@@ -9,7 +9,7 @@ class Certifications extends Component {
     const theme = this.props.theme;
     return (
       <div className="main" id="certs">
-        <div className="certs-header-div">
+        {/* <div className="certs-header-div">
           <Fade bottom duration={2000} distance="20px">
             <h1 className="certs-header" style={{ color: theme.text }}>
               Certifications
@@ -20,7 +20,7 @@ class Certifications extends Component {
           {certifications.certifications.map((cert) => {
             return <CertificationCard certificate={cert} theme={theme} />;
           })}
-        </div>
+        </div> */}
       </div>
     );
   }

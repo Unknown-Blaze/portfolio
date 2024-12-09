@@ -48,7 +48,7 @@ class ExperienceCard extends Component {
           <div style={{ display: "flex", flexDirection: "row" }}>
             <div
               className="arrow-left"
-              style={{ borderRight: `10px solid ${theme.body}` }}
+              style={{ borderRight: `10px solid #ffffff` }}
             ></div>
             <div
               className="experience-card"
@@ -72,13 +72,14 @@ class ExperienceCard extends Component {
                     className="experience-card-company"
                     style={{ color: theme.text }}
                   >
-                    <a
+                    {/* <a
                       href={experience["company_url"]}
                       target="_blank"
                       rel="noopener noreferrer"
-                    >
-                      {experience["company"]}
-                    </a>
+                      color="white"
+                    > */}
+                    {experience["company"]}
+                    {/* </a> */}
                   </p>
                 </div>
                 <div>
@@ -103,6 +104,7 @@ class ExperienceCard extends Component {
                   display: "flex",
                   justifyContent: "flex-start",
                   marginTop: 20,
+                  color: "#ffffff",
                 }}
               >
                 <div className="repo-description" />

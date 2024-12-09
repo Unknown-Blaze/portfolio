@@ -1,97 +1,85 @@
-.skills-main-div {
+.about-main-div {
   display: flex;
   overflow: hidden;
 }
 
-.skills-header {
+.about-header {
   font-size: 60px;
   line-height: normal;
   font-family: "Google Sans Regular";
   text-align: center;
 }
 
-.skills-header-2 {
-  font-size: 60px;
-  line-height: normal;
-  font-family: "Google Sans Regular";
-  text-align: center;
-  margin-top: 80px;
-}
-
-.skills-header-div {
-  margin-top: -50px;
-}
-
-.skills-text {
+.about-text {
   font-size: 20px;
 }
 
-.skills-text-div {
+.about-text-div {
   margin-left: 50px;
   font-family: "Google Sans Regular";
 }
 
-.skills-main-div > * {
+.about-main-div > * {
   flex: 1;
   margin-bottom: 30px;
 }
 
-.skills-image-div > * {
-  max-width: 90%;
+.about-image-div > * {
+  max-width: 100%;
   height: auto;
-  margin-top: 20px;
+  margin-top: 100px;
 }
 
-.skills-heading {
-  font-size: 40px;
-  font-weight: 800;
+.about-heading {
+  font-size: 56px;
+  font-weight: 400;
   font-family: "Google Sans Regular";
   line-height: normal;
 }
 
 /* Media Query */
 @media (max-width: 1380px) {
-  .skills-heading {
-    font-size: 28px;
+  .about-heading {
+    font-size: 40px;
   }
-  .skills-header {
+  .about-header {
     font-size: 50px;
   }
-  /* .skills-image-div > img {
-    margin-top: 0px;
-  } */
+  /* .about-image-div > img {
+      margin-top: 0px;
+    } */
 }
 @media (max-width: 768px) {
-  .skills-heading {
+  .about-heading {
     font-size: 30px;
     text-align: center;
   }
-  .skills-header {
+  .about-header {
     font-size: 30px;
   }
   .greeting-text-p {
     font-size: 16px;
     line-height: normal;
   }
-  .skills-main-div {
+  .about-main-div {
     flex-direction: column;
   }
-  .skills-text-div {
+  .about-text-div {
     margin-left: 0px;
     margin: 20px;
   }
-  .skills-text {
+  .about-text {
     font-size: 16px;
   }
-  .skills-text-subtitle {
+  .about-text-subtitle {
     font-size: 16px;
     text-align: center;
   }
-  .skills-image-div {
+  .about-image-div {
     /* display: none; */
     order: 2;
   }
-  .skills-image-div > * {
+  .about-image-div > * {
     margin-top: 0px;
   }
 }

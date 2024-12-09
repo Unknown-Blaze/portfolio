@@ -5,6 +5,7 @@
 .basic-contact {
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 100px;
 }
 
 .contact-heading-div {
@@ -36,6 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
 }
 
 .blog-heading-img-div {

@@ -70,17 +70,31 @@ export const redTheme = {
 };
 
 export const blackTheme = {
-  body: "#E5E5E5",
-  text: "#14213d",
-  expTxtColor: "#000a12",
-  highlight: "#ffffff",
-  dark: "#000000",
-  secondaryText: "#5A6377",
-  imageHighlight: "#fca311",
+  body: "#13181BFF",
+  text: "#BCAEEEFF",
+  expTxtColor: "#FAFDFFFF",
+  highlight: "#4f5b62",
+  dark: "#DADADAFF",
+  secondaryText: "#FFA3A3FF",
+  imageHighlight: "#607d8b",
   compImgHighlight: "#E6E6E6",
-  jacketColor: "#8d99ae",
-  headerColor: "#fca31177",
-  splashBg: "#14213d",
+  jacketColor: "#8eacbb",
+  headerColor: "#D6E1E6FF",
+  splashBg: "#9FB3BEFF",
+};
+
+export const materialDarkTheme = {
+  body: "#263238",
+  text: "#E2C7C7FF",
+  expTxtColor: "#000a12",
+  highlight: "#4f5b62",
+  dark: "#000a12",
+  secondaryText: "#aeaeae",
+  imageHighlight: "#607d8b",
+  compImgHighlight: "#E6E6E6",
+  jacketColor: "#8eacbb",
+  headerColor: "#34515e",
+  splashBg: "#4f5b62",
 };
 
 export const pinkTheme = {
@@ -153,20 +167,6 @@ export const yellowTheme = {
   splashBg: "#5f4339",
 };
 
-export const materialDarkTheme = {
-  body: "#263238",
-  text: "#aeaeae",
-  expTxtColor: "#000a12",
-  highlight: "#4f5b62",
-  dark: "#000a12",
-  secondaryText: "#aeaeae",
-  imageHighlight: "#607d8b",
-  compImgHighlight: "#E6E6E6",
-  jacketColor: "#8eacbb",
-  headerColor: "#34515e",
-  splashBg: "#4f5b62",
-};
-
 export const materialLightTheme = {
   body: "#ffffff",
   text: "#4c2b91",
@@ -195,4 +195,4 @@ export const materialTealTheme = {
   splashBg: "#05505E",
 };
 
-export const chosenTheme = blueTheme;
+export const chosenTheme = blackTheme;

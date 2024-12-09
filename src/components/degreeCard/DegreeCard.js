@@ -15,7 +15,8 @@ class DegreeCard extends Component {
                 style={{
                   maxWidth: "100%",
                   maxHeight: "100%",
-                  transform: "scale(0.9)",
+                  // transform: "scale(0.9)",
+                  borderRadius: "50%",
                 }}
                 src={require(`../../assets/images/${degree.logo_path}`)}
                 alt={degree.alt_name}
@@ -30,7 +31,7 @@ class DegreeCard extends Component {
           >
             <div
               className="body-header"
-              style={{ backgroundColor: theme.headerColor }}
+              style={{ backgroundColor: "#4F557EFF" }}
             >
               <div className="body-header-title">
                 <h2 className="card-title" style={{ color: theme.text }}>
@@ -62,7 +63,7 @@ class DegreeCard extends Component {
                 >
                   <div
                     className="visit-btn"
-                    style={{ backgroundColor: theme.headerColor }}
+                    style={{ backgroundColor: "#4F557EFF" }}
                   >
                     <p className="btn" style={{ color: theme.text }}>
                       Visit Website
