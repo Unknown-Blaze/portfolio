@@ -23,6 +23,20 @@
       ]
     },
     {
+      "id": "R_kgDOLpZoog",
+      "name": "SC1015-Mini-Project",
+      "createdAt": "2024-04-03T17:53:18Z",
+      "url": "https://github.com/Unknown-Blaze/SC1015-Mini-Project",
+      "description": null,
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Jupyter Notebook",
+          "iconifyClass": "logos-jupyter"
+        }
+      ]
+    },
+    {
       "id": "R_kgDOLM4Kxg",
       "name": "PineappleStudios",
       "createdAt": "2024-02-02T06:11:30Z",
@@ -45,16 +59,68 @@
       ]
     },
     {
-      "id": "R_kgDOLpZoog",
-      "name": "SC1015-Mini-Project",
-      "createdAt": "2024-04-03T17:53:18Z",
-      "url": "https://github.com/Unknown-Blaze/SC1015-Mini-Project",
+      "id": "R_kgDONbVhMQ",
+      "name": "PSASprint",
+      "createdAt": "2024-12-10T02:16:06Z",
+      "url": "https://github.com/Unknown-Blaze/PSASprint",
+      "description": null,
+      "isFork": true,
+      "languages": [
+        {
+          "name": "Shell",
+          "iconifyClass": "simple-icons:shell"
+        },
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        },
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
+        },
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
+        },
+        {
+          "name": "Dockerfile",
+          "iconifyClass": "simple-icons:docker"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOL85ZRg",
+      "name": "Leetcode-Problems",
+      "createdAt": "2024-05-17T12:32:16Z",
+      "url": "https://github.com/Unknown-Blaze/Leetcode-Problems",
+      "description": "Any code that I have submitted on Leetcode will get pushed here",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOKls7sA",
+      "name": "CAMS_2002_SCMA",
+      "createdAt": "2023-10-27T04:53:31Z",
+      "url": "https://github.com/esvar2004/CAMS_2002_SCMA",
       "description": null,
       "isFork": false,
       "languages": [
         {
-          "name": "Jupyter Notebook",
-          "iconifyClass": "logos-jupyter"
+          "name": "Java",
+          "iconifyClass": "logos-java"
         }
       ]
     }
