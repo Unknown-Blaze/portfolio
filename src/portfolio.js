@@ -26,7 +26,7 @@ const greeting = {
     "A passionate computer engineering student dedicated to creating scalable IoT and software solutions for a sustainable, connected world.",
   resumeLink:
     "https://drive.google.com/file/d/10gUjYyex_WCdOztvdgITkA9iFsEu3Z6j/view?usp=sharing",
-  portfolio_repository: "http://unknown-blaze.github.io/MyPortfolio",
+  portfolio_repository: "https://github.com/Unknown-Blaze/portfolio",
   githubProfile: "https://github.com/Unknown-Blaze",
 };
 
@@ -59,7 +59,7 @@ const socialMediaLinks = [
   },
   // {
   //   name: "X-Twitter",
-  //   link: "https://twitter.com/ashutosh_1919",
+  //   link: "https://twitter.com/unknown_blaze",
   //   fontAwesomeIcon: "fa-x-twitter", // Reference https://fontawesome.com/icons/x-twitter?f=brands&s=solid
   //   backgroundColor: "#000000", // Reference https://simpleicons.org/?q=x
   // },
@@ -288,7 +288,7 @@ const competitiveSites = {
     //   style: {
     //     color: "#323754",
     //   },
-    //   profileLink: "https://www.hackerearth.com/@ashutosh391",
+    //   profileLink: "https://www.hackerearth.com/@unknown",
     // },
     // {
     //   siteName: "Kaggle",
@@ -498,7 +498,7 @@ const experience = {
           title: "Full Stack Engineering Intern",
           company: "Panasonic R&D Center",
           company_url: "https://www.panasonic.com",
-          logo_path: "NtuLogo.jpg",
+          logo_path: "panasonic.png",
           duration: "Jan 2025 – May 2025",
           location: "Singapore",
           description:
@@ -509,7 +509,7 @@ const experience = {
           title: "Applied Research Engineering Intern - Embedded Engineering",
           company: "Schaeffler Hub for Advanced REsearch (SHARE)",
           company_url: "https://www.schaeffler.com",
-          logo_path: "NtuLogo.jpg",
+          logo_path: "schaeffler.png",
           duration: "May 2024 – Jul 2024",
           location: "Singapore",
           description:
@@ -525,7 +525,7 @@ const experience = {
           title: "President and Varsity Team Captain",
           company: "NTU International Chess Club",
           company_url: "https://www.ntu.edu.sg",
-          logo_path: "NtuLogo.jpg",
+          logo_path: "chess.jpeg",
           duration: "Jan 2023 - Present",
           location: "Singapore",
           description:
@@ -536,7 +536,7 @@ const experience = {
           title: "Migrant Worker Appreciation and Student Support Volunteer",
           company: "NTU Red Cross Club",
           company_url: "https://www.redcross.sg",
-          logo_path: "NtuLogo.jpg",
+          logo_path: "ntu_red_cross.png",
           duration: "May 2024 - Jul 2024",
           location: "Singapore",
           description:
@@ -547,7 +547,7 @@ const experience = {
           title: "Music Director and Instructor",
           company: "NTU Piano Ensemble Club",
           company_url: "https://www.ntu.edu.sg",
-          logo_path: "NtuLogo.jpg",
+          logo_path: "ntupe.png",
           duration: "Aug 2022 - Jul 2023",
           location: "Singapore",
           description:
@@ -558,7 +558,7 @@ const experience = {
           title: "Private Tutor – Mathematics, Physics, Chemistry, Chess",
           company: "Self-employed",
           company_url: "https://www.example.com",
-          logo_path: "NtuLogo.jpg",
+          logo_path: "mentor.jpg",
           duration: "Aug 2020 - May 2022",
           location: "Malaysia",
           description:
@@ -569,7 +569,7 @@ const experience = {
           title: "Talent Show Organizer and Fundraiser",
           company: "Sri KDU International School",
           company_url: "https://www.srikdu.edu.my",
-          logo_path: "NtuLogo.jpg",
+          logo_path: "srikdu_logo.png",
           duration: "Jan 2021 - May 2021",
           location: "Malaysia",
           description:
@@ -627,13 +627,13 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "contact_rudra.jpg",
     description:
-      "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with ML, AI, React, Android, Cloud and Opensource Development.",
+      "I am available on almost every social media. You can message me, I will reply within 24 hours. We can discuss about React, Android, Embedded systems, IoT, Machine Learning and AI.",
   },
   blogSection: {
     title: "Blogs",
     subtitle:
       "I like to document some of my experiences in professional career journey as well as some technical knowledge sharing.",
-    link: "https://blogs.ashutoshhathidara.com/",
+    link: "https://blogs.unknown-blaze.com/",
     avatar_image_path: "blogs_image.svg",
   },
   addressSection: {
