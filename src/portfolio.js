@@ -13,7 +13,7 @@ const seo = {
   og: {
     title: "Rudra Prasadh Ganesh's Portfolio",
     type: "website",
-    url: "http://unknown-blaze.github.io/MyPortfolio",
+    url: "http://unknown-blaze.github.io/portfolio",
   },
 };
 
@@ -25,7 +25,7 @@ const greeting = {
   subTitle:
     "A passionate computer engineering student dedicated to creating scalable IoT and software solutions for a sustainable, connected world.",
   resumeLink:
-    "https://drive.google.com/file/d/10gUjYyex_WCdOztvdgITkA9iFsEu3Z6j/view?usp=sharing",
+    "https://drive.google.com/file/d/1XFGr17Un9jiYomV1hmLBeARwAGvIjOdl/view?usp=drive_link",
   portfolio_repository: "https://github.com/Unknown-Blaze/portfolio",
   githubProfile: "https://github.com/Unknown-Blaze",
 };
