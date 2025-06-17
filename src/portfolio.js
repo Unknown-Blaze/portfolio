@@ -19,7 +19,7 @@ const seo = {
 
 //Home Page
 const greeting = {
-  title: "Rudra Prasadh",
+  title: "Rudra Prasadh Gan",
   logo_name: "RudraPrasadh",
   nickname: "@unknown_blaze",
   subTitle:
