@@ -19,7 +19,7 @@ const seo = {
 
 //Home Page
 const greeting = {
-  title: "Rudra Prasadh Gan",
+  title: "Rudra Prasadh Ganesh",
   logo_name: "RudraPrasadh",
   nickname: "@unknown_blaze",
   subTitle:
@@ -80,175 +80,249 @@ const socialMediaLinks = [
 const skills = {
   data: [
     {
-      title: "Full Stack Development",
-      fileName: "FullStackImg",
+      title: "Frontend Development",
+      fileName: "FullStackImg", // <-- Update if you have a specific image file
       skills: [
-        "⚡ Building responsive website front end using React.js",
-        "⚡ Developing mobile applications using Expo React Native",
-        "⚡ Creating application backend using Django Rest Framework, working with CRUD and Restful APIs",
+        "⚡ Building responsive, scalable, and dynamic user interfaces with React.js and React Native.",
+        "⚡ Ensuring seamless state management across complex applications using Redux.",
+        "⚡ Crafting modern and clean UI/UX with HTML5, CSS3, Tailwind CSS, and Bootstrap.",
       ],
       softwareSkills: [
         {
           skillName: "HTML5",
           fontAwesomeClassname: "simple-icons:html5",
-          style: {
-            color: "#E34F26",
-          },
+          style: { color: "#E34F26" },
         },
         {
           skillName: "CSS3",
           fontAwesomeClassname: "fa-css3",
-          style: {
-            color: "#1572B6",
-          },
-        },
-        {
-          skillName: "Sass",
-          fontAwesomeClassname: "simple-icons:sass",
-          style: {
-            color: "#CC6699",
-          },
+          style: { color: "#1572B6" },
         },
         {
           skillName: "JavaScript",
           fontAwesomeClassname: "simple-icons:javascript",
-          style: {
-            backgroundColor: "#000000",
-            color: "#F7DF1E",
-          },
+          style: { color: "#F7DF1E", backgroundColor: "#000000" },
         },
         {
-          skillName: "React",
+          skillName: "React.js",
           fontAwesomeClassname: "simple-icons:react",
-          style: {
-            color: "#61DAFB",
-          },
+          style: { color: "#61DAFB" },
         },
         {
-          skillName: "Django",
-          fontAwesomeClassname: "simple-icons:django",
-          style: {
-            color: "#005710FF",
-          },
+          skillName: "React Native",
+          fontAwesomeClassname: "simple-icons:react",
+          style: { color: "#61DAFB" },
         },
         {
-          skillName: "Firebase",
-          fontAwesomeClassname: "simple-icons:firebase",
-          style: {
-            color: "#FFCA28",
-          },
+          skillName: "Redux",
+          fontAwesomeClassname: "simple-icons:redux",
+          style: { color: "#764ABC" },
         },
         {
-          skillName: "MySQL",
-          fontAwesomeClassname: "simple-icons:mysql",
-          style: {
-            color: "#F86700FF",
-          },
+          skillName: "Tailwind CSS",
+          fontAwesomeClassname: "simple-icons:tailwindcss",
+          style: { color: "#06B6D4" },
         },
         {
-          skillName: "NPM",
-          fontAwesomeClassname: "simple-icons:npm",
-          style: {
-            color: "#CB3837",
-          },
+          skillName: "Bootstrap",
+          fontAwesomeClassname: "simple-icons:bootstrap",
+          style: { color: "#7952B3" },
         },
         {
-          skillName: "Flutter",
-          fontAwesomeClassname: "simple-icons:flutter",
-          style: {
-            color: "#02569B",
-          },
+          skillName: "jQuery",
+          fontAwesomeClassname: "simple-icons:jquery",
+          style: { color: "#0769AD" },
+        },
+        {
+          skillName: "Webpack",
+          fontAwesomeClassname: "simple-icons:webpack",
+          style: { color: "#8DD6F9" },
         },
       ],
     },
     {
-      title: "Embedded Engineering",
-      fileName: "CloudInfraImg",
+      title: "Backend & Databases",
+      fileName: "FullStackImg", // <-- Update if you have a specific image file
       skills: [
-        "⚡ Experience working on Arduino, Raspberry Pi, STM32 and other custom ARM based microcontrollers",
-        "⚡ Integrate IoT into Full Stack applications to create a custom hardware based apps",
-        "⚡ Understand control and working with PID controllers",
-        "⚡ Working on Ubuntu Linux to implement RTOS and various multithreading and socket mechanisms on a microcontroller scale",
+        "⚡ Architecting robust and scalable server-side applications using Django, Express.js, and Flask.",
+        "⚡ Designing and implementing RESTful APIs, GraphQL endpoints, and microservices.",
+        "⚡ Managing data persistence and caching with PostgreSQL, MySQL, MongoDB, Firebase and Redis.",
+        "⚡ Automating tasks with Selenium",
       ],
       softwareSkills: [
         {
-          skillName: "Linux",
-          fontAwesomeClassname: "simple-icons:linux",
-          style: {
-            color: "#EEF700FF",
-          },
+          skillName: "Django",
+          fontAwesomeClassname: "simple-icons:django",
+          style: { color: "#092E20" },
         },
         {
-          skillName: "Raspberry Pi",
-          fontAwesomeClassname: "simple-icons:raspberrypi",
-          style: {
-            color: "#690065FF",
-          },
+          skillName: "Express.js",
+          fontAwesomeClassname: "simple-icons:express",
+          style: { color: "#000000" },
         },
         {
-          skillName: "Arduino",
-          fontAwesomeClassname: "simple-icons:arduino",
-          style: {
-            color: "#0089D6",
-          },
+          skillName: "Flask",
+          fontAwesomeClassname: "simple-icons:flask",
+          style: { color: "#000000" },
         },
         {
-          skillName: "ARM Based Microprocessors",
-          fontAwesomeClassname: "simple-icons:arm",
-          style: {
-            color: "#336791",
-          },
+          skillName: "PostgreSQL",
+          fontAwesomeClassname: "simple-icons:postgresql",
+          style: { color: "#4169E1" },
         },
         {
-          skillName: "GNU Toolchain",
-          fontAwesomeClassname: "simple-icons:gnu",
-          style: {
-            color: "#326CE5",
-          },
+          skillName: "MySQL",
+          fontAwesomeClassname: "simple-icons:mysql",
+          style: { color: "#4479A1" },
+        },
+        {
+          skillName: "MongoDB",
+          fontAwesomeClassname: "simple-icons:mongodb",
+          style: { color: "#47A248" },
+        },
+        {
+          skillName: "Firebase",
+          fontAwesomeClassname: "simple-icons:firebase",
+          style: { color: "#FFCA28" },
+        },
+        {
+          skillName: "Redis",
+          fontAwesomeClassname: "simple-icons:redis",
+          style: { color: "#DC382D" },
+        },
+        {
+          skillName: "GraphQL",
+          fontAwesomeClassname: "simple-icons:graphql",
+          style: { color: "#E10098" },
+        },
+        {
+          skillName: "Celery",
+          fontAwesomeClassname: "simple-icons:celery",
+          style: { color: "#37814A" },
         },
       ],
     },
     {
       title: "Data Science & AI",
-      fileName: "DataScienceImg",
+      fileName: "DataScienceImg", // <-- This filename seems appropriate
       skills: [
-        "⚡ Developing scalable models for various deeplearning and statistical use cases",
-        "⚡ Experience of working with Computer Vision and other neural networks projects",
-        "⚡ Integrate with backend for a more robust full stack AI application",
+        "⚡ Developing and fine-tuning models for Computer Vision (YOLO) and NLP (Transformers).",
+        "⚡ Utilizing frameworks like PyTorch and TensorFlow for deep learning applications.",
+        "⚡ Performing data manipulation, analysis, and statistical modeling with Pandas, NumPy, and Scikit-Learn.",
+        "⚡ Building generative AI applications with Hugging Face and LangChain.",
       ],
       softwareSkills: [
         {
-          skillName: "NumPy",
-          fontAwesomeClassname: "logos-numpy",
-          style: {
-            backgroundColor: "transparent",
-          },
-        },
-        {
-          skillName: "Pandas",
-          fontAwesomeClassname: "logos-pandas",
-          style: {
-            backgroundColor: "transparent",
-          },
+          skillName: "Python",
+          fontAwesomeClassname: "simple-icons:python",
+          style: { color: "#3776AB" },
         },
         {
           skillName: "PyTorch",
-          fontAwesomeClassname: "logos-pytorch",
-          style: {
-            backgroundColor: "transparent",
-          },
+          fontAwesomeClassname: "simple-icons:pytorch",
+          style: { color: "#EE4C2C" },
         },
         {
-          skillName: "Python",
-          fontAwesomeClassname: "logos-python",
-          style: {
-            backgroundColor: "transparent",
-            color: "#3776AB",
-          },
+          skillName: "TensorFlow",
+          fontAwesomeClassname: "simple-icons:tensorflow",
+          style: { color: "#FF6F00" },
         },
         {
-          skillName: "Deeplearning",
-          imageSrc: "deeplearning_ai_logo.png",
+          skillName: "Scikit-learn",
+          fontAwesomeClassname: "simple-icons:scikitlearn",
+          style: { color: "#F7931E" },
+        },
+        {
+          skillName: "Pandas",
+          fontAwesomeClassname: "simple-icons:pandas",
+          style: { color: "#150458" },
+        },
+        {
+          skillName: "NumPy",
+          fontAwesomeClassname: "simple-icons:numpy",
+          style: { color: "#013243" },
+        },
+        {
+          skillName: "OpenCV",
+          fontAwesomeClassname: "simple-icons:opencv",
+          style: { color: "#5C3EE8" },
+        },
+        {
+          skillName: "Hugging Face",
+          fontAwesomeClassname: "simple-icons:huggingface",
+          style: { color: "#FFD21E" },
+        },
+        {
+          skillName: "R",
+          fontAwesomeClassname: "simple-icons:r",
+          style: { color: "#276DC3" },
+        },
+        {
+          skillName: "MATLAB",
+          fontAwesomeClassname: "simple-icons:mathworks",
+          style: { color: "#0076A8" },
+        },
+      ],
+    },
+    {
+      title: "Embedded Engineering & DevOps",
+      fileName: "CloudInfraImg", // <-- Update if you have a specific image file
+      skills: [
+        "⚡ Programming microcontrollers like STM32 and ESP32 in C/C++.",
+        "⚡ Designing real-time systems with FreeRTOS and interfacing hardware using protocols like EtherCAT.",
+        "⚡ Containerizing applications with Docker for consistent development and deployment.",
+        "⚡ Implementing CI/CD pipelines with GitHub Actions for automated testing and builds.",
+      ],
+      softwareSkills: [
+        {
+          skillName: "C/C++",
+          fontAwesomeClassname: "simple-icons:cplusplus",
+          style: { color: "#00599C" },
+        },
+        {
+          skillName: "ARM",
+          fontAwesomeClassname: "simple-icons:arm",
+          style: { color: "#0091BD" },
+        },
+        {
+          skillName: "STM32",
+          fontAwesomeClassname: "simple-icons:stmicroelectronics",
+          style: { color: "#03234B" },
+        },
+        {
+          skillName: "Raspberry Pi",
+          fontAwesomeClassname: "simple-icons:raspberrypi",
+          style: { color: "#A22846" },
+        },
+        {
+          skillName: "FreeRTOS",
+          fontAwesomeClassname: "simple-icons:freertos",
+          style: { color: "#1A1A3C" },
+        },
+        {
+          skillName: "Git",
+          fontAwesomeClassname: "simple-icons:git",
+          style: { color: "#F05032" },
+        },
+        {
+          skillName: "Docker",
+          fontAwesomeClassname: "simple-icons:docker",
+          style: { color: "#2496ED" },
+        },
+        {
+          skillName: "GitHub Actions",
+          fontAwesomeClassname: "simple-icons:githubactions",
+          style: { color: "#2088FF" },
+        },
+        {
+          skillName: "Postman",
+          fontAwesomeClassname: "simple-icons:postman",
+          style: { color: "#FF6C37" },
+        },
+        {
+          skillName: "Google Cloud",
+          fontAwesomeClassname: "simple-icons:googlecloud",
+          style: { color: "#4285F4" },
         },
       ],
     },
@@ -304,27 +378,29 @@ const competitiveSites = {
 const degrees = {
   degrees: [
     {
-      title: "Nanyang Technological University Singapore",
+      title: "Nanyang Technological University",
       subtitle: "Bachelor of Engineering in Computer Engineering",
       logo_path: "NtuLogo.jpg",
       alt_name: "NTU Singapore",
-      duration: "Aug 2022 - Apr 2026",
+      duration: "Aug 2022 - Present",
       descriptions: [
-        "⚡ NTU Science and Engineering Undergraduate Scholar - Full Scholarship eligible only to those with outstanding academics, co-curriculars and leadership qualities",
-        "⚡ Dean's List for First and Second year of studies - Awarded to the top 5% of the cohort (~ 8 to 12 students)",
-        "⚡ Completed and received A+ in key modules such as Discrete Math, Data Structures and Algorithms, Microprocessor System Design, Digital Systems, Computer Networks, Data Science & AI, etc.",
+        "⚡ Maintained a cumulative GPA of 4.76 / 5.00, placing me in the highest distinction.",
+        "⚡ Awarded the NTU Science and Engineering Undergraduate Scholarship, a full scholarship for outstanding academic and leadership achievements.",
+        "⚡ Named to the Dean's List for both the 2022-23 and 2023-24 academic years, the only student of my cohort to do so.",
+        "⚡ Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Microprocessor System Design, Data Science & AI, Computer Networks, Operating Systems.",
       ],
       website_link: "https://www.ntu.edu.sg/",
     },
     {
       title: "Sri KDU International School",
-      subtitle: "IB Diploma",
+      subtitle: "International Baccalaureate (IB) Diploma",
       logo_path: "srikdu_logo.png",
       alt_name: "Sri KDU International School",
-      duration: "Aug 2020 - May 2022",
+      duration: "Sep 2020 - May 2022",
       descriptions: [
-        "⚡ Secured Second topper of school with a score of 42 / 45.",
-        "⚡ Organized talent shows and competitions to raise money for the TREAK community in Siep Reap, Cambodia",
+        "⚡ Achieved an IB Diploma score of 42 out of 45, ranking among the top performers of the graduating class.",
+        "⚡ Led fundraising initiatives, including talent shows and inter-school competitions, to raise funds for the TREAK community in Siem Reap, Cambodia.",
+        "⚡ specialized in Higher Level (HL) subjects: Physics, Chemistry, and Mathematics (Analysis & Approaches).",
       ],
       website_link: "https://srikdu.edu.my/homepage/",
     },
@@ -447,136 +523,181 @@ const certifications = {
 // Experience Page
 const experience = {
   title: "Experience",
-  subtitle: "Work, Internship, and Research",
+  subtitle: "Internships, Work, and Leadership",
   description:
-    "I have had the privilege of working on impactful projects across various domains, including IoT, AI, and full-stack development. My journey has spanned industry internships, undergraduate research, and part-time roles, each contributing to my growth as a well-rounded engineer. My passion for creating innovative solutions and fostering collaboration drives me to excel in every endeavor.",
+    "I have had the privilege of contributing to impactful projects across software engineering, AI, and embedded systems. My journey spans high-stakes industry internships and part-time engineering roles where I've architected scalable solutions and driven measurable results. I thrive on solving complex problems, leading collaborative teams, and consistently delivering high-quality, end-to-end solutions.",
   header_image_path: "experience.svg",
   sections: [
     {
-      title: "Work",
+      title: "Internships",
       work: true,
       experiences: [
         {
-          title: "Full Stack Developer",
-          company: "NTU College of Computing and Data Science (CCDS)",
-          company_url: "https://www.ntu.edu.sg",
-          logo_path: "ntuccds.png",
-          duration: "May 2024 - Present",
-          location: "Singapore · Remote",
-          description:
-            "Independently leading the development of a networking website for NTU's CCDS, connecting alumni and undergraduates. The platform facilitates collaboration around startups and mutual events, fostering a vibrant community. Utilized WordPress for streamlined development, integrating SQL and PHP to optimize backend processes. Delivered a user-friendly experience while strengthening the CCDS network. I have been tasked with many more projects now, with more to come.",
-          color: "#005aff",
-        },
-        {
-          title: "Undergraduate Research Experience On Campus (URECA)",
-          company: "Nanyang Technological University",
-          company_url: "https://www.ntu.edu.sg",
-          logo_path: "NtuLogo.jpg",
-          duration: "Aug 2024 – May 2025",
+          title: "Software Engineering Intern - Sustainability",
+          company: "MODEC Offshore Production Systems",
+          company_url: "https://www.modec.com/",
+          logo_path: "modec_logo.png", // <-- Update logo path
+          duration: "Jun 2025 – Aug 2025",
           location: "Singapore",
           description:
-            "Built an IoT system using an O-Droid microcontroller to capture video and detect motion via the ViBe algorithm. Designed a theft detection system using computer vision and optimized data transmission for low-latency operations. Encrypted sensitive video data for secure Wi-Fi transmission, ensuring robust real-time security monitoring.",
-          color: "#ff6600",
+            "Architected a full-stack sustainability dashboard using React, Django, and PostgreSQL to analyze GHG emissions for 30+ supply chain vendors. I designed and implemented a multi-objective optimization algorithm projected to reduce Scope 3 emissions by 15% by balancing emissions, cost, and logistics. The application was deployed using Docker and CI/CD pipelines to provide a scalable, high-availability tool for global production plants.",
+          color: "#003A70",
         },
-        {
-          title: "Chess CCA Mentor",
-          company: "Freelance",
-          company_url: "https://www.ntu.edu.sg",
-          logo_path: "chess.jpeg",
-          duration: "Jan 2024 - Apr 2024",
-          location: "Singapore",
-          description:
-            "Approved by MOE as a Chess Instructor, training primary and secondary students at One World International School. Developing structured lessons and training programs, enhancing students' strategic thinking and game skills. Promoting chess as an educational tool, contributing to students' cognitive development and competitive spirit",
-          color: "#0a0a0a",
-        },
-      ],
-    },
-    {
-      title: "Internships",
-      experiences: [
         {
           title: "Full Stack Engineering Intern",
           company: "Panasonic R&D Center",
-          company_url: "https://www.panasonic.com",
+          company_url: "https://www.panasonic.com/sg/",
           logo_path: "panasonic.png",
           duration: "Jan 2025 – May 2025",
           location: "Singapore",
           description:
-            "Worked on innovative solutions within Panasonic's R&D team. Collaborated on full-stack development tasks, contributing to the design, implementation, and optimization of software solutions tailored for real-world applications.",
-          color: "#000000",
+            "Developed an AI-powered security application with a YOLOv5 model that achieved 98% accuracy in detecting unauthorized presence. I optimized backend performance by implementing a Redis cache and refining queries, reducing API response latency by 45%. The final AI model was containerized as a REST API for seamless integration into Panasonic's existing security ecosystems.",
+          color: "#004B8D",
         },
         {
-          title: "Applied Research Engineering Intern - Embedded Engineering",
+          title: "Embedded Engineering Intern",
           company: "Schaeffler Hub for Advanced REsearch (SHARE)",
-          company_url: "https://www.schaeffler.com",
+          company_url: "https://www.schaeffler.sg/",
           logo_path: "schaeffler.png",
-          duration: "May 2024 – Jul 2024",
+          duration: "May 2024 – Aug 2024",
           location: "Singapore",
           description:
-            "Developed communication between XMC4800 and host/actuators via USB and EtherCAT, optimizing data flow and system integration. Contributed to the embedded framework on STM32 for motor controller projects, enhancing future user applications and system scalability. Engineered both projects integrating FreeRTOS and various middlewares, ensuring reliable and efficient operation. Enhanced system efficiency and reliability, enabling seamless integration and future scalability.",
-          color: "#00873e",
+            "Engineered a robust EtherCAT communication protocol between an XMC4800 microcontroller and industrial actuators, increasing data throughput by 20%. I also architected a modular embedded framework on an STM32 platform for motor control, designing reusable middleware components that reduced development time for future projects by 30%.",
+          color: "#00873E",
         },
       ],
     },
     {
-      title: "Co-curriculars",
+      title: "Work & Research",
+      work: true,
       experiences: [
         {
-          title: "President and Varsity Team Captain",
+          title: "AI Engineer (Part-Time)",
+          company: "National Institute of Education",
+          company_url: "https://www.ntu.edu.sg/scse",
+          logo_path: "nie_logo.png", // <-- Update logo path
+          duration: "Jun 2025 - Present",
+          location: "Singapore",
+          description:
+            "As a part-time AI Engineer, I am enhancing a conversational AI tutor by integrating Generative AI (LLMs) to create adaptive pedagogical feedback, which has improved student engagement by 25%. I manage the end-to-end development lifecycle, from feature implementation to automated deployment with GitHub Actions, ensuring 99.5% system uptime.",
+          color: "#A6192E",
+        },
+        {
+          title: "Full Stack Developer",
+          company: "NTU College of Computing and Data Science (CCDS)",
+          company_url: "https://www.ntu.edu.sg/ccds",
+          logo_path: "ntuccds.png",
+          duration: "May 2024 - Aug 2024",
+          location: "Singapore · Remote",
+          description:
+            "Led the full-stack development of a scalable networking platform in WordPress and PHP for 1,000+ students and alumni. My work increased user registration by 200% after launch and optimized page load times by 40% by architecting a custom SQL database schema and server-side logic to handle high traffic during peak events.",
+          color: "#005aff",
+        },
+        {
+          title: "Undergraduate Researcher (URECA)",
+          company: "Nanyang Technological University",
+          company_url:
+            "https://www.ntu.edu.sg/education/undergraduate-programmes/ureca",
+          logo_path: "NtuLogo.jpg",
+          duration: "Aug 2024 – May 2025",
+          location: "Singapore",
+          description:
+            "Designed and built an IoT-based theft detection system on an O-Droid microcontroller. By implementing the ViBe computer vision algorithm, the system achieved 95% motion detection accuracy in diverse lighting conditions. I also engineered an encrypted data pipeline that achieved real-time alert generation within 180ms of a detected event.",
+          color: "#D71440",
+        },
+      ],
+    },
+    {
+      title: "Leadership & Volunteering",
+      experiences: [
+        {
+          title: "President & Varsity Team Captain",
           company: "NTU International Chess Club",
-          company_url: "https://www.ntu.edu.sg",
+          company_url: "#",
           logo_path: "chess.jpeg",
           duration: "Jan 2023 - Present",
           location: "Singapore",
           description:
-            "Leading a 150-member club, organizing events, training sessions, and competitive tournaments. Guided the varsity team to win several accolades, enhancing the club's reputation and member skills. Fostered a collaborative environment, increasing member engagement and skill development.",
-          color: "#005aff",
+            "As President and Captain, I grew the club to over 250 members (a 40% increase) and led the varsity team to 3 major inter-university championship victories. My leadership in organizing events and securing sponsorships resulted in a 15% increase in university funding for the club.",
+          color: "#1d4ed8",
         },
         {
-          title: "Migrant Worker Appreciation and Student Support Volunteer",
+          title: "Chess Instructor",
+          company: "MOE-Approved Freelancer",
+          company_url: "#",
+          logo_path: "mentor.jpg",
+          duration: "Jan 2024 - Apr 2024",
+          location: "Singapore",
+          description:
+            "As a Ministry of Education (MOE) approved instructor, I designed and delivered structured chess curriculums for primary and secondary students at One World International School. My training programs focused on enhancing strategic thinking, tactical skills, and competitive readiness.",
+          color: "#34495e",
+        },
+        {
+          title: "Volunteer",
           company: "NTU Red Cross Club",
           company_url: "https://www.redcross.sg",
           logo_path: "ntu_red_cross.png",
           duration: "May 2024 - Jul 2024",
           location: "Singapore",
           description:
-            "Volunteered to appreciate and support migrant workers, aiding in their integration and welfare. Organized events and activities to promote well-being and recognition of migrant workers. Enhanced cross-cultural understanding and community spirit, positively affecting the lives of migrant workers.",
+            "Volunteered in initiatives focused on the appreciation and welfare of migrant workers in Singapore. I helped organize and execute events aimed at promoting well-being, fostering community integration, and enhancing cross-cultural understanding.",
           color: "#d91e18",
         },
-        {
-          title: "Music Director and Instructor",
-          company: "NTU Piano Ensemble Club",
-          company_url: "https://www.ntu.edu.sg",
-          logo_path: "ntupe.png",
-          duration: "Aug 2022 - Jul 2023",
-          location: "Singapore",
-          description:
-            "Directed the NTU Piano Ensemble, training beginners and preparing them for concert-like performances. Organized rehearsals and performances, showcasing the talents of ensemble members. Contributed to the cultural life of NTU, enriching musical skills and experiences of participants.",
-          color: "#ff9900",
-        },
-        {
-          title: "Private Tutor – Mathematics, Physics, Chemistry, Chess",
-          company: "Self-employed",
-          company_url: "https://www.example.com",
-          logo_path: "mentor.jpg",
-          duration: "Aug 2020 - May 2022",
-          location: "Malaysia",
-          description:
-            "Provided personalized instruction in Math, Physics, Chemistry, chess, table tennis, and Rubik's cube solving. Taught students aged 4-17, tailoring lessons to individual needs and promoting academic and skill growth. Empowered students with knowledge and confidence, significantly improving their performance and interest.",
-          color: "#1976d2",
-        },
-        {
-          title: "Talent Show Organizer and Fundraiser",
-          company: "Sri KDU International School",
-          company_url: "https://www.srikdu.edu.my",
-          logo_path: "srikdu_logo.png",
-          duration: "Jan 2021 - May 2021",
-          location: "Malaysia",
-          description:
-            "Organized talent shows and fundraising events for TREAK Community in Siam Reap, Cambodia. Coordinated with students, teachers, and sponsors, raising significant funds for community support. Promoted cultural exchange and community service, impacting the lives of underprivileged individuals.",
-          color: "#0a0a0a",
-        },
       ],
+    },
+  ],
+};
+
+const projects = {
+  data: [
+    {
+      name: "nGoDONATE - Transparent Philanthropy Platform",
+      subtitle:
+        "EasyA x Ripple Blockchain Hackathon | Award: Best Developer Tooling",
+      image: null,
+      description:
+        "Won 'Best Developer Tooling' by building a decentralized philanthropy app on the XRP Ledger with a novel Shamir's Secret Sharing validation mechanism.",
+      footerLinks: [],
+    },
+    {
+      name: "Predictive AI for Port Logistics",
+      subtitle: "PSA Code Sprint 2024 | Hackathon Finalist",
+      image: null,
+      description:
+        "Developed an AI logistics system with a React dashboard and a TensorFlow/Django backend, achieving 92% forecast accuracy to reduce port equipment downtime.",
+      footerLinks: [],
+    },
+    {
+      name: "MyCCDS Student Intranet App",
+      subtitle: "Personal Project | Open-Source Mobile App for NTU Students",
+      image: null,
+      description:
+        "Single-handedly built and launched a React Native student app with a custom REST API, achieving 1,500+ downloads in the first month by centralizing academic resources.",
+      footerLinks: [],
+    },
+    {
+      name: "Bespoke E-commerce & Order Management Platform",
+      subtitle: "Full-Stack Freelance Project",
+      image: null,
+      description:
+        "Architected a full-stack e-commerce platform using Django and React, automating order processing with Celery/Redis to reduce manual handling by 95% for a freelance client.",
+      footerLinks: [],
+    },
+    {
+      name: "AI in Edge Computing (URECA Research)",
+      subtitle: "NTU Research Project | IoT-based Security System",
+      image: null,
+      description:
+        "Engineered an IoT security system on an O-Droid microcontroller, achieving 95% motion detection accuracy and real-time alerts within 180ms using the ViBe algorithm.",
+      footerLinks: [],
+    },
+    {
+      name: "Multidisciplinary Robot Car Project",
+      subtitle: "Academic Project | Group Leader and Hardware Lead",
+      image: null,
+      description:
+        "Led a team of 8 to build a maze-solving robot, engineering the hardware control system on an STM32 with FreeRTOS and establishing robust communication with a Raspberry Pi.",
+      footerLinks: [],
     },
   ],
 };
@@ -663,6 +784,7 @@ export {
   degrees,
   certifications,
   experience,
+  projects,
   projectsHeader,
   publicationsHeader,
   publications,
