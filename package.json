@@ -4,37 +4,44 @@
   "version": "0.1.0",
   "homepage": "https://Unknown-Blaze.github.io/portfolio",
   "scripts": {
-    "build": "react-scripts --openssl-legacy-provider build",
+    "build": "vite build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b gh-pages -d build",
-    "eject": "react-scripts eject",
-    "start": "react-scripts --openssl-legacy-provider start",
-    "test": "react-scripts test"
+    "deploy": "gh-pages -b gh-pages -d dist",
+    "dev": "vite",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,css,md}\"",
+    "prepare": "husky install",
+    "preview": "vite preview --port 4173",
+    "start": "vite",
+    "test": "echo 'No test runner configured' && exit 0"
   },
   "dependencies": {
-    "apollo-boost": "^0.4.4",
-    "baseui": "^9.65.3",
-    "chart.js": "^2.9.3",
-    "gh-pages": "^2.1.1",
-    "node-fetch": "^2.6.0",
-    "prettier-package-json": "^2.1.3",
-    "react": "^16.10.2",
-    "react-bootstrap": "^1.0.0-beta.16",
-    "react-chartjs-2": "^2.9.0",
-    "react-dom": "^16.10.2",
+    "@apollo/client": "^3.11.8",
+    "ajv": "^8.17.1",
+    "ajv-keywords": "^5.1.0",
+    "baseui": "^14.0.0",
+    "chart.js": "^4.4.6",
+    "gh-pages": "^6.1.1",
+    "graphql": "^16.9.0",
+    "node-fetch": "^3.3.2",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.6",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-reveal": "^1.2.2",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
-    "styled-components": "^5.1.1",
-    "styletron-engine-atomic": "^1.4.6",
-    "styletron-react": "^5.2.7"
+    "react-router-dom": "^6.28.0",
+    "styled-components": "^6.1.13",
+    "styletron-engine-atomic": "^1.6.2",
+    "styletron-react": "^6.1.1"
   },
   "devDependencies": {
-    "dotenv": "^6.2.0",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.11",
-    "prettier": "2.0.5"
+    "@vitejs/plugin-react": "^4.7.0",
+    "dotenv": "^16.4.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.4.2",
+    "prettier-package-json": "^2.8.0",
+    "vite": "^6.4.1"
   },
   "browserslist": {
     "production": [
@@ -51,13 +58,8 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.json": "prettier-package-json --write",
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,jsx,css,md}": "prettier --write"
   }
 }

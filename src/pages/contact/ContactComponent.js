@@ -4,16 +4,13 @@ import Footer from "../../components/footer/Footer";
 import TopButton from "../../components/topButton/TopButton";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
-import BlogsImg from "./BlogsImg";
-import AddressImg from "./AddressImg";
+// Removed unused images to satisfy ESLint
 import { Fade } from "react-reveal";
 import "./ContactComponent.css";
 import { greeting, contactPageData } from "../../portfolio.js";
 
 const ContactData = contactPageData.contactSection;
-const blogSection = contactPageData.blogSection;
-const addressSection = contactPageData.addressSection;
-const phoneSection = contactPageData.phoneSection;
+// Removed unused constants tied to commented sections
 
 class Contact extends Component {
   render() {
@@ -26,7 +23,9 @@ class Contact extends Component {
             <div className="contact-heading-div">
               <div className="contact-heading-img-div">
                 <img
-                  src={require(`../../assets/images/${ContactData["profile_image_path"]}`)}
+                  src={require(
+                    `../../assets/images/${ContactData["profile_image_path"]}`,
+                  )}
                   alt=""
                   style={{ borderRadius: "50%", height: "450px" }}
                 />
