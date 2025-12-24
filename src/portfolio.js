@@ -742,6 +742,15 @@ const publications = {
   ],
 };
 
+// Open Source (GitHub) settings
+// Note: For GitHub GraphQL API, a Personal Access Token is required.
+// If you don't want to use a token, leave `githubConvertedToken` empty; the Projects page will simply not list pinned repos.
+const openSource = {
+  githubUserName: "Unknown-Blaze",
+  // Base64-encoded GitHub token. Keep empty if not using GraphQL fetch at runtime.
+  githubConvertedToken: "",
+};
+
 // Contact Page
 const contactPageData = {
   contactSection: {
@@ -788,5 +797,6 @@ export {
   projectsHeader,
   publicationsHeader,
   publications,
+  openSource,
   contactPageData,
 };

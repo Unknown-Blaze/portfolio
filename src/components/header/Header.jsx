@@ -24,13 +24,13 @@ class Header extends Component {
         <SeoHeader />
         <div>
           <header className="header">
-            <NavLink to={link} tag={Link} className="logo">
+            <Link to={link} className="logo">
               <span style={{ color: theme.text }}> &lt;</span>
               <span className="logo-name" style={{ color: theme.text }}>
                 {greeting.logo_name}
               </span>
               <span style={{ color: theme.text }}>/&gt;</span>
-            </NavLink>
+            </Link>
             <input className="menu-btn" type="checkbox" id="menu-btn" />
             <label className="menu-icon" htmlFor="menu-btn">
               <span className="navicon"></span>
@@ -39,9 +39,10 @@ class Header extends Component {
               <li>
                 <NavLink
                   to="/home"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
+                  style={({ isActive }) => ({
+                    color: theme.text,
+                    fontWeight: isActive ? "bold" : undefined,
+                  })}
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -51,9 +52,10 @@ class Header extends Component {
               <li>
                 <NavLink
                   to="/education"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
+                  style={({ isActive }) => ({
+                    color: theme.text,
+                    fontWeight: isActive ? "bold" : undefined,
+                  })}
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -63,9 +65,10 @@ class Header extends Component {
               <li>
                 <NavLink
                   to="/experience"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
+                  style={({ isActive }) => ({
+                    color: theme.text,
+                    fontWeight: isActive ? "bold" : undefined,
+                  })}
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -75,9 +78,10 @@ class Header extends Component {
               <li>
                 <NavLink
                   to="/projects"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
+                  style={({ isActive }) => ({
+                    color: theme.text,
+                    fontWeight: isActive ? "bold" : undefined,
+                  })}
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >
@@ -87,9 +91,10 @@ class Header extends Component {
               <li>
                 <NavLink
                   to="/contact"
-                  tag={Link}
-                  activeStyle={{ fontWeight: "bold" }}
-                  style={{ color: theme.text }}
+                  style={({ isActive }) => ({
+                    color: theme.text,
+                    fontWeight: isActive ? "bold" : undefined,
+                  })}
                   onMouseEnter={(event) => onMouseEnter(event, theme.highlight)}
                   onMouseOut={(event) => onMouseOut(event)}
                 >

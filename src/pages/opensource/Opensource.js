@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
-import OpensourceCharts from "../../containers/opensourceCharts/OpensourceCharts";
-import Organizations from "../../containers/organizations/Organizations";
-import PullRequests from "../../containers/pullRequests/PullRequests";
-import Issues from "../../containers/issues/Issues";
-import TopButton from "../../components/topButton/TopButton";
+import Header from "../../components/header/Header.jsx";
+import Footer from "../../components/footer/Footer.jsx";
+import OpensourceCharts from "../../containers/opensourceCharts/OpensourceCharts.jsx";
+import Organizations from "../../containers/organizations/Organizations.jsx";
+import PullRequests from "../../containers/pullRequests/PullRequests.jsx";
+import Issues from "../../containers/issues/Issues.jsx";
+import TopButton from "../../components/topButton/TopButton.jsx";
 import "./Opensource.css";
 
 class Opensource extends Component {

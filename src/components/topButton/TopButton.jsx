@@ -12,9 +12,11 @@ export default function TopButton({ theme }) {
       document.body.scrollTop > 30 ||
       document.documentElement.scrollTop > 30
     ) {
-      document.getElementById("topButton").style.visibility = "visible";
+      const el = document.getElementById("topButton");
+      if (el) el.style.visibility = "visible";
     } else {
-      document.getElementById("topButton").style.visibility = "hidden";
+      const el = document.getElementById("topButton");
+      if (el) el.style.visibility = "hidden";
     }
   }
 
@@ -24,20 +26,28 @@ export default function TopButton({ theme }) {
 
   const onMouseEnter = (color, bgColor) => {
     const topButton = document.getElementById("topButton");
-    topButton.style.color = color;
-    topButton.style.backgroundColor = bgColor;
     const arrow = document.getElementById("arrow");
-    arrow.style.color = color;
-    arrow.style.backgroundColor = bgColor;
+    if (topButton) {
+      topButton.style.color = color;
+      topButton.style.backgroundColor = bgColor;
+    }
+    if (arrow) {
+      arrow.style.color = color;
+      arrow.style.backgroundColor = bgColor;
+    }
   };
 
   const onMouseLeave = (color, bgColor) => {
     const topButton = document.getElementById("topButton");
-    topButton.style.color = color;
-    topButton.style.backgroundColor = bgColor;
     const arrow = document.getElementById("arrow");
-    arrow.style.color = color;
-    arrow.style.backgroundColor = bgColor;
+    if (topButton) {
+      topButton.style.color = color;
+      topButton.style.backgroundColor = bgColor;
+    }
+    if (arrow) {
+      arrow.style.color = color;
+      arrow.style.backgroundColor = bgColor;
+    }
   };
 
   return (

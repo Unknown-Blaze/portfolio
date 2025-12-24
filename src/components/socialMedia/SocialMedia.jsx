@@ -3,9 +3,10 @@ import "./SocialMedia.css";
 import { socialMediaLinks } from "../../portfolio";
 import styled from "styled-components";
 
+// Use a transient prop ($bg) to avoid passing unknown props to the DOM element
 const IconWrapper = styled.span`
   i {
-    background-color: ${(props) => props.backgroundColor};
+    background-color: ${(props) => props.$bg};
   }
   &:hover i {
     background-color: ${({ theme }) => theme.text};
@@ -25,7 +26,7 @@ export default function socialMedia(props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <IconWrapper {...media} {...props}>
+            <IconWrapper $bg={media.backgroundColor}>
               <i className={`fab ${media.fontAwesomeIcon}`}></i>
             </IconWrapper>
           </a>
