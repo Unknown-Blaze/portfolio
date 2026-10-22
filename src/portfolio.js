@@ -7,13 +7,13 @@ const settings = {
 
 //SEO Related settings
 const seo = {
-  title: "Rudra's Portfolio",
+  title: "Rudra Prasadh Ganesh",
   description:
-    "A passionate computer engineering student dedicated to creating scalable IoT and software solutions for a sustainable, connected world.",
+    "Software engineer, robotics & AI at Fabrica AI. Software, embedded hardware and machine learning.",
   og: {
-    title: "Rudra Prasadh Ganesh's Portfolio",
+    title: "Rudra Prasadh Ganesh",
     type: "website",
-    url: "http://unknown-blaze.github.io/portfolio",
+    url: "https://unknown-blaze.github.io/portfolio",
   },
 };
 
@@ -23,7 +23,7 @@ const greeting = {
   logo_name: "RudraPrasadh",
   nickname: "@unknown_blaze",
   subTitle:
-    "A passionate computer engineering student dedicated to creating scalable IoT and software solutions for a sustainable, connected world.",
+    "Software engineer, robotics & AI at Fabrica AI. I work across software, embedded hardware and machine learning, from ROS 2 robots on construction sites to production web platforms.",
   resumeLink:
     "https://drive.google.com/file/d/1XFGr17Un9jiYomV1hmLBeARwAGvIjOdl/view?usp=drive_link",
   portfolio_repository: "https://github.com/Unknown-Blaze/portfolio",
@@ -41,248 +41,48 @@ const socialMediaLinks = [
   },
   {
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/rudra-prasadh-ganesh-70376494/",
+    link: "https://www.linkedin.com/in/unknown-blaze",
     fontAwesomeIcon: "fa-linkedin-in", // Reference https://fontawesome.com/icons/linkedin-in?style=brands
     backgroundColor: "#0077B5", // Reference https://simpleicons.org/?q=linkedin
   },
-  // {
-  //   name: "YouTube",
-  //   link: "https://youtube.com/c/DevSense19",
-  //   fontAwesomeIcon: "fa-youtube", // Reference https://fontawesome.com/icons/youtube?style=brands
-  //   backgroundColor: "#FF0000", // Reference https://simpleicons.org/?q=youtube
-  // },
   {
     name: "Gmail",
     link: "mailto:grudraprasadh@gmail.com",
     fontAwesomeIcon: "fa-google", // Reference https://fontawesome.com/icons/google?style=brands
     backgroundColor: "#D14836", // Reference https://simpleicons.org/?q=gmail
   },
-  // {
-  //   name: "X-Twitter",
-  //   link: "https://twitter.com/unknown_blaze",
-  //   fontAwesomeIcon: "fa-x-twitter", // Reference https://fontawesome.com/icons/x-twitter?f=brands&s=solid
-  //   backgroundColor: "#000000", // Reference https://simpleicons.org/?q=x
-  // },
-  {
-    name: "Facebook",
-    link: "https://www.facebook.com/rudraprasadh.ganesh",
-    fontAwesomeIcon: "fa-facebook-f", // Reference https://fontawesome.com/icons/facebook-f?style=brands
-    backgroundColor: "#1877F2", // Reference https://simpleicons.org/?q=facebook
-  },
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/unknown_rudra/",
-    fontAwesomeIcon: "fa-instagram", // Reference https://fontawesome.com/icons/instagram?style=brands
-    backgroundColor: "#E4405F", // Reference https://simpleicons.org/?q=instagram
-  },
 ];
 
 const skills = {
   data: [
     {
-      title: "Frontend Development",
-      fileName: "FullStackImg", // <-- Update if you have a specific image file
+      title: "Robotics & Embedded",
+      fileName: "CloudInfraImg",
       skills: [
-        "⚡ Building responsive, scalable, and dynamic user interfaces with React.js and React Native.",
-        "⚡ Ensuring seamless state management across complex applications using Redux.",
-        "⚡ Crafting modern and clean UI/UX with HTML5, CSS3, Tailwind CSS, and Bootstrap.",
+        "⚡ Building the ROS 2 software of an autonomous construction robot: perception with LiDAR and cameras, SLAM and navigation, motion planning and behaviour trees.",
+        "⚡ Testing robot behaviour in Gazebo simulation, packaged with Docker and GitHub Actions.",
+        "⚡ Writing embedded firmware in C and C++: FreeRTOS, STM32, ESP32, CAN bus and EtherCAT.",
       ],
       softwareSkills: [
         {
-          skillName: "HTML5",
-          fontAwesomeClassname: "simple-icons:html5",
-          style: { color: "#E34F26" },
+          skillName: "ROS 2",
+          fontAwesomeClassname: "simple-icons:ros",
+          style: { color: "#22314E" },
         },
         {
-          skillName: "CSS3",
-          fontAwesomeClassname: "fa-css3",
-          style: { color: "#1572B6" },
-        },
-        {
-          skillName: "JavaScript",
-          fontAwesomeClassname: "simple-icons:javascript",
-          style: { color: "#F7DF1E", backgroundColor: "#000000" },
-        },
-        {
-          skillName: "React.js",
-          fontAwesomeClassname: "simple-icons:react",
-          style: { color: "#61DAFB" },
-        },
-        {
-          skillName: "React Native",
-          fontAwesomeClassname: "simple-icons:react",
-          style: { color: "#61DAFB" },
-        },
-        {
-          skillName: "Redux",
-          fontAwesomeClassname: "simple-icons:redux",
-          style: { color: "#764ABC" },
-        },
-        {
-          skillName: "Tailwind CSS",
-          fontAwesomeClassname: "simple-icons:tailwindcss",
-          style: { color: "#06B6D4" },
-        },
-        {
-          skillName: "Bootstrap",
-          fontAwesomeClassname: "simple-icons:bootstrap",
-          style: { color: "#7952B3" },
-        },
-        {
-          skillName: "jQuery",
-          fontAwesomeClassname: "simple-icons:jquery",
-          style: { color: "#0769AD" },
-        },
-        {
-          skillName: "Webpack",
-          fontAwesomeClassname: "simple-icons:webpack",
-          style: { color: "#8DD6F9" },
-        },
-      ],
-    },
-    {
-      title: "Backend & Databases",
-      fileName: "FullStackImg", // <-- Update if you have a specific image file
-      skills: [
-        "⚡ Architecting robust and scalable server-side applications using Django, Express.js, and Flask.",
-        "⚡ Designing and implementing RESTful APIs, GraphQL endpoints, and microservices.",
-        "⚡ Managing data persistence and caching with PostgreSQL, MySQL, MongoDB, Firebase and Redis.",
-        "⚡ Automating tasks with Selenium",
-      ],
-      softwareSkills: [
-        {
-          skillName: "Django",
-          fontAwesomeClassname: "simple-icons:django",
-          style: { color: "#092E20" },
-        },
-        {
-          skillName: "Express.js",
-          fontAwesomeClassname: "simple-icons:express",
-          style: { color: "#000000" },
-        },
-        {
-          skillName: "Flask",
-          fontAwesomeClassname: "simple-icons:flask",
-          style: { color: "#000000" },
-        },
-        {
-          skillName: "PostgreSQL",
-          fontAwesomeClassname: "simple-icons:postgresql",
-          style: { color: "#4169E1" },
-        },
-        {
-          skillName: "MySQL",
-          fontAwesomeClassname: "simple-icons:mysql",
-          style: { color: "#4479A1" },
-        },
-        {
-          skillName: "MongoDB",
-          fontAwesomeClassname: "simple-icons:mongodb",
-          style: { color: "#47A248" },
-        },
-        {
-          skillName: "Firebase",
-          fontAwesomeClassname: "simple-icons:firebase",
-          style: { color: "#FFCA28" },
-        },
-        {
-          skillName: "Redis",
-          fontAwesomeClassname: "simple-icons:redis",
-          style: { color: "#DC382D" },
-        },
-        {
-          skillName: "GraphQL",
-          fontAwesomeClassname: "simple-icons:graphql",
-          style: { color: "#E10098" },
-        },
-        {
-          skillName: "Celery",
-          fontAwesomeClassname: "simple-icons:celery",
-          style: { color: "#37814A" },
-        },
-      ],
-    },
-    {
-      title: "Data Science & AI",
-      fileName: "DataScienceImg", // <-- This filename seems appropriate
-      skills: [
-        "⚡ Developing and fine-tuning models for Computer Vision (YOLO) and NLP (Transformers).",
-        "⚡ Utilizing frameworks like PyTorch and TensorFlow for deep learning applications.",
-        "⚡ Performing data manipulation, analysis, and statistical modeling with Pandas, NumPy, and Scikit-Learn.",
-        "⚡ Building generative AI applications with Hugging Face and LangChain.",
-      ],
-      softwareSkills: [
-        {
-          skillName: "Python",
-          fontAwesomeClassname: "simple-icons:python",
-          style: { color: "#3776AB" },
-        },
-        {
-          skillName: "PyTorch",
-          fontAwesomeClassname: "simple-icons:pytorch",
-          style: { color: "#EE4C2C" },
-        },
-        {
-          skillName: "TensorFlow",
-          fontAwesomeClassname: "simple-icons:tensorflow",
-          style: { color: "#FF6F00" },
-        },
-        {
-          skillName: "Scikit-learn",
-          fontAwesomeClassname: "simple-icons:scikitlearn",
-          style: { color: "#F7931E" },
-        },
-        {
-          skillName: "Pandas",
-          fontAwesomeClassname: "simple-icons:pandas",
-          style: { color: "#150458" },
-        },
-        {
-          skillName: "NumPy",
-          fontAwesomeClassname: "simple-icons:numpy",
-          style: { color: "#013243" },
-        },
-        {
-          skillName: "OpenCV",
-          fontAwesomeClassname: "simple-icons:opencv",
-          style: { color: "#5C3EE8" },
-        },
-        {
-          skillName: "Hugging Face",
-          fontAwesomeClassname: "simple-icons:huggingface",
-          style: { color: "#FFD21E" },
-        },
-        {
-          skillName: "R",
-          fontAwesomeClassname: "simple-icons:r",
-          style: { color: "#276DC3" },
-        },
-        {
-          skillName: "MATLAB",
-          fontAwesomeClassname: "simple-icons:mathworks",
-          style: { color: "#0076A8" },
-        },
-      ],
-    },
-    {
-      title: "Embedded Engineering & DevOps",
-      fileName: "CloudInfraImg", // <-- Update if you have a specific image file
-      skills: [
-        "⚡ Programming microcontrollers like STM32 and ESP32 in C/C++.",
-        "⚡ Designing real-time systems with FreeRTOS and interfacing hardware using protocols like EtherCAT.",
-        "⚡ Containerizing applications with Docker for consistent development and deployment.",
-        "⚡ Implementing CI/CD pipelines with GitHub Actions for automated testing and builds.",
-      ],
-      softwareSkills: [
-        {
-          skillName: "C/C++",
+          skillName: "C++",
           fontAwesomeClassname: "simple-icons:cplusplus",
           style: { color: "#00599C" },
         },
         {
-          skillName: "ARM",
-          fontAwesomeClassname: "simple-icons:arm",
-          style: { color: "#0091BD" },
+          skillName: "C",
+          fontAwesomeClassname: "simple-icons:c",
+          style: { color: "#A8B9CC" },
+        },
+        {
+          skillName: "Python",
+          fontAwesomeClassname: "simple-icons:python",
+          style: { color: "#3776AB" },
         },
         {
           skillName: "STM32",
@@ -290,24 +90,135 @@ const skills = {
           style: { color: "#03234B" },
         },
         {
-          skillName: "Raspberry Pi",
-          fontAwesomeClassname: "simple-icons:raspberrypi",
-          style: { color: "#A22846" },
+          skillName: "ESP32",
+          fontAwesomeClassname: "simple-icons:espressif",
+          style: { color: "#E7352C" },
         },
         {
-          skillName: "FreeRTOS",
-          fontAwesomeClassname: "simple-icons:freertos",
-          style: { color: "#1A1A3C" },
+          skillName: "Linux",
+          fontAwesomeClassname: "simple-icons:linux",
+          style: { color: "#000000" },
+        },
+      ],
+    },
+    {
+      title: "Machine Learning",
+      fileName: "DataScienceImg",
+      skills: [
+        "⚡ Fine-tuning protein language models with LoRA/PEFT in PyTorch for MHC-peptide binding prediction.",
+        "⚡ Building retrieval-augmented generation (RAG) systems and LLM features for production apps.",
+        "⚡ Serving computer vision models such as YOLOv8 behind FastAPI and Docker.",
+      ],
+      softwareSkills: [
+        {
+          skillName: "PyTorch",
+          fontAwesomeClassname: "simple-icons:pytorch",
+          style: { color: "#EE4C2C" },
         },
         {
-          skillName: "Git",
-          fontAwesomeClassname: "simple-icons:git",
-          style: { color: "#F05032" },
+          skillName: "Hugging Face",
+          fontAwesomeClassname: "simple-icons:huggingface",
+          style: { color: "#FFD21E" },
         },
+        {
+          skillName: "YOLOv8",
+          fontAwesomeClassname: "simple-icons:ultralytics",
+          style: { color: "#111F68" },
+        },
+        {
+          skillName: "OpenCV",
+          fontAwesomeClassname: "simple-icons:opencv",
+          style: { color: "#5C3EE8" },
+        },
+        {
+          skillName: "FastAPI",
+          fontAwesomeClassname: "simple-icons:fastapi",
+          style: { color: "#009688" },
+        },
+      ],
+    },
+    {
+      title: "Full Stack",
+      fileName: "FullStackImg",
+      skills: [
+        "⚡ Building web and mobile apps with React, Next.js, React Native and TypeScript.",
+        "⚡ Writing backends in Python (FastAPI, Django, Celery) and Node, on PostgreSQL, Redis and Firebase.",
+      ],
+      softwareSkills: [
+        {
+          skillName: "TypeScript",
+          fontAwesomeClassname: "simple-icons:typescript",
+          style: { color: "#3178C6" },
+        },
+        {
+          skillName: "React",
+          fontAwesomeClassname: "simple-icons:react",
+          style: { color: "#61DAFB" },
+        },
+        {
+          skillName: "Next.js",
+          fontAwesomeClassname: "simple-icons:nextdotjs",
+          style: { color: "#000000" },
+        },
+        {
+          skillName: "React Native",
+          fontAwesomeClassname: "simple-icons:react",
+          style: { color: "#61DAFB" },
+        },
+        {
+          skillName: "Node.js",
+          fontAwesomeClassname: "simple-icons:nodedotjs",
+          style: { color: "#339933" },
+        },
+        {
+          skillName: "Django",
+          fontAwesomeClassname: "simple-icons:django",
+          style: { color: "#092E20" },
+        },
+        {
+          skillName: "PostgreSQL",
+          fontAwesomeClassname: "simple-icons:postgresql",
+          style: { color: "#4169E1" },
+        },
+        {
+          skillName: "Redis",
+          fontAwesomeClassname: "simple-icons:redis",
+          style: { color: "#DC382D" },
+        },
+        {
+          skillName: "Firebase",
+          fontAwesomeClassname: "simple-icons:firebase",
+          style: { color: "#FFCA28" },
+        },
+        {
+          skillName: "Solidity",
+          fontAwesomeClassname: "simple-icons:solidity",
+          style: { color: "#363636" },
+        },
+      ],
+    },
+    {
+      title: "Cloud & DevOps",
+      fileName: "DesignImg",
+      skills: [
+        "⚡ Running production systems on AWS and Alibaba Cloud, with infrastructure as code in Terraform.",
+        "⚡ Containers and CI/CD with Docker, Kubernetes and GitHub Actions.",
+      ],
+      softwareSkills: [
         {
           skillName: "Docker",
           fontAwesomeClassname: "simple-icons:docker",
           style: { color: "#2496ED" },
+        },
+        {
+          skillName: "Kubernetes",
+          fontAwesomeClassname: "simple-icons:kubernetes",
+          style: { color: "#326CE5" },
+        },
+        {
+          skillName: "Terraform",
+          fontAwesomeClassname: "simple-icons:terraform",
+          style: { color: "#844FBA" },
         },
         {
           skillName: "GitHub Actions",
@@ -315,14 +226,14 @@ const skills = {
           style: { color: "#2088FF" },
         },
         {
-          skillName: "Postman",
-          fontAwesomeClassname: "simple-icons:postman",
-          style: { color: "#FF6C37" },
+          skillName: "AWS",
+          fontAwesomeClassname: "simple-icons:amazonwebservices",
+          style: { color: "#232F3E" },
         },
         {
-          skillName: "Google Cloud",
-          fontAwesomeClassname: "simple-icons:googlecloud",
-          style: { color: "#4285F4" },
+          skillName: "Alibaba Cloud",
+          fontAwesomeClassname: "simple-icons:alibabacloud",
+          style: { color: "#FF6A00" },
         },
       ],
     },
@@ -340,38 +251,6 @@ const competitiveSites = {
       },
       profileLink: "https://leetcode.com/UnknownBlaze/",
     },
-    // {
-    //   siteName: "HackerRank",
-    //   iconifyClassname: "simple-icons:hackerrank",
-    //   style: {
-    //     color: "#2EC866",
-    //   },
-    //   profileLink: "https://www.hackerrank.com/layman_brother",
-    // },
-    {
-      siteName: "Codeforces",
-      iconifyClassname: "simple-icons:codeforces",
-      style: {
-        color: "#1F8ACB",
-      },
-      profileLink: "http://codeforces.com/profile/layman_brother",
-    },
-    // {
-    //   siteName: "Hackerearth",
-    //   iconifyClassname: "simple-icons:hackerearth",
-    //   style: {
-    //     color: "#323754",
-    //   },
-    //   profileLink: "https://www.hackerearth.com/@unknown",
-    // },
-    // {
-    //   siteName: "Kaggle",
-    //   iconifyClassname: "simple-icons:kaggle",
-    //   style: {
-    //     color: "#20BEFF",
-    //   },
-    //   profileLink: "https://www.kaggle.com/laymanbrother",
-    // },
   ],
 };
 
@@ -382,266 +261,165 @@ const degrees = {
       subtitle: "Bachelor of Engineering in Computer Engineering",
       logo_path: "NtuLogo.jpg",
       alt_name: "NTU Singapore",
-      duration: "Aug 2022 - Present",
+      duration: "Aug 2022 - May 2026",
       descriptions: [
-        "⚡ Maintained a cumulative GPA of 4.76 / 5.00, placing me in the highest distinction.",
-        "⚡ Awarded the NTU Science and Engineering Undergraduate Scholarship, a full scholarship for outstanding academic and leadership achievements.",
-        "⚡ Named to the Dean's List for both the 2022-23 and 2023-24 academic years, the only student of my cohort to do so.",
-        "⚡ Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Microprocessor System Design, Data Science & AI, Computer Networks, Operating Systems.",
+        "⚡ Honours (Highest Distinction), with an elective focus on AI.",
+        "⚡ Lee Kuan Yew Gold Medal, awarded to the top graduating student of the cohort.",
+        "⚡ NTU Science and Engineering Undergraduate Scholar (full scholarship).",
+        "⚡ Dean's List in all four years.",
+        "⚡ Final Year Project: MHC-peptide binding affinity prediction with ESM-2 and AlphaFold-derived structure, supervised by Prof. Jagath C. Rajapakse. Submitted to ICLR 2027.",
       ],
       website_link: "https://www.ntu.edu.sg/",
-    },
-    {
-      title: "Sri KDU International School",
-      subtitle: "International Baccalaureate (IB) Diploma",
-      logo_path: "srikdu_logo.png",
-      alt_name: "Sri KDU International School",
-      duration: "Sep 2020 - May 2022",
-      descriptions: [
-        "⚡ Achieved an IB Diploma score of 42 out of 45, ranking among the top performers of the graduating class.",
-        "⚡ Led fundraising initiatives, including talent shows and inter-school competitions, to raise funds for the TREAK community in Siem Reap, Cambodia.",
-        "⚡ specialized in Higher Level (HL) subjects: Physics, Chemistry, and Mathematics (Analysis & Approaches).",
-      ],
-      website_link: "https://srikdu.edu.my/homepage/",
     },
   ],
 };
 
 const certifications = {
-  certifications: [
-    {
-      title: "Machine Learning",
-      subtitle: "- Andrew Ng",
-      logo_path: "stanford_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/22MTSSC5WDTM",
-      alt_name: "Stanford University",
-      color_code: "#8C151599",
-    },
-    {
-      title: "Deep Learning",
-      subtitle: "- Andrew Ng",
-      logo_path: "deeplearning_ai_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/H8CPSFXAJD2G",
-      alt_name: "deeplearning.ai",
-      color_code: "#00000099",
-    },
-    {
-      title: "ML on GCP",
-      subtitle: "- GCP Training",
-      logo_path: "google_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/EB4VJARK8647",
-      alt_name: "Google",
-      color_code: "#0C9D5899",
-    },
-    {
-      title: "Data Science",
-      subtitle: "- Alex Aklson",
-      logo_path: "ibm_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/specialization/PLEAPCSJBZT5",
-      alt_name: "IBM",
-      color_code: "#1F70C199",
-    },
-    {
-      title: "Big Data",
-      subtitle: "- Kim Akers",
-      logo_path: "microsoft_logo.png",
-      certificate_link:
-        "https://drive.google.com/file/d/164zKCFOsI4vGqokc-Qj-e_D00kLDHIrG/view",
-      alt_name: "Microsoft",
-      color_code: "#D83B0199",
-    },
-    {
-      title: "Advanced Data Science",
-      subtitle: "- Romeo Kienzler",
-      logo_path: "ibm_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/BH2T9BRU87BH",
-      alt_name: "IBM",
-      color_code: "#1F70C199",
-    },
-    {
-      title: "Advanced ML on GCP",
-      subtitle: "- GCP Training",
-      logo_path: "google_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/5JZZM7TNQ2AV",
-      alt_name: "Google",
-      color_code: "#0C9D5899",
-    },
-    {
-      title: "DL on Tensorflow",
-      subtitle: "- Laurence Moroney",
-      logo_path: "deeplearning_ai_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/verify/6T4DCUGNK8J8",
-      alt_name: "deeplearning.ai",
-      color_code: "#00000099",
-    },
-    {
-      title: "Fullstack Development",
-      subtitle: "- Jogesh Muppala",
-      logo_path: "coursera_logo.png",
-      certificate_link:
-        "https://www.coursera.org/account/accomplishments/certificate/NRANJA66Y2YA",
-      alt_name: "Coursera",
-      color_code: "#2A73CC",
-    },
-    {
-      title: "Kuberenetes on GCP",
-      subtitle: "- Qwiklabs",
-      logo_path: "gcp_logo.png",
-      certificate_link:
-        "https://google.qwiklabs.com/public_profiles/e4d5a92b-faf6-4679-a70b-a9047c0cd750",
-      alt_name: "GCP",
-      color_code: "#4285F499",
-    },
-    {
-      title: "Cryptography",
-      subtitle: "- Saurabh Mukhopadhyay",
-      logo_path: "nptel_logo.png",
-      certificate_link:
-        "https://drive.google.com/open?id=1z5ExD_QJVdU0slLkp8CBqSF3-C3g-ro_",
-      alt_name: "NPTEL",
-      color_code: "#FFBB0099",
-    },
-    {
-      title: "Cloud Architecture",
-      subtitle: "- Qwiklabs",
-      logo_path: "gcp_logo.png",
-      certificate_link:
-        "https://google.qwiklabs.com/public_profiles/5fab4b2d-be6f-408c-8dcb-6d3b58ecb4a2",
-      alt_name: "GCP",
-      color_code: "#4285F499",
-    },
-  ],
+  certifications: [],
 };
 
 // Experience Page
 const experience = {
   title: "Experience",
-  subtitle: "Internships, Work, and Leadership",
+  subtitle: "Work, research and leadership",
   description:
-    "I have had the privilege of contributing to impactful projects across software engineering, AI, and embedded systems. My journey spans high-stakes industry internships and part-time engineering roles where I've architected scalable solutions and driven measurable results. I thrive on solving complex problems, leading collaborative teams, and consistently delivering high-quality, end-to-end solutions.",
+    "Robotics at Fabrica AI today; before that, cloud platforms, full-stack products, AI research and embedded firmware across startups, research institutes and industry.",
   header_image_path: "experience.svg",
   sections: [
     {
-      title: "Internships",
+      title: "Work",
       work: true,
       experiences: [
         {
-          title: "Software Engineering Intern - Sustainability",
-          company: "MODEC Offshore Production Systems",
-          company_url: "https://www.modec.com/",
-          logo_path: "modec_logo.png", // <-- Update logo path
-          duration: "Jun 2025 – Aug 2025",
+          title: "Software Engineer",
+          company: "Fabrica AI",
+          company_url: "#",
+          logo_path: "monogram_fabrica.png",
+          duration: "Jul 2026 - Present",
           location: "Singapore",
           description:
-            "Architected a full-stack sustainability dashboard using React, Django, and PostgreSQL to analyze GHG emissions for 30+ supply chain vendors. I designed and implemented a multi-objective optimization algorithm projected to reduce Scope 3 emissions by 15% by balancing emissions, cost, and logistics. The application was deployed using Docker and CI/CD pipelines to provide a scalable, high-availability tool for global production plants.",
+            "Sole software engineer owning the ROS 2 codebase of an autonomous tile-grouting robot for construction, deployed in Singapore and Australia. Perception (LiDAR, cameras), SLAM and navigation, motion planning, behaviour trees, Gazebo simulation, Docker and GitHub Actions. Led a LiDAR upgrade in one month and directs the interns.",
+          color: "#374151",
+        },
+        {
+          title: "Co-Founder and Full Stack Engineer",
+          company: "Lumerva",
+          company_url: "#",
+          logo_path: "monogram_lumerva.png",
+          duration: "Sep 2025 - Present",
+          location: "Singapore",
+          description:
+            "Building a learning platform: React and TypeScript, a Python backend with Celery and Redis, the YouTube Data API and the Brave Search API.",
+          color: "#374151",
+        },
+        {
+          title: "DevOps Engineer and Team Lead",
+          company: "MISUMI.AI (Misumi Kaizen OU Group)",
+          company_url: "#",
+          logo_path: "monogram_misumi.png",
+          duration: "Sep 2025 - Aug 2026",
+          location: "Singapore",
+          description:
+            "Led LISA 1.0, an automotive advisor (Next.js 15, PostgreSQL, RAG) in production across 4 ASEAN markets on Alibaba Cloud with Terraform. Cut API latency from 300 ms to 50 ms and cloud cost by 70%.",
+          color: "#374151",
+        },
+        {
+          title: "DevOps Intern",
+          company: "MODEC",
+          company_url: "https://www.modec.com/",
+          logo_path: "modec_logo.png",
+          duration: "Dec 2025 - Jan 2026",
+          location: "Singapore",
+          description:
+            "Took an analytics app from proof of concept to secure production on AWS Elastic Beanstalk, with CI/CD.",
           color: "#003A70",
         },
         {
-          title: "Full Stack Engineering Intern",
-          company: "Panasonic R&D Center",
-          company_url: "https://www.panasonic.com/sg/",
-          logo_path: "panasonic.png",
-          duration: "Jan 2025 – May 2025",
+          title: "Software Engineer Intern, Sustainability Analytics",
+          company: "MODEC",
+          company_url: "https://www.modec.com/",
+          logo_path: "modec_logo.png",
+          duration: "Jun 2025 - Aug 2025",
           location: "Singapore",
           description:
-            "Developed an AI-powered security application with a YOLOv5 model that achieved 98% accuracy in detecting unauthorized presence. I optimized backend performance by implementing a Redis cache and refining queries, reducing API response latency by 45%. The final AI model was containerized as a REST API for seamless integration into Panasonic's existing security ecosystems.",
+            "React and Django/DRF application handling 500+ concurrent requests, with Redis, and IoT data ingestion on AWS Lambda and S3.",
+          color: "#003A70",
+        },
+        {
+          title: "AI Engineer (Part-Time)",
+          company: "National Institute of Education (NTU)",
+          company_url: "https://www.ntu.edu.sg/nie",
+          logo_path: "nie_logo.png",
+          duration: "Jun 2025 - Oct 2025",
+          location: "Singapore",
+          description:
+            "Built the real-time WebSocket backend of an intelligent tutoring system used in a 60-participant study, and co-authored the resulting AIED 2026 paper.",
+          color: "#A6192E",
+        },
+        {
+          title: "Full Stack Engineer Intern",
+          company: "Panasonic R&D Center Singapore",
+          company_url: "https://www.panasonic.com/sg/",
+          logo_path: "panasonic.png",
+          duration: "Jan 2025 - Jun 2025",
+          location: "Singapore",
+          description:
+            "Built a FastAPI and Docker inference API serving a YOLOv8 model.",
           color: "#004B8D",
         },
         {
           title: "Embedded Engineering Intern",
-          company: "Schaeffler Hub for Advanced REsearch (SHARE)",
+          company: "Schaeffler Hub for Advanced Research",
           company_url: "https://www.schaeffler.sg/",
           logo_path: "schaeffler.png",
-          duration: "May 2024 – Aug 2024",
+          duration: "May 2024 - Aug 2024",
           location: "Singapore",
           description:
-            "Engineered a robust EtherCAT communication protocol between an XMC4800 microcontroller and industrial actuators, increasing data throughput by 20%. I also architected a modular embedded framework on an STM32 platform for motor control, designing reusable middleware components that reduced development time for future projects by 30%.",
+            "CAN bus master-slave system on the XMC4800, EtherCAT, FreeRTOS and STM32F4.",
           color: "#00873E",
         },
       ],
     },
     {
-      title: "Work & Research",
-      work: true,
+      title: "Research",
       experiences: [
         {
-          title: "AI Engineer (Part-Time)",
-          company: "National Institute of Education",
-          company_url: "https://www.ntu.edu.sg/scse",
-          logo_path: "nie_logo.png", // <-- Update logo path
-          duration: "Jun 2025 - Present",
-          location: "Singapore",
-          description:
-            "As a part-time AI Engineer, I am enhancing a conversational AI tutor by integrating Generative AI (LLMs) to create adaptive pedagogical feedback, which has improved student engagement by 25%. I manage the end-to-end development lifecycle, from feature implementation to automated deployment with GitHub Actions, ensuring 99.5% system uptime.",
-          color: "#A6192E",
-        },
-        {
-          title: "Full Stack Developer",
-          company: "NTU College of Computing and Data Science (CCDS)",
-          company_url: "https://www.ntu.edu.sg/ccds",
-          logo_path: "ntuccds.png",
-          duration: "May 2024 - Aug 2024",
-          location: "Singapore · Remote",
-          description:
-            "Led the full-stack development of a scalable networking platform in WordPress and PHP for 1,000+ students and alumni. My work increased user registration by 200% after launch and optimized page load times by 40% by architecting a custom SQL database schema and server-side logic to handle high traffic during peak events.",
-          color: "#005aff",
-        },
-        {
-          title: "Undergraduate Researcher (URECA)",
+          title: "URECA President Research Scholar",
           company: "Nanyang Technological University",
           company_url:
             "https://www.ntu.edu.sg/education/undergraduate-programmes/ureca",
           logo_path: "NtuLogo.jpg",
-          duration: "Aug 2024 – May 2025",
+          duration: "Aug 2024 - Apr 2025",
           location: "Singapore",
           description:
-            "Designed and built an IoT-based theft detection system on an O-Droid microcontroller. By implementing the ViBe computer vision algorithm, the system achieved 95% motion detection accuracy in diverse lighting conditions. I also engineered an encrypted data pipeline that achieved real-time alert generation within 180ms of a detected event.",
+            "Edge-AI motion detection for IoT security on an ODROID N2 (URECA research paper, NTU, 2025). 96% motion-detection accuracy at 180 ms latency; President Research Scholar.",
           color: "#D71440",
         },
       ],
     },
     {
-      title: "Leadership & Volunteering",
+      title: "Leadership",
       experiences: [
         {
-          title: "President & Varsity Team Captain",
-          company: "NTU International Chess Club",
+          title: "President and Captain",
+          company: "NTU International Chess Varsity",
           company_url: "#",
           logo_path: "chess.jpeg",
-          duration: "Jan 2023 - Present",
+          duration: "NTU",
           location: "Singapore",
-          description:
-            "As President and Captain, I grew the club to over 250 members (a 40% increase) and led the varsity team to 3 major inter-university championship victories. My leadership in organizing events and securing sponsorships resulted in a 15% increase in university funding for the club.",
+          description: "Led the club and captained the varsity team.",
           color: "#1d4ed8",
         },
         {
-          title: "Chess Instructor",
-          company: "MOE-Approved Freelancer",
+          title: "Music Director",
+          company: "NTU Piano Ensemble",
           company_url: "#",
-          logo_path: "mentor.jpg",
-          duration: "Jan 2024 - Apr 2024",
+          logo_path: "monogram_piano.png",
+          duration: "NTU",
           location: "Singapore",
           description:
-            "As a Ministry of Education (MOE) approved instructor, I designed and delivered structured chess curriculums for primary and secondary students at One World International School. My training programs focused on enhancing strategic thinking, tactical skills, and competitive readiness.",
-          color: "#34495e",
-        },
-        {
-          title: "Volunteer",
-          company: "NTU Red Cross Club",
-          company_url: "https://www.redcross.sg",
-          logo_path: "ntu_red_cross.png",
-          duration: "May 2024 - Jul 2024",
-          location: "Singapore",
-          description:
-            "Volunteered in initiatives focused on the appreciation and welfare of migrant workers in Singapore. I helped organize and execute events aimed at promoting well-being, fostering community integration, and enhancing cross-cultural understanding.",
-          color: "#d91e18",
+            "Music director of the ensemble. ABRSM Piano Grade 8 with Distinction.",
+          color: "#374151",
         },
       ],
     },
@@ -651,53 +429,135 @@ const experience = {
 const projects = {
   data: [
     {
-      name: "nGoDONATE - Transparent Philanthropy Platform",
+      name: "MyCCDS",
       subtitle:
-        "EasyA x Ripple Blockchain Hackathon | Award: Best Developer Tooling",
-      image: null,
+        "iOS and Android app for NTU CCDS students | React Native, Expo",
+      image: "project_myccds.png",
       description:
-        "Won 'Best Developer Tooling' by building a decentralized philanthropy app on the XRP Ledger with a novel Shamir's Secret Sharing validation mechanism.",
-      footerLinks: [],
+        "Student platform for NTU's College of Computing and Data Science, on the App Store and Google Play, with 600+ daily active users.",
+      footerLinks: [
+        {
+          name: "Google Play",
+          url: "https://play.google.com/store/apps/details?id=com.ntu.myccds",
+        },
+        {
+          name: "App Store",
+          url: "https://apps.apple.com/us/app/myccds/id6753279278",
+        },
+        {
+          name: "NTU article",
+          url: "https://www.ntu.edu.sg/computing/news-events/news/detail/ganesh-rudra-prasadh-transforms-student-experience-with-myccds",
+        },
+      ],
     },
     {
-      name: "Predictive AI for Port Logistics",
-      subtitle: "PSA Code Sprint 2024 | Hackathon Finalist",
-      image: null,
+      name: "nGoDonate",
+      subtitle: "Winner, Best Developer Tooling | EasyA x Ripple hackathon",
+      image: "project_ngodonate.png",
       description:
-        "Developed an AI logistics system with a React dashboard and a TensorFlow/Django backend, achieving 92% forecast accuracy to reduce port equipment downtime.",
-      footerLinks: [],
+        "Transparent donations on the XRP Ledger and Ethereum, with NFT receipts stored on IPFS.",
+      footerLinks: [
+        { name: "Live", url: "https://easya-hackathon-tawny.vercel.app" },
+        {
+          name: "Live (course build)",
+          url: "https://sc-4053-bc-project.vercel.app",
+        },
+        {
+          name: "Code",
+          url: "https://github.com/Unknown-Blaze/SC4053-Project",
+        },
+      ],
     },
     {
-      name: "MyCCDS Student Intranet App",
-      subtitle: "Personal Project | Open-Source Mobile App for NTU Students",
-      image: null,
+      name: "MHC-peptide binding prediction",
+      subtitle: "Final Year Project | Submitted to ICLR 2027",
+      image: "project_fyp.png",
       description:
-        "Single-handedly built and launched a React Native student app with a custom REST API, achieving 1,500+ downloads in the first month by centralizing academic resources.",
-      footerLinks: [],
+        "ESM-2 650M with AlphaFold-derived structure, fine-tuned with LoRA/PEFT in PyTorch. PCC 0.859 against 0.847 for the best retrained state-of-the-art baseline.",
+      footerLinks: [
+        { name: "Code", url: "https://github.com/Unknown-Blaze/FYP-Research" },
+      ],
     },
     {
-      name: "Bespoke E-commerce & Order Management Platform",
-      subtitle: "Full-Stack Freelance Project",
-      image: null,
-      description:
-        "Architected a full-stack e-commerce platform using Django and React, automating order processing with Celery/Redis to reduce manual handling by 95% for a freelance client.",
-      footerLinks: [],
+      name: "Blazing Chess",
+      subtitle: "Chess academy website | Next.js 14, TypeScript, Tailwind CSS",
+      image: "project_blazing_chess.png",
+      description: "Website for a chess academy.",
+      footerLinks: [
+        { name: "Live", url: "https://blazing-chess.vercel.app" },
+        { name: "Code", url: "https://github.com/Unknown-Blaze/blazing-chess" },
+      ],
     },
     {
-      name: "AI in Edge Computing (URECA Research)",
-      subtitle: "NTU Research Project | IoT-based Security System",
-      image: null,
-      description:
-        "Engineered an IoT security system on an O-Droid microcontroller, achieving 95% motion detection accuracy and real-time alerts within 180ms using the ViBe algorithm.",
-      footerLinks: [],
+      name: "SyncTube",
+      subtitle: "Watch parties | Next.js 15, Socket.IO, YouTube IFrame API",
+      image: "project_synctube.png",
+      description: "Watch YouTube with friends, in sync, in real time.",
+      footerLinks: [
+        { name: "Live", url: "https://synctube-tau.vercel.app" },
+        { name: "Code", url: "https://github.com/Unknown-Blaze/synctube" },
+      ],
     },
     {
-      name: "Multidisciplinary Robot Car Project",
-      subtitle: "Academic Project | Group Leader and Hardware Lead",
+      name: "Mango order management",
+      subtitle:
+        "Order management with online payments | React, Firebase, Stripe",
+      image: "project_mango.png",
+      description: "Order management with online payments.",
+      footerLinks: [{ name: "Live", url: "https://mango-club.vercel.app" }],
+    },
+    {
+      name: "Truth Fairy",
+      subtitle: "Top 5 | NTU TechFest",
       image: null,
       description:
-        "Led a team of 8 to build a maze-solving robot, engineering the hardware control system on an STM32 with FreeRTOS and establishing robust communication with a Raspberry Pi.",
-      footerLinks: [],
+        "Chrome extension against misinformation, with deepfake detection and Grad-CAM explanations.",
+      footerLinks: [
+        {
+          name: "Code",
+          url: "https://github.com/Unknown-Blaze/techfest-truth-fairy",
+        },
+      ],
+    },
+    {
+      name: "FunctionGemma",
+      subtitle: "National Top 10 | Cactus x Google Global Hackathon",
+      image: null,
+      description:
+        "Routing tool calls between an on-device model and the cloud.",
+      footerLinks: [
+        {
+          name: "Code",
+          url: "https://github.com/Unknown-Blaze/functiongemma-hackathon",
+        },
+      ],
+    },
+    {
+      name: "Scaffolding Emotion Regulation in Productive Failure Using an AIED System",
+      subtitle: "Publication | AIED 2026, Springer CCIS",
+      image: null,
+      description:
+        "Sinha, T., Huang, R., & Ganesh, R. P. (2026). Scaffolding Emotion Regulation in Productive Failure Using an AIED System: Prototyping and Evaluation. AIED 2026, CCIS, pp. 17-32, Springer.",
+      footerLinks: [
+        { name: "DOI", url: "https://doi.org/10.1007/978-3-032-29791-4_2" },
+      ],
+    },
+    {
+      name: "More hackathons",
+      subtitle: "Finalist | DSTA BrainHack and PSA Code Sprint",
+      image: null,
+      description:
+        "GroceryGrabber, a grocery app built at DSTA BrainHack (finalist), and the PSA Code Sprint (finalist).",
+      footerLinks: [
+        {
+          name: "GroceryGrabber",
+          url: "https://github.com/Unknown-Blaze/BrainHacks-Code-Exp",
+        },
+        {
+          name: "PSA Code Sprint",
+          url: "https://github.com/Unknown-Blaze/PSASprint",
+        },
+      ],
     },
   ],
 };
@@ -706,39 +566,42 @@ const projects = {
 const projectsHeader = {
   title: "Projects",
   description:
-    "My projects makes use of vast variety of latest technology tools. My best experience is to create an IoT interface using a full stack and deploy them to web applications.",
+    "Apps in production, hackathon builds and research, from mobile and web to machine learning.",
   avatar_image_path: "projects_image.svg",
 };
 
 const publicationsHeader = {
   title: "Publications",
-  description: "Some of my published Articles, Blogs and Research.",
+  description: "Research papers and submissions.",
   avatar_image_path: "projects_image.svg",
 };
 
 const publications = {
   data: [
-    // {
-    //   id: "neuro-symbolic-sudoku-solver",
-    //   name: "Neuro-Symbolic Sudoku Solver",
-    //   createdAt: "2023-07-02T00:00:00Z",
-    //   description: "Paper published in KDD KiML 2023",
-    //   url: "https://arxiv.org/abs/2307.00653",
-    // },
-    // {
-    //   id: "mdp-diffusion",
-    //   name: "MDP-Diffusion",
-    //   createdAt: "2023-09-19T00:00:00Z",
-    //   description: "Blog published in Paperspace",
-    //   url: "https://blog.paperspace.com/mdp-diffusion/",
-    // },
-    // {
-    //   id: "consistency-models",
-    //   name: "Consistency Models",
-    //   createdAt: "2023-10-12T00:00:00Z",
-    //   description: "Blog published in Paperspace",
-    //   url: "https://blog.paperspace.com/consistency-models/",
-    // },
+    {
+      id: "aied-2026-emotion-regulation",
+      name: "Scaffolding Emotion Regulation in Productive Failure Using an AIED System: Prototyping and Evaluation",
+      createdAt: "2026",
+      description:
+        "Sinha, T., Huang, R., & Ganesh, R. P. (2026). AIED 2026, CCIS, pp. 17-32, Springer.",
+      url: "https://doi.org/10.1007/978-3-032-29791-4_2",
+    },
+    {
+      id: "fyp-mhc-peptide",
+      name: "MHC-peptide binding affinity prediction with ESM-2 and AlphaFold-derived structure",
+      createdAt: "2026",
+      description: "Submitted to ICLR 2027.",
+      url: "https://github.com/Unknown-Blaze/FYP-Research",
+    },
+    {
+      // TODO: URECA paper title/link
+      id: "ureca-edge-ai",
+      name: "Edge-AI motion detection for IoT security",
+      createdAt: "2025",
+      description:
+        "Edge-AI motion detection for IoT security on an ODROID N2 (URECA research paper, NTU, 2025). 96% motion-detection accuracy at 180 ms latency; President Research Scholar.",
+      url: "",
+    },
   ],
 };
 
@@ -748,29 +611,21 @@ const contactPageData = {
     title: "Contact Me",
     profile_image_path: "contact_rudra.jpg",
     description:
-      "I am available on almost every social media. You can message me, I will reply within 24 hours. We can discuss about React, Android, Embedded systems, IoT, Machine Learning and AI.",
+      "Email or LinkedIn is the best way to reach me. Happy to talk about robotics, embedded systems, machine learning and full-stack engineering.",
   },
   blogSection: {
-    title: "Blogs",
-    subtitle:
-      "I like to document some of my experiences in professional career journey as well as some technical knowledge sharing.",
-    link: "https://blogs.unknown-blaze.com/",
+    title: "",
+    subtitle: "",
+    link: "",
     avatar_image_path: "blogs_image.svg",
   },
   addressSection: {
-    title: "Address",
-    subtitle: "Saratoga Ave, San Jose, CA, USA 95129",
-    locality: "San Jose",
-    country: "USA",
-    region: "California",
-    postalCode: "95129",
-    streetAddress: "Saratoga Avenue",
+    title: "Location",
+    subtitle: "Singapore",
+    locality: "Singapore",
+    country: "Singapore",
     avatar_image_path: "address_image.svg",
-    location_map_link: "https://maps.app.goo.gl/NvYZqa34Wye4tpS17",
-  },
-  phoneSection: {
-    title: "",
-    subtitle: "+65 8178 0206",
+    location_map_link: "",
   },
 };
 
