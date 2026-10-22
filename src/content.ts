@@ -683,6 +683,7 @@ export const education: readonly School[] = [
     period: "Aug 2022 – May 2026",
     place: "Singapore",
     points: [
+      "CGPA: 4.94 / 5.00.",
       "Honours (Highest Distinction).",
       "Elective focus awarded: Artificial Intelligence.",
       "Lee Kuan Yew Gold Medal, awarded to the top graduating student of the cohort.",
