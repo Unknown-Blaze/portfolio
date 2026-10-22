@@ -144,7 +144,7 @@ export const work: readonly Work[] = [
   {
     id: "mhc-peptide",
     name: "MHC-peptide binding prediction",
-    context: "Final Year Project (Graded A), Bioinformatics Lab, NTU · submitted to ICLR 2027",
+    context: "Final Year Project (graded A), Bioinformatics Lab, NTU · submitted to ICLR 2027",
     period: "Aug 2025 – May 2026",
     domains: ["ML"],
     summary:
@@ -580,7 +580,7 @@ export const honours: readonly Medal[] = [
     placing: "SCHOLAR",
     name: "President Research Scholar",
     event: "URECA, NTU",
-    date: "2024–2025",
+    date: "2024 – 2025",
     note: "Edge-AI motion detection research.",
   },
   {
