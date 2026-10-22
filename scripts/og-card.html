@@ -1,0 +1,64 @@
+<!doctype html>
+<!-- Source for public/og.png (1200x630). Render with scripts/render-og.py. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @font-face { font-family: "Inter Variable"; font-weight: 100 900; src: url("../src/fonts/inter-latin-wght.woff2"); }
+      @font-face { font-family: "JetBrains Mono"; font-weight: 400; src: url("../src/fonts/jetbrains-mono-latin-400.woff2"); }
+      @font-face { font-family: "JetBrains Mono"; font-weight: 600; src: url("../src/fonts/jetbrains-mono-latin-600.woff2"); }
+      html, body, p, h1 { margin: 0; }
+      body {
+        width: 1200px; height: 630px; overflow: hidden; position: relative;
+        background-color: #f6f8fa; color: #1f2328; font-family: "Inter Variable", sans-serif;
+        background-image:
+          linear-gradient(rgba(31,35,40,.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(31,35,40,.08) 1px, transparent 1px),
+          linear-gradient(rgba(31,35,40,.045) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(31,35,40,.045) 1px, transparent 1px);
+        background-size: 180px 180px, 180px 180px, 45px 45px, 45px 45px;
+      }
+      .frame { position: absolute; inset: 28px; border: 1.5px solid #1f2328; }
+      .mono { font-family: "JetBrains Mono", monospace; }
+      .tb { position: absolute; left: 72px; top: 68px; display: flex; border: 1.5px solid #1f2328; background: #fff; font-size: 15px; letter-spacing: .12em; }
+      .tb span { padding: 7px 14px; } .tb span + span { border-left: 1.5px solid #1f2328; }
+      .tb span:first-child { background: #1f2328; color: #f6f8fa; font-weight: 600; }
+      h1 { position: absolute; left: 68px; top: 130px; margin: 0; font-size: 92px; line-height: .98; letter-spacing: -.045em; font-weight: 760; width: 640px; }
+      .role { position: absolute; left: 72px; top: 336px; font-size: 26px; color: #0f766e; letter-spacing: .03em; }
+      .breadth { position: absolute; left: 72px; top: 382px; font-size: 24px; color: #2f363d; width: 600px; line-height: 1.4; }
+      .facts { position: absolute; left: 72px; right: 72px; bottom: 64px; display: flex; border: 1.5px solid #1f2328; background: #fff; font-size: 16px; }
+      .facts span { flex: 1; padding: 14px 16px; white-space: nowrap; font-size: 15px; } .facts span + span { border-left: 1.5px solid #1f2328; }
+      .facts b { color: #c2410c; font-weight: 600; margin-right: 8px; }
+      svg { position: absolute; right: 72px; top: 68px; }
+      .url { position: absolute; right: 72px; top: 76px; font-size: 15px; letter-spacing: .1em; color: #57606a; }
+    </style>
+  </head>
+  <body>
+    <div class="frame"></div>
+    <p class="tb mono"><span>SHT 00</span><span>GENERAL ARRANGEMENT</span><span>REV 2026-10</span></p>
+    <h1>Rudra Prasadh Ganesh</h1>
+    <p class="role mono">Software engineer, robotics &amp; AI</p>
+    <p class="breadth">Software, embedded hardware and machine learning, from ROS 2 robots on construction sites to production apps.</p>
+    <svg width="400" height="380" viewBox="0 0 400 380" style="top: 110px">
+      <g stroke="#d0d7de" stroke-width="1">
+        <path d="M0 0V360M40 0V360M80 0V360M120 0V360M160 0V360M200 0V360M240 0V360M280 0V360M320 0V360M360 0V360M400 0V360" />
+        <path d="M0 0H400M0 40H400M0 80H400M0 120H400M0 160H400M0 200H400M0 240H400M0 280H400M0 320H400M0 360H400" />
+      </g>
+      <path d="M20 320 H100 V240 H180 V200 H260 V120 H340 V80" fill="none" stroke="#57606a" stroke-width="1.25" stroke-dasharray="3 6" />
+      <path d="M20 320 H100 V240 H180 V200 H260 V120 H300" fill="none" stroke="#c2410c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+      <g fill="#c2410c"><circle cx="100" cy="240" r="5"/><circle cx="180" cy="200" r="5"/><circle cx="260" cy="120" r="5"/></g>
+      <g transform="translate(300 120)">
+        <g fill="none" stroke="#0f766e" stroke-width="2" stroke-linecap="round">
+          <path d="M22 -15 A20 20 0 0 1 22 15"/><path d="M30 -23 A30 30 0 0 1 30 23" opacity=".6"/><path d="M38 -31 A40 40 0 0 1 38 31" opacity=".3"/>
+        </g>
+        <rect x="-14" y="-20" width="18" height="6" rx="2" fill="#1f2328"/><rect x="-14" y="14" width="18" height="6" rx="2" fill="#1f2328"/>
+        <rect x="-19" y="-15" width="38" height="30" rx="7" fill="#fff" stroke="#1f2328" stroke-width="2.5"/>
+        <rect x="-25" y="-4" width="8" height="8" rx="2" fill="#c2410c"/>
+        <circle cx="5" cy="0" r="6.5" fill="#0f766e"/>
+      </g>
+    </svg>
+    <p class="facts mono">
+      <span><b>01</b>Lee Kuan Yew Gold Medal</span><span><b>02</b>AIED 2026 co-author</span><span><b>03</b>600+ DAU app</span><span><b>04</b>Winner, EasyA x Ripple</span>
+    </p>
+  </body>
+</html>

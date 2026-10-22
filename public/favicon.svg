@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .p{fill:#F6F8FA;stroke:#1F2328}.t{fill:#0F766E}.a{stroke:#C2410C}
+    @media (prefers-color-scheme:dark){.p{fill:#0D1117;stroke:#E6EDF3}.t{fill:#2DD4BF}.a{stroke:#FBBF24}}
+  </style>
+  <rect class="p" x="3" y="3" width="58" height="58" rx="8" stroke-width="3"/>
+  <path class="a" d="M12 52 L24 40 L40 40 L52 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+  <text class="t" x="32" y="34" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-weight="700" font-size="22">RPG</text>
+</svg>
