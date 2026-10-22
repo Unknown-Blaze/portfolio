@@ -1,17 +1,13 @@
 {
   "data": [
     {
-      "id": "R_kgDOL9ksmA",
-      "name": "BrainHacks-Code-Exp",
-      "createdAt": "2024-05-19T07:42:58Z",
-      "url": "https://github.com/Unknown-Blaze/BrainHacks-Code-Exp",
-      "description": null,
+      "id": "R_kgDOPkaBUw",
+      "name": "FYP-Research",
+      "createdAt": "2025-08-26T08:37:54Z",
+      "url": "https://github.com/Unknown-Blaze/FYP-Research",
+      "description": "NTU final year project: MHC-peptide binding prediction with ESM-2, LoRA and structure GNNs",
       "isFork": false,
       "languages": [
-        {
-          "name": "JavaScript",
-          "iconifyClass": "logos-javascript"
-        },
         {
           "name": "Python",
           "iconifyClass": "logos-python"
@@ -23,25 +19,11 @@
       ]
     },
     {
-      "id": "R_kgDOLpZoog",
-      "name": "SC1015-Mini-Project",
-      "createdAt": "2024-04-03T17:53:18Z",
-      "url": "https://github.com/Unknown-Blaze/SC1015-Mini-Project",
-      "description": null,
-      "isFork": false,
-      "languages": [
-        {
-          "name": "Jupyter Notebook",
-          "iconifyClass": "logos-jupyter"
-        }
-      ]
-    },
-    {
-      "id": "R_kgDOLM4Kxg",
-      "name": "PineappleStudios",
-      "createdAt": "2024-02-02T06:11:30Z",
-      "url": "https://github.com/SC2006-AY23-SCSG-Group2/PineappleStudios",
-      "description": "Software Engineering Group 2 for SCSG",
+      "id": "R_kgDOO3loyw",
+      "name": "easya-hackathon",
+      "createdAt": "2025-06-07T08:31:44Z",
+      "url": "https://github.com/Unknown-Blaze/easya-hackathon",
+      "description": "nGoDonate: XRPL donation escrow, NFT receipts. Winner, Best Developer Tooling, EasyA x Ripple",
       "isFork": false,
       "languages": [
         {
@@ -55,21 +37,65 @@
         {
           "name": "Python",
           "iconifyClass": "logos-python"
+        },
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
         }
       ]
     },
     {
-      "id": "R_kgDONbVhMQ",
-      "name": "PSASprint",
-      "createdAt": "2024-12-10T02:16:06Z",
-      "url": "https://github.com/Unknown-Blaze/PSASprint",
-      "description": null,
-      "isFork": true,
+      "id": "R_kgDORDRiSQ",
+      "name": "blazing-chess",
+      "createdAt": "2026-01-28T14:16:57Z",
+      "url": "https://github.com/Unknown-Blaze/blazing-chess",
+      "description": "Chess academy website: Next.js 14, TypeScript, Tailwind CSS, shadcn/ui",
+      "isFork": false,
       "languages": [
         {
-          "name": "Shell",
-          "iconifyClass": "simple-icons:shell"
+          "name": "TypeScript",
+          "iconifyClass": "logos-typescript-icon"
         },
+        {
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
+        },
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOQg-T1g",
+      "name": "synctube",
+      "createdAt": "2025-12-02T09:57:35Z",
+      "url": "https://github.com/Unknown-Blaze/synctube",
+      "description": "Watch YouTube in sync with friends: Next.js 15, Socket.IO, YouTube IFrame API",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "TypeScript",
+          "iconifyClass": "logos-typescript-icon"
+        },
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        },
+        {
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOOEgh_g",
+      "name": "techfest-truth-fairy",
+      "createdAt": "2025-03-07T03:10:15Z",
+      "url": "https://github.com/Unknown-Blaze/techfest-truth-fairy",
+      "description": "Truth Fairy: Chrome extension against misinformation, deepfake detection. Top 5, NTU TechFest",
+      "isFork": false,
+      "languages": [
         {
           "name": "JavaScript",
           "iconifyClass": "logos-javascript"
@@ -85,42 +111,76 @@
         {
           "name": "HTML",
           "iconifyClass": "logos-html-5"
-        },
-        {
-          "name": "Dockerfile",
-          "iconifyClass": "simple-icons:docker"
         }
       ]
     },
     {
-      "id": "R_kgDOL85ZRg",
-      "name": "Leetcode-Problems",
-      "createdAt": "2024-05-17T12:32:16Z",
-      "url": "https://github.com/Unknown-Blaze/Leetcode-Problems",
-      "description": "Any code that I have submitted on Leetcode will get pushed here",
+      "id": "R_kgDOL9ksmA",
+      "name": "BrainHacks-Code-Exp",
+      "createdAt": "2024-05-19T07:42:58Z",
+      "url": "https://github.com/Unknown-Blaze/BrainHacks-Code-Exp",
+      "description": "GroceryGrabber: expiring supermarket stock and recipes (Expo). Finalist, DSTA BrainHack",
       "isFork": false,
       "languages": [
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        },
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        }
+      ]
+    },
+    {
+      "id": "R_kgDOPvGTxQ",
+      "name": "SC4053-Project",
+      "createdAt": "2025-09-13T08:17:10Z",
+      "url": "https://github.com/Unknown-Blaze/SC4053-Project",
+      "description": "nGoDonate, SC4053 (2025). Winner, Best Developer Tooling, EasyA x Ripple: Ethereum escrow, NFTs",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "JavaScript",
+          "iconifyClass": "logos-javascript"
+        },
         {
           "name": "Python",
           "iconifyClass": "logos-python"
         },
         {
-          "name": "JavaScript",
-          "iconifyClass": "logos-javascript"
+          "name": "CSS",
+          "iconifyClass": "logos-css-3"
+        },
+        {
+          "name": "Solidity",
+          "iconifyClass": "simple-icons:solidity"
+        },
+        {
+          "name": "Dockerfile",
+          "iconifyClass": "simple-icons:docker"
+        },
+        {
+          "name": "HTML",
+          "iconifyClass": "logos-html-5"
         }
       ]
     },
     {
-      "id": "R_kgDOKls7sA",
-      "name": "CAMS_2002_SCMA",
-      "createdAt": "2023-10-27T04:53:31Z",
-      "url": "https://github.com/esvar2004/CAMS_2002_SCMA",
-      "description": null,
+      "id": "R_kgDOPtMIxQ",
+      "name": "SC4001-Group-Project",
+      "createdAt": "2025-09-10T08:49:57Z",
+      "url": "https://github.com/Unknown-Blaze/SC4001-Group-Project",
+      "description": "SC4001 project: full fine-tuning vs LoRA for cross-domain sentiment analysis (PyTorch, 2025)",
       "isFork": false,
       "languages": [
         {
-          "name": "Java",
-          "iconifyClass": "logos-java"
+          "name": "Jupyter Notebook",
+          "iconifyClass": "logos-jupyter"
+        },
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
         }
       ]
     }
