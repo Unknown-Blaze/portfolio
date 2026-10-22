@@ -23,9 +23,22 @@ All text, links and numbers live in [`src/content.ts`](src/content.ts). Change t
 the components only lay it out. Images go in `public/img` as WebP with their width and height
 recorded next to them in `content.ts`.
 
-The résumé linked from the Contact section is `public/Rudra_Prasadh_Ganesh_Resume.pdf`.
 The social card is `public/og.png`, rendered from `scripts/og-card.html` with
-`python3 scripts/render-og.py` (needs Python Playwright with Chromium).
+`python3 scripts/render-og.py` (needs Python Playwright with Chromium). Re-render it only when
+the text on the card changes.
+
+## Résumé PDF
+
+The Contact section links `public/Rudra_Prasadh_Ganesh_Resume.pdf`, the two-page general
+résumé (`software.tex` in the private LaTeX résumé sources). To refresh it:
+
+1. Copy the LaTeX folder somewhere temporary; never edit the originals for the web copy.
+2. In the copy, remove the phone number: drop `\cvPhone\ ·` from the header in
+   `resume-preamble.tex` and set `\cvPhone` to empty.
+3. Run `pdflatex software.tex` twice (one pass leaves a wrong page count).
+4. Check the text has no phone number, then replace the file in `public/`.
+
+The public PDF must never contain a phone number or a home address.
 
 ## Run
 
