@@ -1545,6 +1545,17 @@ ol {
   }
 }
 
+/* At 360px the nine sheet numbers otherwise run 7px past the bar and the last one is cut off. */
+@media (max-width: 380px) {
+  .topbar {
+    gap: 0.5rem;
+  }
+
+  .index a {
+    padding-inline: 0.22rem;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
