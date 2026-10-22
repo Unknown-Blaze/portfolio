@@ -1,4 +1,5 @@
 // Every word on the site lives in this file. Edit here; the components only lay it out.
+// Product names that must not break across lines ("ROS 2") use a no-break space, written \u00a0.
 
 export type Domain = "Robotics" | "ML" | "Web" | "Mobile" | "Embedded" | "Blockchain";
 
@@ -28,7 +29,7 @@ export const REVISION = "2026-10";
 export const person = {
   name: "Rudra Prasadh Ganesh",
   headline: "Software engineer, robotics & AI",
-  breadth: "I work across software, embedded hardware and machine learning, from ROS 2 robots on construction sites to production web platforms.",
+  breadth: "I work across software, embedded hardware and machine learning, from ROS\u00a02 robots on construction sites to production web platforms.",
   location: "Singapore",
   email: "grudraprasadh@gmail.com",
   github: "https://github.com/Unknown-Blaze",
@@ -66,8 +67,8 @@ export const now: readonly NowItem[] = [
     role: "Software Engineer",
     since: "Jul 2026",
     summary:
-      "Sole software engineer on the ROS 2 codebase of an autonomous tile-grouting robot for construction, deployed commercially in Singapore and Australia. I own perception, SLAM and navigation, motion planning and behaviour trees, and direct the intern engineers.",
-    stack: ["ROS 2", "LiDAR", "SLAM", "Behaviour trees", "Gazebo", "Docker", "GitHub Actions"],
+      "Sole software engineer on the ROS\u00a02 codebase of an autonomous tile-grouting robot for construction, deployed commercially in Singapore and Australia. I own perception, SLAM and navigation, motion planning and behaviour trees, and direct the intern engineers.",
+    stack: ["ROS\u00a02", "LiDAR", "SLAM", "Behaviour trees", "Gazebo", "Docker", "GitHub Actions"],
   },
   {
     org: "Lumerva",
@@ -106,13 +107,13 @@ export const work: readonly Work[] = [
     context: "Fabrica AI · deployed in Singapore and Australia",
     period: "Jul 2026 – present",
     domains: ["Robotics", "Embedded"],
-    summary: "The ROS 2 software of a construction robot that grouts tiles on its own.",
+    summary: "The ROS\u00a02 software of a construction robot that grouts tiles on its own.",
     points: [
       "Perception with LiDAR and cameras, SLAM and navigation, motion planning and behaviour trees.",
       "Delivered a complete LiDAR sensor upgrade, from integration to on-site deployment, in one month.",
       "Behaviour tested in Gazebo, packaged with Docker and GitHub Actions.",
     ],
-    stack: ["ROS 2", "LiDAR", "SLAM", "Gazebo", "Docker", "GitHub Actions"],
+    stack: ["ROS\u00a02", "LiDAR", "SLAM", "Gazebo", "Docker", "GitHub Actions"],
     callouts: [{ value: "1 month", note: "LiDAR upgrade, integration to site" }],
     links: [],
     plate: "robot",
@@ -313,7 +314,7 @@ export const experience: readonly Role[] = [
     period: "Jul 2026 – present",
     location: "Singapore",
     bullets: [
-      "Sole software engineer, owning the ROS 2 codebase of a fully autonomous tile-grouting robot for construction, deployed commercially in Singapore and Australia.",
+      "Sole software engineer, owning the ROS\u00a02 codebase of a fully autonomous tile-grouting robot for construction, deployed commercially in Singapore and Australia.",
       "Directing intern engineers and integrating across the mechanical and electrical teams.",
       "Integrating, tuning and debugging across the autonomy stack: perception with LiDAR and cameras, SLAM, navigation, motion planning and behaviour trees.",
       "Delivered a complete LiDAR sensor upgrade from integration through on-site deployment in one month.",
@@ -610,7 +611,7 @@ export const skills: readonly SkillGroup[] = [
   {
     group: "Robotics",
     items:
-      "ROS, ROS 2, robot perception, robot control, autonomous navigation, simulation, reinforcement learning, LiDAR, computer vision, sensor fusion",
+      "ROS, ROS\u00a02, robot perception, robot control, autonomous navigation, simulation, reinforcement learning, LiDAR, computer vision, sensor fusion",
   },
   {
     group: "Embedded and hardware",
