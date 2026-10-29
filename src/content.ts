@@ -156,6 +156,16 @@ export interface Work {
   gallery?: readonly Image[];
   /** A drawn plate shown in place of a screenshot, for work with nothing public to show. */
   plate?: "robot";
+  /** A system plate (light and dark SVG in public/plates/). Leads the figure unless there is a gallery. */
+  system?: SystemPlate;
+}
+
+export interface SystemPlate {
+  /** File stem: public/plates/<name>-light.svg and <name>-dark.svg. */
+  name: "fyp" | "lisa" | "modec" | "myccds" | "truthfairy";
+  alt: string;
+  width: number;
+  height: number;
 }
 
 const shot = (file: string, alt: string): Image => ({ src: `img/${file}.webp`, alt, width: 800, height: 450 });
@@ -191,6 +201,12 @@ export const work: readonly Work[] = [
       phone("guide", "MyCCDS getting-started guide explaining the links, side navigation and in-app browser"),
       phone("calendar", "MyCCDS academic calendar page listing the calendars by academic year"),
     ],
+    system: {
+      name: "myccds",
+      alt: "System plate: an Expo and React Native app on iOS and Android, backed by Firebase Authentication and Firestore. 600+ daily active users, 5-star store rating.",
+      width: 600,
+      height: 560,
+    },
   },
   {
     id: "mhc-peptide",
@@ -210,6 +226,12 @@ export const work: readonly Work[] = [
     callouts: [{ value: "0.859", note: "PCC vs 0.847 baseline" }],
     links: [{ label: "Code", href: "https://github.com/Unknown-Blaze/FYP-Research" }],
     image: shot("fyp", "Bar chart of Pearson correlation: best retrained baseline 0.847, this model 0.859"),
+    system: {
+      name: "fyp",
+      alt: "System plate: IEDB data feeds a sequence branch (ESM-2 650M with LoRA) and a structure branch (ColabFold structures as graphs for a GNN); an ensemble predicts binding affinity. PCC 0.859 against 0.847.",
+      width: 600,
+      height: 660,
+    },
   },
   {
     id: "ngodonate",
@@ -315,6 +337,12 @@ export const work: readonly Work[] = [
       { value: "−70%", note: "cloud cost" },
     ],
     links: [],
+    system: {
+      name: "lisa",
+      alt: "System plate: users in 4 ASEAN markets reach a Next.js 15 app; an API layer with PostgreSQL runs retrieval over a document store, then an LLM returns the answer. Alibaba Cloud with Terraform. Latency 300 to 50 ms, cloud cost down 70 percent.",
+      width: 600,
+      height: 640,
+    },
   },
   {
     id: "nie-tutoring",
@@ -439,6 +467,33 @@ export const work: readonly Work[] = [
       { value: "−40%", note: "retrieval time" },
     ],
     links: [],
+    system: {
+      name: "modec",
+      alt: "System plate: IoT logs ingested through AWS Lambda and Amazon S3 into a Django REST backend with a Redis cache, serving a React dashboard. 500+ concurrent requests, retrieval time down 40 percent.",
+      width: 600,
+      height: 600,
+    },
+  },
+  {
+    id: "truth-fairy",
+    name: "Truth Fairy",
+    context: "NTU TechFest Hackathon · Top 5",
+    period: "Jan 2025",
+    domains: ["AI & ML", "Web"],
+    summary: "A Chrome extension against misinformation: it checks highlighted text and flags manipulated images as you browse.",
+    points: [
+      "The extension sends page images to a Flask API running a PyTorch deepfake classifier.",
+      "Grad-CAM heatmaps are drawn back over the page to show where the model looked.",
+    ],
+    stack: ["Chrome extension", "JavaScript", "Flask", "PyTorch", "Grad-CAM"],
+    callouts: [{ value: "Top 5", note: "NTU TechFest" }],
+    links: [{ label: "Code", href: "https://github.com/Unknown-Blaze/techfest-truth-fairy" }],
+    system: {
+      name: "truthfairy",
+      alt: "System plate: a Chrome extension calls a Flask API with a PyTorch deepfake classifier; a Grad-CAM heatmap is overlaid back in the page.",
+      width: 600,
+      height: 490,
+    },
   },
   {
     id: "ccds-alumni",

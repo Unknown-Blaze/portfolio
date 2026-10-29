@@ -948,10 +948,62 @@ ol {
 }
 
 .feature-shot figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem 0.8rem;
   margin-top: 0.45rem;
   font-size: 0.64rem;
   letter-spacing: 0.12em;
   color: var(--muted);
+}
+
+/* System plates are portrait sheets; cap them so a card does not turn into a poster. */
+.plate-shot .system-plate {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin-inline: auto;
+}
+
+.view-toggle {
+  display: inline-flex;
+  gap: 0;
+}
+
+.view-button {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  cursor: pointer;
+}
+
+.view-button + .view-button {
+  border-left: 0;
+}
+
+.view-button:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.view-button:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+.view-button:hover {
+  border-color: var(--teal);
+}
+
+.view-button[aria-pressed="true"] {
+  color: var(--paper);
+  background: var(--ink);
+  border-color: var(--ink);
 }
 
 .feature-body h3 {

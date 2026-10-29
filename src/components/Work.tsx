@@ -1,9 +1,10 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import { DOMAINS, work, type Domain, type Work as WorkItem } from "../content";
 import { asset } from "../lib/asset";
 import { Callout } from "./Callout";
 import { Chips } from "./Chips";
 import { ExtLink } from "./ExtLink";
+import { Plate } from "./Plate";
 import { RobotPlate } from "./RobotPlate";
 import { SheetHead } from "./SheetHead";
 
@@ -22,46 +23,105 @@ function Links({ item }: { item: WorkItem }) {
   );
 }
 
+interface View {
+  key: string;
+  label: string;
+  caption: string;
+  className: string;
+  node: ReactNode;
+}
+
+/** Every figure a card can show, the lead one first. */
+function viewsOf(item: WorkItem): View[] {
+  const name = item.name.toUpperCase();
+  const views: View[] = [];
+  const { gallery, image, system } = item;
+  if (gallery && gallery.length > 0) {
+    views.push({
+      key: "screens",
+      label: "Screens",
+      caption: `${name} · ${gallery.length} SCREENS, ANDROID`,
+      className: "feature-shot phones",
+      node: (
+        <ul className="phone-strip" aria-label={`${item.name} screenshots`}>
+          {gallery.map((g) => (
+            <li key={g.src} className="phone">
+              <img src={asset(g.src)} alt={g.alt} width={g.width} height={g.height} loading="lazy" decoding="async" />
+            </li>
+          ))}
+        </ul>
+      ),
+    });
+  }
+  if (system) {
+    views.push({
+      key: "system",
+      label: "System",
+      caption: `SYSTEM PLATE · ${name}`,
+      className: "feature-shot plate-shot",
+      node: <Plate plate={system} />,
+    });
+  }
+  if (image) {
+    views.push({
+      key: "image",
+      label: system ? "Result" : "Image",
+      caption: name,
+      className: "feature-shot",
+      node: (
+        <img src={asset(image.src)} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async" />
+      ),
+    });
+  }
+  if (views.length === 0 && item.plate === "robot") {
+    views.push({
+      key: "robot",
+      label: "Plan",
+      caption: "PLAN VIEW, NOT TO SCALE",
+      className: "feature-shot",
+      node: <RobotPlate />,
+    });
+  }
+  return views;
+}
+
+function Figure({ item, index }: { item: WorkItem; index: number }) {
+  const views = viewsOf(item);
+  const [key, setKey] = useState(views[0]?.key);
+  const view = views.find((v) => v.key === key) ?? views[0];
+  if (!view) return null;
+  const detail = `DETAIL ${String.fromCharCode(66 + index)}`;
+  return (
+    <figure className={view.className}>
+      {view.node}
+      <figcaption className="mono">
+        <span aria-hidden="true">
+          {detail} · {view.caption}
+        </span>
+        {views.length > 1 ? (
+          <span className="view-toggle" role="group" aria-label={`${item.name} figure`}>
+            {views.map((v) => (
+              <button
+                key={v.key}
+                type="button"
+                className="view-button mono"
+                aria-pressed={v.key === view.key}
+                onClick={() => setKey(v.key)}
+              >
+                {v.label}
+              </button>
+            ))}
+          </span>
+        ) : null}
+      </figcaption>
+    </figure>
+  );
+}
+
 function Feature({ item, index }: { item: WorkItem; index: number }) {
-  const image = item.image;
-  const gallery = item.gallery;
   return (
     <article className={`feature ${index % 2 === 1 ? "feature-flip" : ""}`} aria-labelledby={`w-${item.id}`}>
-      {gallery && gallery.length > 0 ? (
-        <figure className="feature-shot phones">
-          <ul className="phone-strip" aria-label={`${item.name} screenshots`}>
-            {gallery.map((g) => (
-              <li key={g.src} className="phone">
-                <img src={asset(g.src)} alt={g.alt} width={g.width} height={g.height} loading="lazy" decoding="async" />
-              </li>
-            ))}
-          </ul>
-          <figcaption className="mono" aria-hidden="true">
-            DETAIL {String.fromCharCode(66 + index)} · {item.name.toUpperCase()} · {gallery.length} SCREENS, ANDROID
-          </figcaption>
-        </figure>
-      ) : image ? (
-        <figure className="feature-shot">
-          <img
-            src={asset(image.src)}
-            alt={image.alt}
-            width={image.width}
-            height={image.height}
-            loading="lazy"
-            decoding="async"
-          />
-          <figcaption className="mono" aria-hidden="true">
-            DETAIL {String.fromCharCode(66 + index)} · {item.name.toUpperCase()}
-          </figcaption>
-        </figure>
-      ) : item.plate === "robot" ? (
-        <figure className="feature-shot">
-          <RobotPlate />
-          <figcaption className="mono" aria-hidden="true">
-            DETAIL {String.fromCharCode(66 + index)} · PLAN VIEW, NOT TO SCALE
-          </figcaption>
-        </figure>
-      ) : null}
+      <Figure item={item} index={index} />
       <div className="feature-body">
         <p className="kicker mono">
           {item.domains.join(" · ")}
@@ -127,7 +187,7 @@ export function Work() {
     () => (filter === "All" ? work : work.filter((w) => w.domains.includes(filter))),
     [filter],
   );
-  const hasVisual = (w: WorkItem): boolean => Boolean(w.image ?? w.gallery ?? w.plate);
+  const hasVisual = (w: WorkItem): boolean => Boolean(w.image ?? w.gallery ?? w.plate ?? w.system);
   const features = shown.filter(hasVisual);
   const others = shown.filter((w) => !hasVisual(w));
   const count = (d: Domain): number => work.filter((w) => w.domains.includes(d)).length;
