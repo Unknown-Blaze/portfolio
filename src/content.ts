@@ -127,7 +127,6 @@ export const work: readonly Work[] = [
         label: "NTU article",
         href: "https://www.ntu.edu.sg/computing/news-events/news/detail/ganesh-rudra-prasadh-transforms-student-experience-with-myccds",
       },
-      { label: "Source", href: "https://github.com/Unknown-Blaze/myccds" },
     ],
     image: shot("myccds", "MyCCDS Google Play listing with a 5.0 rating and six app screenshots"),
   },
@@ -304,7 +303,7 @@ export const work: readonly Work[] = [
     points: [],
     stack: ["Python", "PyTorch", "pandas", "scikit-learn"],
     callouts: [],
-    links: [{ label: "Code", href: "https://github.com/Unknown-Blaze/Bloomberg-Code-Crunch" }],
+    links: [],
   },
   {
     id: "careeraxis",
