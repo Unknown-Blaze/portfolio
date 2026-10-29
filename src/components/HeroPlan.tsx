@@ -57,6 +57,8 @@ export function HeroPlan() {
   const robotRef = useRef<SVGGElement>(null);
   const frame = useRef(0);
   const figureRef = useRef<HTMLElement>(null);
+  const counterRef = useRef<HTMLSpanElement>(null);
+  const shown = useRef(-1);
 
   const place = useCallback((progress: number) => {
     const run = runRef.current;
@@ -69,6 +71,13 @@ export function HeroPlan() {
     const angle = (Math.atan2(ay - by, ax - bx) * 180) / Math.PI;
     run.style.strokeDashoffset = `${LENGTH - at}`;
     robot.setAttribute("transform", `translate(${x} ${y}) rotate(${angle})`);
+    // Text writes only when the whole percent changes, and nothing here reads layout.
+    const pct = Math.round(progress * 100);
+    const counter = counterRef.current;
+    if (counter && pct !== shown.current) {
+      shown.current = pct;
+      counter.textContent = `RUN 1/1 · ${pct}%`;
+    }
   }, []);
 
   const play = useCallback(() => {
@@ -155,6 +164,9 @@ export function HeroPlan() {
       </svg>
       <figcaption className="mono">
         <span>FIG. 1 · ROBOT ON A TILE GRID</span>
+        <span ref={counterRef} className="plan-progress" aria-hidden="true">
+          RUN 1/1 · 0%
+        </span>
         <button type="button" className="link-button mono" onClick={play}>
           ↻ Replay
         </button>

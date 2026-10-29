@@ -1,0 +1,347 @@
+/*
+ * First and last screens: hero, sheet index, contact title block and footer.
+ * Loaded after styles.css, so equal-specificity rules here win. New tokens live on the component roots.
+ */
+
+/* ---------- Top bar ---------- */
+
+.topbar {
+  --progress-h: 2px;
+}
+
+.scroll-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: var(--progress-h);
+  background: var(--amber);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  pointer-events: none;
+}
+
+.theme-toggle:focus-visible {
+  outline-offset: 2px;
+}
+
+/* Narrow bars: the index becomes a strip of numbered titles that scrolls sideways, with soft edges. */
+@media (max-width: 719px) {
+  .topbar .index {
+    scroll-snap-type: x proximity;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0, #000 14px, #000 calc(100% - 14px), transparent 100%);
+  }
+
+  .topbar .index ol {
+    justify-content: flex-start;
+    padding-inline: 10px;
+    margin: 0;
+  }
+
+  .topbar .index li {
+    scroll-snap-align: center;
+  }
+
+  .topbar .index-title {
+    display: inline;
+  }
+
+  .topbar .index a {
+    padding-inline: 0.45rem;
+  }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  --hero-rule: color-mix(in srgb, var(--line) 80%, var(--muted));
+}
+
+.hero .hero-id {
+  align-items: flex-end;
+  margin-bottom: clamp(1.25rem, 2.6vw, 1.75rem);
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5.6vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.hero .headline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: clamp(0.75rem, 1.6vw, 1.1rem);
+  font-size: clamp(0.82rem, 1.25vw, 0.98rem);
+  line-height: 1.35;
+  letter-spacing: 0.03em;
+}
+
+.hero .headline-role {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.hero .headline-focus {
+  color: var(--teal);
+}
+
+.hero .breadth {
+  max-width: 46ch;
+  margin-bottom: 0;
+  font-size: clamp(1.05rem, 1.55vw, 1.2rem);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.hero .hero-actions {
+  align-items: center;
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* Quick actions sit just under the buttons as a quieter second row of the same group. */
+.hero-quick {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 1.25rem;
+  width: 100%;
+  margin-top: -0.25rem;
+}
+
+.hero-quick-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  padding: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-decoration-color: var(--teal);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.hero-quick-link:hover {
+  color: var(--teal);
+}
+
+/* Fixed width so the "Copied" swap does not nudge the row. */
+.hero-quick .copy-email {
+  min-width: 11ch;
+}
+
+.copy-email[data-state="copied"] {
+  color: var(--teal);
+}
+
+.copy-email[data-state="failed"] {
+  color: var(--amber);
+}
+
+.copy-email-glyph {
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+}
+
+/* Revision row, as in a drawing's revision table. */
+.rev-strip {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: clamp(1.5rem, 3vw, 2.25rem) 0 0;
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  border-top: 1px dashed var(--hero-rule);
+  padding-top: 0.6rem;
+}
+
+.rev-strip span {
+  padding-right: 0.5rem;
+}
+
+.rev-strip .rev-strip-key {
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.rev-strip .rev-strip-key:not(:first-child) {
+  padding-left: 0.75rem;
+  border-left: 1px solid var(--hero-rule);
+}
+
+.plan .plan-progress {
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.plan figcaption {
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+/* ---------- 09 Contact: title block ---------- */
+
+.contact .contact-email {
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+/* Cells sit on a rule-coloured grid with 1px gaps, so every joint is drawn once whatever the column count. */
+.tb {
+  --tb-rule: var(--ink);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  border: 1.5px solid var(--tb-rule);
+  background: var(--tb-rule);
+  font-size: 0.78rem;
+}
+
+.tb-cell {
+  min-width: 0;
+  padding: 0.6rem 0.8rem 0.7rem;
+  background: var(--surface);
+}
+
+.tb .tb-title {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.tb .tb-title dd {
+  font-size: 0.95rem;
+}
+
+.tb dt {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.tb dd {
+  margin: 0.2rem 0 0;
+  font-weight: 600;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.tb dd a {
+  text-decoration: none;
+  border-bottom: 1px solid var(--teal);
+}
+
+.tb dd a:hover {
+  color: var(--teal);
+}
+
+.tb-copy {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  max-width: 100%;
+  padding: 0;
+  font: inherit;
+  font-weight: 600;
+  color: inherit;
+  text-align: left;
+  overflow-wrap: anywhere;
+  background: none;
+  border: 0;
+  border-bottom: 1px dashed var(--teal);
+  cursor: copy;
+}
+
+.tb-copy:hover {
+  color: var(--teal);
+}
+
+/* Two columns: the long cells (email, résumé) take a full row so the pairs stay even. */
+@media (max-width: 899px) {
+  .tb {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tb .tb-title {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .tb .tb-email,
+  .tb .tb-resume {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  align-items: center;
+}
+
+.to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.to-top span {
+  border-bottom: 1px solid var(--teal);
+}
+
+.to-top-dim {
+  flex: none;
+  overflow: visible;
+}
+
+.to-top-dim path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.25;
+}
+
+.to-top-dim .to-top-head {
+  fill: var(--amber);
+  stroke: none;
+}
+
+.to-top:hover {
+  color: var(--teal);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .to-top-dim {
+    transition: transform 0.2s ease;
+  }
+
+  .to-top:hover .to-top-dim,
+  .to-top:focus-visible .to-top-dim {
+    transform: translateY(-3px);
+  }
+
+  .hero-quick-link .copy-email-glyph {
+    transition: transform 0.2s ease;
+  }
+
+  .copy-email[data-state="copied"] .copy-email-glyph {
+    transform: scale(1.15);
+  }
+}
