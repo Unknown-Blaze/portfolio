@@ -1,0 +1,36 @@
+name: Link check
+
+# Weekly check of every link in the built site. It opens no issue; a broken link shows as a failed run.
+on:
+  schedule:
+    - cron: "17 3 * * 1" # Mondays 03:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      # The page is served under /portfolio/, so stage dist/ there and let lychee resolve root-relative links
+      # against it. The sheet is rendered by script, so its links live in src/content.ts: check that file too.
+      - run: mkdir -p "$RUNNER_TEMP/site" && cp -r dist "$RUNNER_TEMP/site/portfolio"
+      - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          # LinkedIn answers every bot with status 999, so it is skipped.
+          args: >-
+            --no-progress
+            --root-dir ${{ runner.temp }}/site
+            --exclude 'linkedin\.com'
+            --accept '100..=103,200..=299,429'
+            '${{ runner.temp }}/site/portfolio/**/*.html'
+            src/content.ts
+          fail: true
