@@ -152,7 +152,7 @@ export const now: readonly NowItem[] = [
     role: "Software Engineer",
     since: "Jul 2026",
     summary:
-      "Sole software engineer on a autonomous tile-grouting robot deployed in Singapore and Australia. I own its ROS\u00a02 codebase, from perception to release.",
+      "Sole software engineer on an autonomous tile-grouting robot deployed in Singapore and Australia. I own its ROS\u00a02 codebase, from perception to release.",
     stack: ["ROS\u00a02", "LiDAR", "SLAM", "Behaviour trees", "Gazebo", "Docker", "GitHub Actions"],
   },
   {
@@ -289,7 +289,7 @@ export const work: readonly Work[] = [
     context: "Fabrica AI · deployed in Singapore and Australia",
     period: "Jul 2026 – present",
     domains: ["Robotics", "Embedded"],
-    summary: "The ROS\u00a02 software of a autonomous robot that automates tile grouting on construction sites.",
+    summary: "The ROS\u00a02 software of an autonomous robot that automates tile grouting on construction sites.",
     points: [
       "Delivered a complete LiDAR upgrade, from integration to on-site deployment, in one month.",
       "Autonomy stack: LiDAR and camera perception, SLAM, navigation, motion planning and behaviour trees.",
@@ -625,7 +625,7 @@ export const experience: readonly Role[] = [
     period: "Jul 2026 – present",
     location: "Singapore",
     bullets: [
-      "Sole software engineer: own the ROS\u00a02 codebase of a autonomous tile-grouting robot deployed commercially in Singapore and Australia.",
+      "Sole software engineer: own the ROS\u00a02 codebase of an autonomous tile-grouting robot deployed commercially in Singapore and Australia.",
       "Delivered a complete LiDAR upgrade, from integration to on-site deployment, in one month.",
       "Integrate, tune and debug the autonomy stack: LiDAR and camera perception, SLAM, navigation, motion planning and behaviour trees.",
       "Direct intern engineers and integrate the software with the mechanical and electrical teams.",
