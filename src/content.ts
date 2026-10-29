@@ -31,7 +31,7 @@ export const person = {
   // Word joiners and no-break spaces keep "AI, full-stack & robotics" on one line.
   headline: "Software engineer · AI,\u00a0full-\u2060stack\u00a0&\u00a0robotics",
   breadth:
-    "Machine learning · web & mobile · embedded & robotics. I build AI-backed products end to end, from research models and RAG platforms to production apps, and now ROS\u00a02 robots.",
+    "Machine learning · web & mobile · embedded & robotics. I take software from research model to production, and today I own the ROS\u00a02 software of an autonomous construction robot deployed in Singapore and Australia.",
   location: "Singapore",
   email: "grudraprasadh@gmail.com",
   github: "https://github.com/Unknown-Blaze",
@@ -49,7 +49,7 @@ export const person = {
 export const facts: readonly string[] = [
   "Lee Kuan Yew Gold Medal",
   "AIED 2026 co-author",
-  "600+ DAU app on both stores",
+  "600+ daily users on iOS & Android",
   "Winner, EasyA x Ripple",
 ];
 
@@ -87,7 +87,7 @@ export const numbers: readonly KeyNumber[] = [
     decimals: 3,
     prefix: "",
     suffix: "",
-    label: "PCC, vs 0.847 best baseline",
+    label: "PCC vs 0.847 best baseline",
     source: "Final Year Project",
     kind: "research",
   },
@@ -117,7 +117,7 @@ export interface NowItem {
 }
 
 export const nowIntro =
-  "Software engineer building AI-backed products end to end: the models, the services around them and the apps people use.";
+  "I own the software of an autonomous construction robot at Fabrica AI, and I build Lumerva, the learning platform I co-founded, end to end.";
 
 export const now: readonly NowItem[] = [
   {
@@ -125,7 +125,7 @@ export const now: readonly NowItem[] = [
     role: "Software Engineer",
     since: "Jul 2026",
     summary:
-      "Sole software engineer on the ROS\u00a02 codebase of an autonomous tile-grouting robot for construction, deployed in Singapore and Australia.",
+      "Sole software engineer on a fully autonomous tile-grouting robot deployed in Singapore and Australia. I own its ROS\u00a02 codebase, from perception to release.",
     stack: ["ROS\u00a02", "LiDAR", "SLAM", "Behaviour trees", "Gazebo", "Docker", "GitHub Actions"],
   },
   {
@@ -133,7 +133,7 @@ export const now: readonly NowItem[] = [
     role: "Co-Founder and Full Stack Engineer",
     since: "Sep 2025",
     summary:
-      "A learning platform that builds personalised course paths, quizzes and content modules. I own it end to end: React and TypeScript on the front, Python services behind, background jobs on Celery and Redis.",
+      "A learning platform that builds personalised course paths, quizzes and content modules. I build all of it: React and TypeScript front end, Python services, Celery and Redis background jobs.",
     stack: ["React", "TypeScript", "Python", "Celery", "Redis", "YouTube Data API", "Brave Search API"],
   },
 ];
@@ -179,11 +179,11 @@ export const work: readonly Work[] = [
     context: "Student platform for NTU's College of Computing and Data Science",
     period: "Nov 2024 – present",
     domains: ["Mobile"],
-    summary: "A production iOS and Android app for CCDS students, on the App Store and Google Play.",
+    summary: "One app for CCDS students' links, guides and calendars, used by 600+ students a day on iOS and Android.",
     points: [
-      "Shipped a cross-platform mobile app using React Native, Expo and Redux.",
-      "Reached 600 or more daily active users with a 5-star store rating.",
-      "Optimised caching to improve content discovery workflows.",
+      "Shipped to the App Store and Google Play from one React Native, Expo and Redux codebase.",
+      "600+ daily active users and a 5-star store rating.",
+      "Tuned caching to speed up content discovery.",
     ],
     stack: ["React Native", "Expo", "Redux"],
     callouts: [{ value: "600+", note: "daily active users" }],
@@ -211,18 +211,19 @@ export const work: readonly Work[] = [
   {
     id: "mhc-peptide",
     name: "MHC-peptide binding prediction",
-    context: "Final Year Project (graded A), Bioinformatics Lab, NTU · submitted to ICLR 2027",
+    context: "Final Year Project, graded A · Bioinformatics Lab, NTU · submitted to ICLR 2027",
     period: "Aug 2025 – May 2026",
     domains: ["AI & ML"],
     summary:
-      "ESM-2 (650M) sequence embeddings fused with an AlphaFold-based structural pipeline, fine-tuned with LoRA/PEFT in PyTorch on an NVIDIA A100 80GB.",
+      "Predicts MHC-peptide binding affinity, a core problem in vaccine and immunotherapy design, from ESM-2 sequence embeddings and AlphaFold-derived structure.",
     points: [
-      "PCC 0.859 against 0.847 for the best state-of-the-art baseline retrained on the same dataset and split; R-squared and Spearman up 0.5 to 2 percent.",
-      "Dataset built from IEDB, with 3D structures from a self-developed ColabFold extension.",
-      "Homology-based 80/10/10 splits to prevent sequence-similarity leakage.",
-      "Supervisor: Prof. Jagath C. Rajapakse.",
+      "PCC 0.859 vs 0.847 for the best state-of-the-art baseline retrained on the same split; R² and Spearman up 0.5–2%.",
+      "ESM-2 (650M) fine-tuned with LoRA/PEFT in PyTorch on an NVIDIA A100 80GB.",
+      "Dataset from IEDB; 3D structures from a self-built ColabFold extension.",
+      "Homology-based 80/10/10 split to prevent sequence-similarity leakage.",
+      "Supervised by Prof. Jagath C. Rajapakse.",
     ],
-    stack: ["PyTorch", "ESM-2", "AlphaFold", "ColabFold", "LoRA / PEFT"],
+    stack: ["PyTorch", "ESM-2", "AlphaFold", "ColabFold", "LoRA/PEFT"],
     callouts: [{ value: "0.859", note: "PCC vs 0.847 baseline" }],
     links: [{ label: "Code", href: "https://github.com/Unknown-Blaze/FYP-Research" }],
     image: shot("fyp", "Bar chart of Pearson correlation: best retrained baseline 0.847, this model 0.859"),
@@ -239,11 +240,11 @@ export const work: readonly Work[] = [
     context: "Winner, Best Developer Tooling · EasyA x Ripple Hackathon",
     period: "Jun 2025 – Nov 2025",
     domains: ["Blockchain", "Web"],
-    summary: "A transparent donation workflow on XRPL and Ethereum.",
+    summary: "Donations that donors can audit: milestone escrow on XRPL and Ethereum, with NFT receipts and certificates.",
     points: [
-      "Built a donation workflow on XRPL and Ethereum achieving 2-second transaction finality.",
-      "Implemented milestone-based escrow with on-chain transparency, and NFT receipts and certificates.",
-      "Added IPFS storage for verifiable supporting documents linked to on-chain records.",
+      "2 s transaction finality across XRPL and Ethereum.",
+      "Milestone-based escrow keeps every release on chain; donors receive NFT receipts and certificates.",
+      "Supporting documents stored on IPFS and linked to on-chain records for verification.",
     ],
     stack: ["XRPL", "Ethereum", "NFT receipts", "IPFS"],
     callouts: [{ value: "2 s", note: "transaction finality" }],
@@ -260,11 +261,11 @@ export const work: readonly Work[] = [
     context: "Fabrica AI · deployed in Singapore and Australia",
     period: "Jul 2026 – present",
     domains: ["Robotics", "Embedded"],
-    summary: "The ROS\u00a02 software of a construction robot that grouts tiles on its own.",
+    summary: "The ROS\u00a02 software of a fully autonomous robot that automates tile grouting on construction sites.",
     points: [
-      "Perception with LiDAR and cameras, SLAM and navigation, motion planning and behaviour trees.",
-      "Delivered a complete LiDAR sensor upgrade, from integration to on-site deployment, in one month.",
-      "Behaviour tested in Gazebo, packaged with Docker and GitHub Actions.",
+      "Delivered a complete LiDAR upgrade, from integration to on-site deployment, in one month.",
+      "Autonomy stack: LiDAR and camera perception, SLAM, navigation, motion planning and behaviour trees.",
+      "Behaviour tested in Gazebo; reproducible Docker builds; CI/CD on GitHub Actions.",
     ],
     stack: ["ROS\u00a02", "LiDAR", "SLAM", "Gazebo", "Docker", "GitHub Actions"],
     callouts: [{ value: "1 month", note: "LiDAR upgrade, integration to site" }],
@@ -277,10 +278,10 @@ export const work: readonly Work[] = [
     context: "Real-time synchronised video streaming and collaboration",
     period: "Sep 2024 – Dec 2024",
     domains: ["Web"],
-    summary: "Watch YouTube with friends, in sync, in real time.",
+    summary: "Watch parties for YouTube: one room, one shared player, playback kept in sync for everyone in real time.",
     points: [
       "Built synchronised playback and room-state management for multi-user watch sessions.",
-      "Implemented real-time communication and reconnect handling for stable room continuity.",
+      "Added reconnect handling so a dropped connection rejoins the room without breaking the session.",
     ],
     stack: ["Next.js 15", "Socket.IO", "YouTube IFrame API"],
     callouts: [],
@@ -296,8 +297,8 @@ export const work: readonly Work[] = [
     context: "B2B ordering, payments and operational analytics for a retailer",
     period: "Jan 2025 – May 2025",
     domains: ["Web"],
-    summary: "Ordering and payments for a retailer, end to end.",
-    points: ["Built end-to-end ordering and payment workflows using React, Firebase and Stripe."],
+    summary: "A live ordering and Stripe payment system for a B2B retailer.",
+    points: ["Built the ordering and payment flows end to end with React, Firebase and Stripe."],
     stack: ["React", "Firebase", "Stripe"],
     callouts: [],
     links: [{ label: "Live", href: "https://mango-club.vercel.app" }],
@@ -309,7 +310,7 @@ export const work: readonly Work[] = [
     context: "Academy website",
     period: "",
     domains: ["Web"],
-    summary: "Website for a chess academy.",
+    summary: "The live website of a chess academy, built with Next.js 14 and Tailwind CSS.",
     points: [],
     stack: ["Next.js 14", "TypeScript", "Tailwind CSS"],
     callouts: [],
@@ -325,11 +326,11 @@ export const work: readonly Work[] = [
     context: "Automotive advisor platform · MISUMI.AI",
     period: "Sep 2025 – Aug 2026",
     domains: ["AI & ML", "Web"],
-    summary: "An automotive advisor in production across 4 ASEAN markets.",
+    summary: "An AI automotive advisor that serves MISUMI's customers in production across 4 ASEAN markets.",
     points: [
-      "Next.js 15 and PostgreSQL with a RAG pipeline over structured Japanese and English automotive listings.",
+      "API latency cut from 300 ms to 50 ms; cloud cost down 70%.",
+      "Next.js 15 and PostgreSQL, with RAG over structured Japanese and English automotive listings.",
       "Containerised microservices on Alibaba Cloud, provisioned with Terraform.",
-      "API latency cut from 300 ms to 50 ms; cloud cost down 70 percent.",
     ],
     stack: ["Next.js 15", "PostgreSQL", "RAG", "Alibaba Cloud", "Terraform"],
     callouts: [
@@ -339,7 +340,7 @@ export const work: readonly Work[] = [
     links: [],
     system: {
       name: "lisa",
-      alt: "System plate: users in 4 ASEAN markets reach a Next.js 15 app; an API layer with PostgreSQL runs retrieval over a document store, then an LLM returns the answer. Alibaba Cloud with Terraform. Latency 300 to 50 ms, cloud cost down 70 percent.",
+      alt: "System plate: users in 4 ASEAN markets reach a Next.js 15 app; an API layer with PostgreSQL runs retrieval over a document store, then an LLM returns the answer. Alibaba Cloud with Terraform. API latency 300 ms to 50 ms; cloud cost down 70%.",
       width: 600,
       height: 640,
     },
@@ -350,10 +351,10 @@ export const work: readonly Work[] = [
     context: "AI Engineer (part-time) · National Institute of Education, NTU",
     period: "Jun 2025 – Oct 2025",
     domains: ["AI & ML", "Web"],
-    summary: "Backend and real-time infrastructure for an intelligent tutoring system.",
+    summary: "The real-time backend of an intelligent tutoring system, evaluated in a peer-reviewed AIED 2026 study.",
     points: [
-      "One of two primary developers; WebSocket communication with 99.9 percent session stability.",
-      "Organised the 60-participant study behind the AIED 2026 paper I co-authored.",
+      "One of two primary developers; WebSocket sessions held 99.9% stability.",
+      "Organised the 60-participant study behind the co-authored AIED 2026 paper.",
     ],
     stack: ["WebSockets", "Real-time backend"],
     callouts: [{ value: "99.9%", note: "session stability" }],
@@ -365,8 +366,8 @@ export const work: readonly Work[] = [
     context: "Full Stack Engineer Intern · Panasonic R&D Center Singapore",
     period: "Jan 2025 – Jun 2025",
     domains: ["AI & ML", "Web"],
-    summary: "An inference API serving YOLOv8, with async processing for real-time workflows.",
-    points: ["Built with FastAPI and packaged with Docker; caching tuned for retrieval speed and latency."],
+    summary: "A FastAPI service that serves YOLOv8 object detection to real-time workflows.",
+    points: ["Packaged with Docker; async processing and caching tuned for latency."],
     stack: ["FastAPI", "Docker", "YOLOv8", "Python"],
     callouts: [],
     links: [],
@@ -377,7 +378,7 @@ export const work: readonly Work[] = [
     context: "SC4000 course project · Kaggle competition",
     period: "",
     domains: ["AI & ML"],
-    summary: "A machine-learning entry for BirdCLEF, the Kaggle competition on identifying bird species from audio.",
+    summary: "An entry for BirdCLEF, the Kaggle competition to identify bird species from audio recordings.",
     points: [],
     stack: ["Machine learning", "Kaggle"],
     callouts: [],
@@ -389,7 +390,7 @@ export const work: readonly Work[] = [
     context: "Quantitative trading-signal pipeline",
     period: "",
     domains: ["AI & ML"],
-    summary: "A deep-learning pipeline that predicts trading signals with LSTM, GRU and Transformer models and backtests them with transaction costs.",
+    summary: "A deep-learning pipeline that predicts trading signals with LSTM, GRU and Transformer models, backtested net of transaction costs.",
     points: [],
     stack: ["Python", "PyTorch", "pandas", "scikit-learn"],
     callouts: [],
@@ -413,9 +414,9 @@ export const work: readonly Work[] = [
     context: "President Research Scholar, URECA · ODROID N2",
     period: "Aug 2024 – Apr 2025",
     domains: ["AI & ML", "Embedded"],
-    summary: "Motion detection for an IoT security system, running on the edge.",
+    summary: "Motion detection for an IoT security system that runs on the device itself, an ODROID N2.",
     points: [
-      "96 percent motion-detection accuracy at 180 ms latency on an ODROID.",
+      "96% motion-detection accuracy at 180 ms latency.",
       "Tuned thresholds and buffering to cut false positives under changing light.",
       "Presented as a research poster for the URECA programme.",
     ],
@@ -429,7 +430,7 @@ export const work: readonly Work[] = [
     context: "SC2079 Multidisciplinary Project · group coursework",
     period: "",
     domains: ["Embedded"],
-    summary: "Firmware for a robot car: FreeRTOS tasks, PID motor control and an IMU.",
+    summary: "Firmware for a robot car: FreeRTOS tasks, PID motor control and IMU feedback.",
     points: [],
     stack: ["C", "STM32F407", "FreeRTOS", "PID", "IMU"],
     callouts: [],
@@ -441,10 +442,10 @@ export const work: readonly Work[] = [
     context: "SC4001 group project",
     period: "Jan 2024 – Apr 2024",
     domains: ["AI & ML", "Web"],
-    summary: "End-to-end text analytics with model-serving APIs.",
+    summary: "A text-analytics platform that classifies sentiment through model-serving APIs and charts the trends.",
     points: [
       "Built preprocessing and model-inference endpoints for sentiment classification.",
-      "Delivered dashboard views for trend analysis.",
+      "Built dashboard views for trend analysis.",
     ],
     stack: ["NLP", "Model-serving APIs", "Dashboards"],
     callouts: [],
@@ -456,10 +457,10 @@ export const work: readonly Work[] = [
     context: "Software Engineer Intern · MODEC",
     period: "Jun 2025 – Aug 2025",
     domains: ["Web"],
-    summary: "A full-stack web application for sustainability and environmental analytics, delivered independently.",
+    summary: "A sustainability analytics platform, built solo, that turns vendor data and IoT logs into environmental reporting.",
     points: [
-      "React workflows for vendor data collection on a Django REST Framework backend handling 500 or more concurrent requests.",
-      "Redis caching cut retrieval time by 40 percent; IoT logs ingested through AWS Lambda and Amazon S3.",
+      "React vendor-data workflows on a Django REST Framework backend serving 500+ concurrent requests.",
+      "Redis caching cut retrieval time by 40%; IoT logs ingested through AWS Lambda and Amazon S3.",
     ],
     stack: ["React", "Django", "DRF", "Redis", "AWS Lambda", "Amazon S3"],
     callouts: [
@@ -469,7 +470,7 @@ export const work: readonly Work[] = [
     links: [],
     system: {
       name: "modec",
-      alt: "System plate: IoT logs ingested through AWS Lambda and Amazon S3 into a Django REST backend with a Redis cache, serving a React dashboard. 500+ concurrent requests, retrieval time down 40 percent.",
+      alt: "System plate: IoT logs ingested through AWS Lambda and Amazon S3 into a Django REST backend with a Redis cache, serving a React dashboard. 500+ concurrent requests; retrieval time down 40%.",
       width: 600,
       height: 600,
     },
@@ -480,7 +481,7 @@ export const work: readonly Work[] = [
     context: "NTU TechFest Hackathon · Top 5",
     period: "Jan 2025",
     domains: ["AI & ML", "Web"],
-    summary: "A Chrome extension against misinformation: it checks highlighted text and flags manipulated images as you browse.",
+    summary: "A Chrome extension that slows misinformation by checking highlighted text and flagging manipulated images as you browse.",
     points: [
       "The extension sends page images to a Flask API running a PyTorch deepfake classifier.",
       "Grad-CAM heatmaps are drawn back over the page to show where the model looked.",
@@ -501,8 +502,8 @@ export const work: readonly Work[] = [
     context: "Full Stack Developer · NTU College of Computing and Data Science",
     period: "May 2024 – Jul 2025",
     domains: ["Web"],
-    summary: "A networking platform connecting alumni and students for startup and event collaboration.",
-    points: ["Led development end to end, from features to backend and site performance."],
+    summary: "A platform that connects CCDS alumni with students for startup and event collaboration.",
+    points: ["Led development end to end: features, backend and site performance."],
     stack: ["WordPress", "PHP", "SQL"],
     callouts: [],
     links: [],
@@ -513,7 +514,7 @@ export const work: readonly Work[] = [
     context: "Card game for the web",
     period: "",
     domains: ["Web"],
-    summary: "The Kaboo card game in the browser, with game lobbies and an AI opponent.",
+    summary: "The Kaboo card game in the browser, with lobbies for friends and an AI opponent.",
     points: [],
     stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "Firebase"],
     callouts: [],
@@ -525,7 +526,7 @@ export const work: readonly Work[] = [
     context: "Built for a trading company",
     period: "",
     domains: ["Web"],
-    summary: "Stock in and out, orders, shipments, a printable catalogue, invoices and delivery orders.",
+    summary: "Runs a trading company's daily operations: stock in and out, orders, shipments, a printable catalogue, invoices and delivery orders.",
     points: [],
     stack: ["React", "Vite", "Tailwind CSS", "Supabase"],
     callouts: [],
@@ -537,7 +538,7 @@ export const work: readonly Work[] = [
     context: "Inventory and sales for a seasonal fruit business",
     period: "",
     domains: ["Web"],
-    summary: "A local-first inventory and sales app with an Excel importer and Supabase sync.",
+    summary: "A local-first inventory and sales app for a seasonal business: works offline, imports Excel and syncs to Supabase.",
     points: [],
     stack: ["React", "Supabase", "Python", "Playwright"],
     callouts: [],
@@ -562,7 +563,7 @@ export const work: readonly Work[] = [
     period: "May 2026 – Jul 2026",
     domains: [],
     summary:
-      "Students manipulate 3D molecular structures in a Meta Quest 3 headset and sit in-VR quizzes, replacing static diagrams in an introductory chemistry course.",
+      "Replaces static diagrams in an introductory chemistry course: students handle 3D molecules in a Meta Quest 3 and sit in-VR quizzes.",
     points: [],
     stack: ["Unity", "Meta Quest 3"],
     callouts: [],
@@ -591,11 +592,11 @@ export const experience: readonly Role[] = [
     period: "Jul 2026 – present",
     location: "Singapore",
     bullets: [
-      "Sole software engineer, owning the ROS\u00a02 codebase of a fully autonomous tile-grouting robot for construction, deployed commercially in Singapore and Australia.",
-      "Directing intern engineers and integrating across the mechanical and electrical teams.",
-      "Integrating, tuning and debugging across the autonomy stack: perception with LiDAR and cameras, SLAM, navigation, motion planning and behaviour trees.",
-      "Delivered a complete LiDAR sensor upgrade from integration through on-site deployment in one month.",
-      "Gazebo simulation for behaviour testing; Docker for reproducible builds on development machines and on the robot; GitHub Actions for build, test and release.",
+      "Sole software engineer: own the ROS\u00a02 codebase of a fully autonomous tile-grouting robot deployed commercially in Singapore and Australia.",
+      "Delivered a complete LiDAR upgrade, from integration to on-site deployment, in one month.",
+      "Integrate, tune and debug the autonomy stack: LiDAR and camera perception, SLAM, navigation, motion planning and behaviour trees.",
+      "Direct intern engineers and integrate the software with the mechanical and electrical teams.",
+      "Test behaviour in Gazebo, build reproducibly with Docker on development machines and the robot, and release through GitHub Actions.",
     ],
   },
   {
@@ -606,10 +607,10 @@ export const experience: readonly Role[] = [
     period: "Sep 2025 – present",
     location: "Singapore",
     bullets: [
-      "Building a production learning platform with full-stack ownership across a React and TypeScript frontend and Python backend services.",
-      "Designed an asynchronous background-job architecture with Celery and Redis to improve throughput and reduce request latency.",
-      "Implemented modular API and content pipelines for personalised course paths, quizzes and content modules.",
-      "Integrated the YouTube Data API and Brave Search API with ranking logic to improve discovery quality.",
+      "Build the full stack of a production learning platform: React and TypeScript front end, Python back-end services.",
+      "Designed Celery and Redis background jobs that raise throughput and cut request latency.",
+      "Built modular API and content pipelines for personalised course paths, quizzes and content modules.",
+      "Integrated the YouTube Data API and Brave Search API, with ranking logic that improves discovery quality.",
     ],
   },
   {
@@ -620,12 +621,12 @@ export const experience: readonly Role[] = [
     period: "Sep 2025 – Aug 2026",
     location: "Singapore",
     bullets: [
-      "Led development and deployment of LISA 1.0, an automotive advisor platform built with Next.js 15, PostgreSQL and AI-enabled retrieval, used by MISUMI to serve customers internationally.",
-      "Owned cloud architecture and infrastructure operations for production delivery across 4 ASEAN markets.",
-      "Co-architected containerised microservices on Alibaba Cloud with a RAG pipeline over structured Japanese and English automotive listings, with infrastructure in Terraform.",
-      "Reduced API latency from 300 ms to 50 ms through caching, query optimisation and service-level tuning.",
-      "Drove performance and workload tuning that reduced cloud costs by 70 percent.",
-      "Moved on to developer and technical advisor for LISA 2.0, supporting a new team on architecture and retrieval design.",
+      "Led LISA 1.0 from build to production: an automotive advisor on Next.js 15, PostgreSQL and RAG serving MISUMI's international customers.",
+      "Cut API latency from 300 ms to 50 ms through caching, query optimisation and service-level tuning.",
+      "Cut cloud cost by 70% through performance and workload tuning.",
+      "Owned cloud architecture and infrastructure operations for production in 4 ASEAN markets.",
+      "Co-architected containerised microservices on Alibaba Cloud, in Terraform, with RAG over Japanese and English automotive listings.",
+      "Stayed on as developer and technical advisor for LISA 2.0, guiding a new team on architecture and retrieval design.",
     ],
   },
   {
@@ -636,10 +637,10 @@ export const experience: readonly Role[] = [
     period: "Dec 2025 – Jan 2026",
     location: "Singapore",
     bullets: [
-      "Managed end-to-end deployment of an analytical data application from proof of concept to secure production.",
-      "Configured and operated AWS Elastic Beanstalk environments with security-aligned release processes.",
-      "Integrated a CI/CD workflow and validation gates for stable, repeatable delivery.",
-      "Executed testing and rollback planning to meet organisational security and reliability benchmarks.",
+      "Took an analytical data application from proof of concept to secure production.",
+      "Configured and ran AWS Elastic Beanstalk environments with security-aligned release processes.",
+      "Added a CI/CD workflow with validation gates for stable, repeatable releases.",
+      "Planned testing and rollback to meet the company's security and reliability benchmarks.",
     ],
   },
   {
@@ -651,9 +652,9 @@ export const experience: readonly Role[] = [
     location: "Singapore",
     bullets: [
       "One of two primary developers of the backend and real-time infrastructure for an intelligent tutoring system.",
-      "Architected WebSocket-based low-latency communication, achieving 99.9 percent session stability.",
-      "Organised the user study and consolidated qualitative and quantitative findings for product iteration.",
-      "Co-authored the peer-reviewed AIED 2026 paper (Springer) on scaffolding emotion regulation in productive failure, based on a 60-participant study (PI: Dr. Tanmay Sinha).",
+      "Designed low-latency WebSocket communication that held 99.9% session stability.",
+      "Co-authored the peer-reviewed AIED 2026 paper (Springer) on scaffolding emotion regulation in productive failure (PI: Dr. Tanmay Sinha).",
+      "Organised the 60-participant user study and consolidated its qualitative and quantitative findings for product iteration.",
     ],
   },
   {
@@ -665,10 +666,10 @@ export const experience: readonly Role[] = [
     location: "Singapore",
     bullets: [
       "Independently delivered a full-stack web application for sustainability and environmental analytics.",
+      "Engineered a Django REST Framework backend serving 500+ concurrent requests at 99.9% uptime.",
+      "Improved retrieval performance by 40% with Redis caching and optimised query paths.",
       "Built responsive React workflows for complex vendor data collection and reporting.",
-      "Engineered a Django and Django REST Framework backend handling 500 or more concurrent requests with 99.9 percent uptime.",
-      "Improved retrieval performance by 40 percent with Redis caching and optimised query paths.",
-      "Managed AWS deployment and IoT log ingestion through AWS Lambda and Amazon S3.",
+      "Ran the AWS deployment and IoT log ingestion through AWS Lambda and Amazon S3.",
     ],
   },
   {
@@ -679,10 +680,10 @@ export const experience: readonly Role[] = [
     period: "Jan 2025 – Jun 2025",
     location: "Singapore",
     bullets: [
-      "Deployed an inference API with FastAPI and Docker serving YOLOv8, with async processing for real-time workflows.",
-      "Debugged and optimised workflows across SQL, Python, Redis and network-integrated services.",
-      "Implemented and refined caching strategies to improve retrieval speed, latency and reliability.",
-      "Designed and ran testing strategies to find bottlenecks and validate system integrity.",
+      "Deployed a FastAPI and Docker inference API serving YOLOv8, with async processing for real-time workflows.",
+      "Debugged and optimised workflows across SQL, Python, Redis and networked services.",
+      "Refined caching strategies to improve retrieval speed, latency and reliability.",
+      "Designed and ran tests that found bottlenecks and validated system integrity.",
     ],
   },
   {
@@ -693,8 +694,8 @@ export const experience: readonly Role[] = [
     period: "May 2024 – Jul 2025",
     location: "Singapore",
     bullets: [
-      "Led end-to-end development of a networking platform connecting alumni and students for startup and event collaboration.",
-      "Built and maintained full-stack features with WordPress, SQL, PHP and frontend customisation.",
+      "Led end-to-end development of a platform connecting alumni and students for startup and event collaboration.",
+      "Built and maintained full-stack features in WordPress, PHP and SQL, with custom front-end work.",
       "Optimised backend processes and site performance for reliability and user experience.",
     ],
   },
@@ -706,10 +707,10 @@ export const experience: readonly Role[] = [
     period: "May 2024 – Aug 2024",
     location: "Singapore",
     bullets: [
-      "Integrated the CAN bus protocol on an XMC4800 microcontroller, establishing a master-slave configuration between controller and actuator.",
-      "Improved performance by 20 percent with low-latency EtherCAT and FreeRTOS scheduling on the XMC4800.",
-      "Contributed to embedded framework development across Arduino, STM32F4 and XMC4800.",
-      "Enabled higher-frequency telemetry pipelines for predictive maintenance and edge analytics.",
+      "Improved performance by 20% with low-latency EtherCAT and FreeRTOS scheduling on an XMC4800 microcontroller.",
+      "Integrated CAN bus on the XMC4800 in a master-slave configuration between controller and actuator.",
+      "Enabled higher-frequency telemetry for predictive maintenance and edge analytics.",
+      "Contributed to the embedded framework across Arduino, STM32F4 and XMC4800.",
     ],
   },
   {
@@ -720,8 +721,8 @@ export const experience: readonly Role[] = [
     period: "Jan 2024 – Apr 2024",
     location: "Singapore",
     bullets: [
-      "Selected as one of four SCSE peer coaches to support students on academic warning.",
-      "Delivered personalised study planning, mentorship and accountability support.",
+      "Selected as one of four SCSE peer coaches for students on academic warning.",
+      "Gave personalised study planning, mentorship and accountability support.",
     ],
   },
   {
@@ -732,8 +733,8 @@ export const experience: readonly Role[] = [
     period: "Jan 2024 – Apr 2024",
     location: "Singapore",
     bullets: [
-      "Delivered structured chess lessons in school CCA sessions, focused on critical thinking and strategy.",
-      "Built training plans to improve problem-solving and decision-making under constraints.",
+      "Taught structured chess lessons in school CCA sessions, focused on critical thinking and strategy.",
+      "Built training plans that develop problem-solving and decision-making under constraints.",
     ],
   },
 ];
@@ -761,7 +762,7 @@ export const research: readonly Research[] = [
     kind: "Final Year Project · submitted to ICLR 2027",
     title: "Multimodal deep learning for MHC-peptide binding affinity prediction",
     detail:
-      "ESM-2 (650M) embeddings integrated with a fine-tuned AlphaFold-based pipeline. PCC 0.859 against 0.847 for the strongest retrained baseline on the same dataset and split. Graded A. Supervised by Prof. Jagath C. Rajapakse, Bioinformatics Lab, NTU.",
+      "PCC 0.859 vs 0.847 for the strongest baseline retrained on the same dataset and split. ESM-2 (650M) sequence embeddings fused with AlphaFold-derived structure, fine-tuned with LoRA/PEFT. Graded A; supervised by Prof. Jagath C. Rajapakse, Bioinformatics Lab, NTU.",
     meta: "Aug 2025 – May 2026",
     link: { label: "github.com/Unknown-Blaze/FYP-Research", href: "https://github.com/Unknown-Blaze/FYP-Research" },
   },
@@ -769,7 +770,7 @@ export const research: readonly Research[] = [
     kind: "URECA · research poster",
     title: "Edge-AI motion detection for IoT security on an ODROID N2",
     detail:
-      "96 percent motion-detection accuracy at 180 ms latency. Thresholds and buffering tuned to reduce false positives under changing lighting. Presented as a research poster as a URECA President Research Scholar.",
+      "96% motion-detection accuracy at 180 ms latency, with thresholds and buffering tuned to cut false positives under changing light. Presented as a research poster as a URECA President Research Scholar.",
     meta: "Aug 2024 – Apr 2025",
   },
 ];
@@ -791,7 +792,7 @@ export const hackathons: readonly Medal[] = [
     name: "nGoDonate",
     event: "EasyA x Ripple Hackathon · Best Developer Tooling",
     date: "2025",
-    note: "Donations on XRPL and Ethereum with milestone escrow, NFT receipts and IPFS documents.",
+    note: "Auditable donations on XRPL and Ethereum: milestone escrow, NFT receipts and IPFS-stored documents.",
     link: { label: "Code", href: "https://github.com/Unknown-Blaze/SC4053-Project" },
   },
   {
@@ -807,7 +808,7 @@ export const hackathons: readonly Medal[] = [
     name: "Truth Fairy",
     event: "NTU TechFest Hackathon",
     date: "Jan 2025",
-    note: "Chrome extension against misinformation, with deepfake detection and Grad-CAM explanations.",
+    note: "Chrome extension against misinformation: deepfake detection with Grad-CAM explanations on the page.",
     link: { label: "Code", href: "https://github.com/Unknown-Blaze/techfest-truth-fairy" },
   },
   {
@@ -815,7 +816,7 @@ export const hackathons: readonly Medal[] = [
     name: "GroceryGrabber",
     event: "DSTA BrainHack",
     date: "May 2024",
-    note: "Led the team; PostGIS filtering within a 5 km radius, GPT-powered parsing and ranking for nearby inventory.",
+    note: "Led the team. PostGIS search within a 5 km radius and GPT-powered parsing rank nearby grocery inventory.",
     link: { label: "Code", href: "https://github.com/Unknown-Blaze/BrainHacks-Code-Exp" },
   },
   {
@@ -848,7 +849,7 @@ export const honours: readonly Medal[] = [
     name: "Peer-reviewed publication",
     event: "AIED 2026, Springer Nature Switzerland",
     date: "2026",
-    note: "Co-author, CCIS pp. 17–32.",
+    note: "Co-author; Springer CCIS, pp. 17–32.",
   },
   {
     placing: "FULL",
@@ -862,7 +863,7 @@ export const honours: readonly Medal[] = [
     name: "Dean's List",
     event: "Nanyang Technological University",
     date: "",
-    note: "Every academic year. Top 5 percent of the cohort.",
+    note: "Every academic year; top 5% of the cohort.",
   },
   {
     placing: "SCHOLAR",
@@ -876,7 +877,7 @@ export const honours: readonly Medal[] = [
     name: "Malaysia National Cubing Open",
     event: "Speedcubing",
     date: "",
-    note: "National finalist.",
+    note: "Finalist at national level.",
   },
   {
     placing: "DISTINCTION",
@@ -898,7 +899,7 @@ export const skills: readonly SkillGroup[] = [
   {
     group: "AI/ML and LLM systems",
     items:
-      "PyTorch, TensorFlow, Scikit-Learn, Hugging Face, Transformers, LoRA, PEFT, RAG, LangChain, LangGraph, Ollama, prompt engineering, fine-tuning, model evaluation",
+      "PyTorch, TensorFlow, scikit-learn, Hugging Face, Transformers, LoRA, PEFT, RAG, LangChain, LangGraph, Ollama, prompt engineering, fine-tuning, model evaluation",
   },
   {
     group: "Computer vision and NLP",
@@ -907,7 +908,7 @@ export const skills: readonly SkillGroup[] = [
   {
     group: "Data and analytics",
     items:
-      "ETL, ELT, data modelling, feature engineering, Pandas, NumPy, PostGIS, Power BI, Tableau, dashboard design, time-series forecasting",
+      "ETL, ELT, data modelling, feature engineering, pandas, NumPy, PostGIS, Power BI, Tableau, dashboard design, time-series forecasting",
   },
   {
     group: "Programming languages",
@@ -976,14 +977,14 @@ export const education: readonly School[] = [
       "Elective focus awarded: Artificial Intelligence.",
       "Lee Kuan Yew Gold Medal, awarded to the top graduating student of the cohort.",
       "NTU Science and Engineering Scholar (full scholarship).",
-      "Dean's List in all four academic years; top 5 percent of the cohort.",
+      "Dean's List in all four academic years; top 5% of the cohort.",
       "President Research Scholar, URECA.",
       "Final Year Project graded A; submitted to ICLR 2027.",
     ],
   },
   {
     name: "Sri KDU International School",
-    award: "IB Diploma · 100 percent Tuition Scholar",
+    award: "IB Diploma · 100% Tuition Scholar",
     period: "Sep 2020 – May 2022",
     place: "Malaysia",
     points: ["Score: 42 / 45."],
@@ -993,7 +994,7 @@ export const education: readonly School[] = [
     award: "CBSE Class 10",
     period: "Apr 2019 – Mar 2020",
     place: "Malaysia",
-    points: ["Score: 96.2 percent."],
+    points: ["Score: 96.2%."],
   },
 ];
 
@@ -1033,7 +1034,7 @@ export const beyond: readonly Pastime[] = [
     label: "CHESS",
     plate: "knight",
     title: "President and Captain, NTU International Chess Varsity",
-    detail: "Led team selection, training and competition for the varsity team. MOE-qualified chess CCA coach.",
+    detail: "Led selection, training and competition for the varsity team. MOE-qualified chess CCA coach.",
   },
   {
     label: "PIANO",
