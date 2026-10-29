@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="490" viewBox="0 0 600 490" role="img" aria-labelledby="title desc">
+<title id="title">Truth Fairy plate</title>
+<desc id="desc">A Chrome extension sends page media to a Flask and PyTorch backend running a deepfake classifier; a Grad-CAM heatmap is overlaid back in the page. Top 5 at NTU TechFest.</desc>
+<defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0 H0 V20" fill="none" stroke="#E6EAEE" stroke-width="1"/></pattern><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#57606A"/></marker><marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker></defs>
+<rect x="0.5" y="0.5" width="599" height="489" rx="14" fill="#F6F8FA"/>
+<rect x="0.5" y="0.5" width="599" height="489" rx="14" fill="url(#grid)" stroke="#D0D7DE"/>
+<text x="28" y="34" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" fill="#0F766E" font-weight="700" letter-spacing="1.6">SYSTEM PLATE · TRUTH FAIRY</text>
+<text x="572" y="34" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#57606A" letter-spacing="1.4" text-anchor="end">NTU TECHFEST</text>
+<path d="M20 48 H580" stroke="#D0D7DE" stroke-width="1"/>
+<rect x="40" y="72" width="250" height="58" rx="6" fill="#FFFFFF" stroke="#57606A" stroke-width="1.2"/>
+<text x="165.0" y="99.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">Chrome extension</text>
+<text x="165.0" y="116.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">IN THE PAGE</text>
+<path d="M290 101 H338" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="330" y="62" width="246" height="236" rx="10" fill="none" stroke="#0F766E" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="342" y="290" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#0F766E" font-weight="700" letter-spacing="1.2">BACKEND</text>
+<rect x="346" y="72" width="214" height="58" rx="6" fill="#FFFFFF" stroke="#57606A" stroke-width="1.2"/>
+<text x="453.0" y="99.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">Flask API</text>
+<text x="453.0" y="116.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">PYTHON</text>
+<path d="M453 130 V158" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="346" y="160" width="214" height="58" rx="6" fill="#E3F1EF" stroke="#0F766E" stroke-width="1.6"/>
+<text x="453.0" y="187.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">Deepfake classifier</text>
+<text x="453.0" y="204.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">PYTORCH</text>
+<path d="M346 189 H300 V246 H290" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="40" y="216" width="250" height="58" rx="6" fill="#FFFFFF" stroke="#57606A" stroke-width="1.2"/>
+<text x="165.0" y="243.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">Grad-CAM heatmap</text>
+<text x="165.0" y="260.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">WHERE THE MODEL LOOKED</text>
+<path d="M165 274 V318" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="40" y="320" width="250" height="58" rx="6" fill="#E3F1EF" stroke="#0F766E" stroke-width="1.6"/>
+<text x="165.0" y="347.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">Overlay in the page</text>
+<text x="165.0" y="364.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">VERDICT + HEATMAP</text>
+<circle cx="165" cy="378" r="3.2" fill="#C2410C"/>
+<path d="M165 378 L165 420 L180 420" fill="none" stroke="#C2410C" stroke-width="1.2"/>
+<text x="186" y="426" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#C2410C" font-weight="700" letter-spacing="-0.3">Top 5</text>
+<text x="186" y="444" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="1.1">NTU TECHFEST</text>
+<g><rect x="366" y="426" width="214" height="44" fill="#F6F8FA" stroke="#57606A" stroke-width="1"/><path d="M366 448 H580" stroke="#57606A" stroke-width="0.75"/></g>
+<text x="376" y="441.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#1F2328" font-weight="700" letter-spacing="1.1">NOT TO SCALE</text>
+<text x="376" y="463.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="1.1">PLATE · TRUTH FAIRY</text>
+</svg>
