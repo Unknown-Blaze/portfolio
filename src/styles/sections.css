@@ -1,0 +1,469 @@
+/* Sections 03 to 07: experience spec column, reference entries, medal glyphs, skill frequency, honours strip.
+   Loaded after styles.css and only uses its tokens, so both themes follow automatically. */
+
+/* ---------- 03 Experience: spec column, figures, linked hover ---------- */
+
+.timeline details > summary {
+  grid-template-columns: 11.5rem minmax(0, 1fr) 13.5rem auto;
+  align-items: start;
+}
+
+.timeline-period {
+  padding-top: 0.25rem;
+}
+
+.timeline-main {
+  display: grid;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.role-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+}
+
+.role-metrics .callout-value {
+  font-size: 1.05rem;
+}
+
+.role-metrics .callout-leader {
+  width: 18px;
+  height: 12px;
+  margin-bottom: 4px;
+}
+
+.role-metrics .callout-note {
+  font-size: 0.64rem;
+}
+
+/* The spec column reads like the right-hand block of a drawing's title strip. */
+.role-spec {
+  display: grid;
+  justify-items: end;
+  gap: 0.35rem;
+  padding: 0.15rem 0 0 0.75rem;
+  border-left: 1px solid var(--line);
+  text-align: right;
+}
+
+.role-length {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.role-ongoing {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.role-spec .timeline-tags {
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  justify-self: end;
+}
+
+.timeline details > summary::after {
+  padding-top: 0.15rem;
+}
+
+/* Linked hover: a role and its ruler bar light together. Pointer devices only; touch has no hover to follow. */
+.ruler-lane,
+.timeline-item {
+  transition: background-color 120ms ease;
+}
+
+@media (hover: hover) and (min-width: 900px) {
+  .ruler-lane[data-active] {
+    background: var(--chip);
+  }
+
+  .ruler-lane[data-active] .ruler-tag {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .ruler-lane[data-active] .ruler-bar {
+    outline: 2px solid var(--kind);
+    outline-offset: 1px;
+  }
+
+  .ruler:has(.ruler-lane[data-active]) .ruler-lane:not([data-active]) .ruler-bar {
+    opacity: 0.35;
+  }
+
+  .timeline-item[data-active] {
+    background: linear-gradient(90deg, var(--chip), transparent 85%);
+  }
+
+  .timeline-item[data-active] .timeline-title {
+    color: var(--teal);
+  }
+}
+
+.timeline summary:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1099px) and (min-width: 900px) {
+  .timeline details > summary {
+    grid-template-columns: 9rem minmax(0, 1fr) 13rem auto;
+  }
+
+  .timeline-body {
+    padding-left: 10rem;
+  }
+}
+
+@media (max-width: 899px) {
+  .timeline details > summary {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .timeline-main {
+    grid-column: 1;
+  }
+
+  .role-spec {
+    grid-column: 1;
+    grid-row: 3;
+    justify-items: start;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: start;
+    gap: 0.5rem;
+    padding: 0;
+    border-left: 0;
+    text-align: left;
+  }
+
+  .role-spec .timeline-tags {
+    flex-wrap: wrap;
+    justify-self: start;
+    justify-content: flex-start;
+  }
+
+  .timeline details > summary::after {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .role-spec {
+    grid-auto-flow: row;
+    gap: 0.35rem;
+  }
+}
+
+/* ---------- 04 Research: numbered reference entries ---------- */
+
+.refs {
+  display: grid;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.ref {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+  gap: 0 1.25rem;
+}
+
+.ref-no {
+  padding-top: 0.1rem;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--ink);
+  border-right: 1px solid var(--line);
+}
+
+.ref-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.9rem;
+  margin-bottom: 0.7rem;
+}
+
+.ref-stamp {
+  --stamp: var(--muted);
+  padding: 0.18rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--stamp);
+  border: 1.5px solid var(--stamp);
+  outline: 1px solid var(--stamp);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.ref-stamp[data-status="published"] {
+  --stamp: var(--teal);
+}
+
+.ref-stamp[data-status="submitted"] {
+  --stamp: var(--amber);
+}
+
+.ref-stamp[data-status="poster"] {
+  --stamp: var(--ink-soft);
+}
+
+.ref-kind {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ref h3 {
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  margin-bottom: 0.6rem;
+  max-width: 52ch;
+}
+
+.ref-detail {
+  max-width: 72ch;
+}
+
+.doi-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin: 0.9rem 0 0;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.8rem;
+  background: var(--chip);
+  border: 1px dashed var(--line);
+  border-radius: 2px;
+}
+
+.doi-label {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.doi-value {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-family: var(--mono);
+  color: var(--ink);
+  user-select: all;
+}
+
+.doi-copy {
+  margin-left: auto;
+  padding: 0.15rem 0.55rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--muted);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.doi-copy:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+.doi-copy:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .ref {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ref-no {
+    margin-bottom: 0.5rem;
+    border-right: 0;
+    font-size: 1.1rem;
+  }
+
+  .doi-copy {
+    margin-left: 0;
+  }
+}
+
+/* ---------- 05 Medal glyphs ---------- */
+
+.medal-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.medal-glyph {
+  flex: none;
+  width: 40px;
+  height: 46px;
+  color: var(--amber);
+}
+
+#rail-honours + .rail .medal-glyph {
+  color: var(--teal);
+}
+
+.medal-repeat {
+  padding: 0.05rem 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--surface);
+  background: var(--teal);
+  border-radius: 2px;
+}
+
+.medal-years {
+  display: flex;
+  gap: 0.3rem;
+  margin: 0.15rem 0 0.4rem;
+}
+
+.medal-year {
+  padding: 0 0.3rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  border-bottom: 2px solid var(--teal);
+}
+
+/* ---------- 06 Skills: frequency ticks and anchorable keys ---------- */
+
+.legend-note {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  margin: -0.5rem 0 1.25rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.legend-note-text {
+  flex: 1 1 16rem;
+  min-width: 0;
+}
+
+.legend dt {
+  flex-wrap: wrap;
+}
+
+.legend-group {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+a.legend-key {
+  text-decoration: none;
+}
+
+a.legend-key:hover {
+  color: var(--surface);
+  background: var(--teal);
+}
+
+a.legend-key:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+.legend-row {
+  scroll-margin-top: calc(var(--bar-h) + 16px);
+}
+
+.legend-row:target {
+  background: linear-gradient(90deg, var(--chip), transparent 90%);
+  border-top-color: var(--teal);
+}
+
+.legend-row:target .legend-key {
+  color: var(--surface);
+  background: var(--teal);
+}
+
+.freq {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+  font-weight: 400;
+}
+
+.freq-ticks,
+.freq-sample {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.freq-tick {
+  width: 4px;
+  height: 12px;
+  border: 1px solid var(--muted);
+}
+
+.freq-tick[data-on] {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
+.freq-count {
+  min-width: 2.2rem;
+  font-size: 0.68rem;
+  color: var(--muted);
+  text-align: right;
+}
+
+/* ---------- 07 Education: honours strip ---------- */
+
+.honours-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.9rem 0 0.4rem;
+  padding: 0.6rem 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.honour-stamp {
+  padding: 0.15rem 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  border: 1px solid var(--teal);
+  border-radius: 2px;
+}
+
+.honour-stamp:first-child {
+  color: var(--amber);
+  border-color: var(--amber);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ruler-lane,
+  .timeline-item {
+    transition: none;
+  }
+}
