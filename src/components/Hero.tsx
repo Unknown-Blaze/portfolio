@@ -1,7 +1,24 @@
-import { facts, person, REVISION } from "../content";
+import { facts, person, REVISION, sheets } from "../content";
 import { asset } from "../lib/asset";
+import "../styles/hero.css";
+import { CopyEmail } from "./Contact";
 import { HeroPlan } from "./HeroPlan";
 import { Legend } from "./Legend";
+
+const MONTHS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+
+// REVISION is "YYYY-MM"; anything else is shown as written rather than guessed at.
+const issued = (rev: string): string => {
+  const [y, m] = rev.split("-");
+  const month = MONTHS[Number(m) - 1];
+  return y && month ? `${month} ${y}` : rev;
+};
+
+// "Role · focus" reads as two lines of different weight; a headline without the dot stays one line.
+const [role, focus] = ((): [string, string | null] => {
+  const at = person.headline.indexOf(" · ");
+  return at < 0 ? [person.headline, null] : [person.headline.slice(0, at), person.headline.slice(at + 3)];
+})();
 
 export function Hero() {
   return (
@@ -27,17 +44,39 @@ export function Hero() {
           </figure>
           <div>
             <h1 id="hero-name">{person.name}</h1>
-            <p className="headline">{person.headline}</p>
+            <p className="headline">
+              <span className="headline-role">{role}</span>
+              {focus ? (
+                <>
+                  <span className="visually-hidden"> · </span>
+                  <span className="headline-focus">{focus}</span>
+                </>
+              ) : null}
+            </p>
           </div>
         </div>
         <p className="breadth">{person.breadth}</p>
-        <p className="hero-actions">
+        <div className="hero-actions">
           <a className="button" href="#work">
             See the work
           </a>
           <a className="button button-quiet" href="#contact">
             Get in touch
           </a>
+          <span className="hero-quick">
+            <a className="hero-quick-link mono" href={asset(person.resumePdf)} download>
+              <span aria-hidden="true">↓</span> Download résumé
+            </a>
+            <CopyEmail className="hero-quick-link mono" label="Copy email" />
+          </span>
+        </div>
+        <p className="rev-strip mono">
+          <span className="rev-strip-key">REV</span>
+          <span>{REVISION}</span>
+          <span className="rev-strip-key">ISSUED</span>
+          <span>{issued(REVISION)}</span>
+          <span className="rev-strip-key">SHEETS</span>
+          <span>{String(sheets.length).padStart(2, "0")}</span>
         </p>
       </div>
       <HeroPlan />
