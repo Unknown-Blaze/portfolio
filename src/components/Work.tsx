@@ -10,7 +10,7 @@ import { SheetHead } from "./SheetHead";
 type Filter = Domain | "All";
 
 function Links({ item }: { item: WorkItem }) {
-  if (item.links.length === 0) return null;
+  if (item.links.length === 0) return <p className="work-links not-public mono">Not public</p>;
   return (
     <p className="work-links">
       {item.links.map((l) => (
@@ -120,7 +120,7 @@ export function Work() {
   return (
     <section id="work" aria-labelledby="work-title" className="section">
       <SheetHead id="work-title" no="02" label="Selected work" title="Selected work">
-        Apps in production, research, robots and hackathon builds. Filter by domain.
+        AI systems, production apps, research and robots. Filter by domain.
       </SheetHead>
       <div className="filters" role="group" aria-label="Filter work by domain">
         {(["All", ...DOMAINS] as const).map((d) => (

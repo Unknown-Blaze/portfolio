@@ -1,9 +1,9 @@
 // Every word on the site lives in this file. Edit here; the components only lay it out.
 // Product names that must not break across lines ("ROS 2") use a no-break space, written \u00a0.
 
-export type Domain = "Robotics" | "ML" | "Web" | "Mobile" | "Embedded" | "Blockchain";
+export type Domain = "AI & ML" | "Web" | "Mobile" | "Robotics" | "Embedded" | "Blockchain";
 
-export const DOMAINS: readonly Domain[] = ["Robotics", "ML", "Web", "Mobile", "Embedded", "Blockchain"];
+export const DOMAINS: readonly Domain[] = ["AI & ML", "Web", "Mobile", "Robotics", "Embedded", "Blockchain"];
 
 export interface Link {
   label: string;
@@ -28,8 +28,10 @@ export const REVISION = "2026-10";
 
 export const person = {
   name: "Rudra Prasadh Ganesh",
-  headline: "Software engineer, robotics & AI",
-  breadth: "I work across software, embedded hardware and machine learning, from ROS\u00a02 robots on construction sites to production web platforms.",
+  // Word joiners and no-break spaces keep "AI, full-stack & robotics" on one line.
+  headline: "Software engineer · AI,\u00a0full-\u2060stack\u00a0&\u00a0robotics",
+  breadth:
+    "Machine learning · web & mobile · embedded & robotics. I build AI-backed products end to end, from research models and RAG platforms to production apps, and now ROS\u00a02 robots.",
   location: "Singapore",
   email: "grudraprasadh@gmail.com",
   github: "https://github.com/Unknown-Blaze",
@@ -61,13 +63,16 @@ export interface NowItem {
   stack: readonly string[];
 }
 
+export const nowIntro =
+  "Software engineer building AI-backed products end to end: the models, the services around them and the apps people use.";
+
 export const now: readonly NowItem[] = [
   {
     org: "Fabrica AI",
     role: "Software Engineer",
     since: "Jul 2026",
     summary:
-      "Sole software engineer on the ROS\u00a02 codebase of an autonomous tile-grouting robot for construction, deployed commercially in Singapore and Australia. I own perception, SLAM and navigation, motion planning and behaviour trees, and direct the intern engineers.",
+      "Sole software engineer on the ROS\u00a02 codebase of an autonomous tile-grouting robot for construction, deployed in Singapore and Australia.",
     stack: ["ROS\u00a02", "LiDAR", "SLAM", "Behaviour trees", "Gazebo", "Docker", "GitHub Actions"],
   },
   {
@@ -102,23 +107,6 @@ const shot = (file: string, alt: string): Image => ({ src: `img/${file}.webp`, a
 
 export const work: readonly Work[] = [
   {
-    id: "grouting-robot",
-    name: "Autonomous tile-grouting robot",
-    context: "Fabrica AI · deployed in Singapore and Australia",
-    period: "Jul 2026 – present",
-    domains: ["Robotics", "Embedded"],
-    summary: "The ROS\u00a02 software of a construction robot that grouts tiles on its own.",
-    points: [
-      "Perception with LiDAR and cameras, SLAM and navigation, motion planning and behaviour trees.",
-      "Delivered a complete LiDAR sensor upgrade, from integration to on-site deployment, in one month.",
-      "Behaviour tested in Gazebo, packaged with Docker and GitHub Actions.",
-    ],
-    stack: ["ROS\u00a02", "LiDAR", "SLAM", "Gazebo", "Docker", "GitHub Actions"],
-    callouts: [{ value: "1 month", note: "LiDAR upgrade, integration to site" }],
-    links: [],
-    plate: "robot",
-  },
-  {
     id: "myccds",
     name: "MyCCDS",
     context: "Student platform for NTU's College of Computing and Data Science",
@@ -147,7 +135,7 @@ export const work: readonly Work[] = [
     name: "MHC-peptide binding prediction",
     context: "Final Year Project (graded A), Bioinformatics Lab, NTU · submitted to ICLR 2027",
     period: "Aug 2025 – May 2026",
-    domains: ["ML"],
+    domains: ["AI & ML"],
     summary:
       "ESM-2 (650M) sequence embeddings fused with an AlphaFold-based structural pipeline, fine-tuned with LoRA/PEFT in PyTorch on an NVIDIA A100 80GB.",
     points: [
@@ -181,6 +169,23 @@ export const work: readonly Work[] = [
       { label: "Code", href: "https://github.com/Unknown-Blaze/SC4053-Project" },
     ],
     image: shot("ngodonate", "nGoDonate landing page: Amplify your impact, transparently"),
+  },
+  {
+    id: "grouting-robot",
+    name: "Autonomous tile-grouting robot",
+    context: "Fabrica AI · deployed in Singapore and Australia",
+    period: "Jul 2026 – present",
+    domains: ["Robotics", "Embedded"],
+    summary: "The ROS\u00a02 software of a construction robot that grouts tiles on its own.",
+    points: [
+      "Perception with LiDAR and cameras, SLAM and navigation, motion planning and behaviour trees.",
+      "Delivered a complete LiDAR sensor upgrade, from integration to on-site deployment, in one month.",
+      "Behaviour tested in Gazebo, packaged with Docker and GitHub Actions.",
+    ],
+    stack: ["ROS\u00a02", "LiDAR", "SLAM", "Gazebo", "Docker", "GitHub Actions"],
+    callouts: [{ value: "1 month", note: "LiDAR upgrade, integration to site" }],
+    links: [],
+    plate: "robot",
   },
   {
     id: "synctube",
@@ -235,7 +240,7 @@ export const work: readonly Work[] = [
     name: "LISA 1.0",
     context: "Automotive advisor platform · MISUMI.AI",
     period: "Sep 2025 – Aug 2026",
-    domains: ["Web", "ML"],
+    domains: ["AI & ML", "Web"],
     summary: "An automotive advisor in production across 4 ASEAN markets.",
     points: [
       "Next.js 15 and PostgreSQL with a RAG pipeline over structured Japanese and English automotive listings.",
@@ -250,11 +255,50 @@ export const work: readonly Work[] = [
     links: [],
   },
   {
+    id: "nie-tutoring",
+    name: "Real-time tutoring backend",
+    context: "AI Engineer (part-time) · National Institute of Education, NTU",
+    period: "Jun 2025 – Oct 2025",
+    domains: ["AI & ML", "Web"],
+    summary: "Backend and real-time infrastructure for an intelligent tutoring system.",
+    points: [
+      "One of two primary developers; WebSocket communication with 99.9 percent session stability.",
+      "Organised the 60-participant study behind the AIED 2026 paper I co-authored.",
+    ],
+    stack: ["WebSockets", "Real-time backend"],
+    callouts: [{ value: "99.9%", note: "session stability" }],
+    links: [{ label: "AIED 2026 paper", href: "https://doi.org/10.1007/978-3-032-29791-4_2" }],
+  },
+  {
+    id: "yolo-api",
+    name: "YOLOv8 inference API",
+    context: "Full Stack Engineer Intern · Panasonic R&D Center Singapore",
+    period: "Jan 2025 – Jun 2025",
+    domains: ["AI & ML", "Web"],
+    summary: "An inference API serving YOLOv8, with async processing for real-time workflows.",
+    points: ["Built with FastAPI and packaged with Docker; caching tuned for retrieval speed and latency."],
+    stack: ["FastAPI", "Docker", "YOLOv8", "Python"],
+    callouts: [],
+    links: [],
+  },
+  {
+    id: "birdclef",
+    name: "BirdCLEF on Kaggle",
+    context: "SC4000 course project · Kaggle competition",
+    period: "",
+    domains: ["AI & ML"],
+    summary: "A machine-learning entry for BirdCLEF, the Kaggle competition on identifying bird species from audio.",
+    points: [],
+    stack: ["Machine learning", "Kaggle"],
+    callouts: [],
+    links: [],
+  },
+  {
     id: "edge-ai",
     name: "Edge-AI security pipeline",
     context: "President Research Scholar, URECA · ODROID N2",
     period: "Aug 2024 – Apr 2025",
-    domains: ["Embedded", "ML"],
+    domains: ["AI & ML", "Embedded"],
     summary: "Motion detection for an IoT security system, running on the edge.",
     points: [
       "96 percent motion-detection accuracy at 180 ms latency on an ODROID.",
@@ -270,7 +314,7 @@ export const work: readonly Work[] = [
     name: "Sentiment analysis platform",
     context: "SC4001 group project",
     period: "Jan 2024 – Apr 2024",
-    domains: ["ML", "Web"],
+    domains: ["AI & ML", "Web"],
     summary: "End-to-end text analytics with model-serving APIs.",
     points: [
       "Built preprocessing and model-inference endpoints for sentiment classification.",
@@ -279,6 +323,36 @@ export const work: readonly Work[] = [
     stack: ["NLP", "Model-serving APIs", "Dashboards"],
     callouts: [],
     links: [{ label: "Code", href: "https://github.com/Unknown-Blaze/SC4001-Group-Project" }],
+  },
+  {
+    id: "modec-analytics",
+    name: "Sustainability analytics platform",
+    context: "Software Engineer Intern · MODEC",
+    period: "Jun 2025 – Aug 2025",
+    domains: ["Web"],
+    summary: "A full-stack web application for sustainability and environmental analytics, delivered independently.",
+    points: [
+      "React workflows for vendor data collection on a Django REST Framework backend handling 500 or more concurrent requests.",
+      "Redis caching cut retrieval time by 40 percent; IoT logs ingested through AWS Lambda and Amazon S3.",
+    ],
+    stack: ["React", "Django", "DRF", "Redis", "AWS Lambda", "Amazon S3"],
+    callouts: [
+      { value: "500+", note: "concurrent requests" },
+      { value: "−40%", note: "retrieval time" },
+    ],
+    links: [],
+  },
+  {
+    id: "ccds-alumni",
+    name: "CCDS alumni platform",
+    context: "Full Stack Developer · NTU College of Computing and Data Science",
+    period: "May 2024 – Jul 2025",
+    domains: ["Web"],
+    summary: "A networking platform connecting alumni and students for startup and event collaboration.",
+    points: ["Led development end to end, from features to backend and site performance."],
+    stack: ["WordPress", "PHP", "SQL"],
+    callouts: [],
+    links: [],
   },
   {
     id: "vr-chem",
@@ -609,16 +683,6 @@ export interface SkillGroup {
 
 export const skills: readonly SkillGroup[] = [
   {
-    group: "Robotics",
-    items:
-      "ROS, ROS\u00a02, robot perception, robot control, autonomous navigation, simulation, reinforcement learning, LiDAR, computer vision, sensor fusion",
-  },
-  {
-    group: "Embedded and hardware",
-    items:
-      "FreeRTOS, STM32, STM32F4, XMC4800, MSP432, ESP32, Arduino, ODROID, EtherCAT, CAN bus, I2C, SPI, UART, sensor integration, motor control, real-time scheduling, firmware debugging",
-  },
-  {
     group: "AI/ML and LLM systems",
     items:
       "PyTorch, TensorFlow, Scikit-Learn, Hugging Face, Transformers, LoRA, PEFT, RAG, LangChain, LangGraph, Ollama, prompt engineering, fine-tuning, model evaluation",
@@ -658,6 +722,16 @@ export const skills: readonly SkillGroup[] = [
     group: "Cloud and DevOps",
     items:
       "Alibaba Cloud, AWS, AWS Lambda, Amazon S3, AWS Elastic Beanstalk, Amazon SageMaker, Docker, Kubernetes, Terraform, CI/CD, GitHub Actions, Vercel, deployment automation",
+  },
+  {
+    group: "Robotics",
+    items:
+      "ROS, ROS\u00a02, robot perception, robot control, autonomous navigation, simulation, reinforcement learning, LiDAR, computer vision, sensor fusion",
+  },
+  {
+    group: "Embedded and hardware",
+    items:
+      "FreeRTOS, STM32, STM32F4, XMC4800, MSP432, ESP32, Arduino, ODROID, EtherCAT, CAN bus, I2C, SPI, UART, sensor integration, motor control, real-time scheduling, firmware debugging",
   },
   {
     group: "Software practices",

@@ -1,6 +1,6 @@
 # portfolio
 
-The personal site of Rudra Prasadh Ganesh, software engineer in robotics and AI:
+The personal site of Rudra Prasadh Ganesh, software engineer working across AI, full-stack and robotics:
 <https://unknown-blaze.github.io/portfolio/>
 
 ![The site's opening sheet: name, role, and a robot laying a grout line across a tile grid](public/og.png)

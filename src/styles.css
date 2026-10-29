@@ -1567,3 +1567,10 @@ ol {
     transition: none !important;
   }
 }
+
+.not-public {
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}

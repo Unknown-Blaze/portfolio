@@ -1,11 +1,13 @@
-import { now } from "../content";
+import { now, nowIntro } from "../content";
 import { Chips } from "./Chips";
 import { SheetHead } from "./SheetHead";
 
 export function Now() {
   return (
     <section id="now" aria-labelledby="now-title" className="section">
-      <SheetHead id="now-title" no="01" label="Now" title="What I'm building now" />
+      <SheetHead id="now-title" no="01" label="Now" title="What I'm building now">
+        {nowIntro}
+      </SheetHead>
       <div className="now-grid">
         {now.map((n) => (
           <article key={n.org} className="panel now-card">
