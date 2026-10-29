@@ -1,25 +1,46 @@
-name: Deploy
+name: Check and deploy
 
+# Every push and pull request runs `npm run check` (typecheck, lint, build).
+# Only a push to main (or a manual run on main) deploys, and only after the check passes.
 on:
   push:
-    branches: [main]
+    branches-ignore: [gh-pages] # the deploy target itself
+  pull_request:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: deploy
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
-          node-version: 20
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+
+  deploy:
+    needs: check
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: deploy
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
           cache: npm
       - run: npm ci
       - run: npm run build
