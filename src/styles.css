@@ -728,6 +728,11 @@ ol {
   height: auto;
 }
 
+/* While the robot drives, give the drawing its own layer so each frame repaints only the figure. */
+.plan[data-driving] svg {
+  will-change: transform;
+}
+
 .plan figcaption,
 .knight figcaption,
 .hobby-figure figcaption,
@@ -813,7 +818,7 @@ ol {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .robot-sweep {
+  .plan[data-driving] .robot-sweep {
     animation: sweep 1.6s ease-in-out infinite;
   }
 }

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Awards } from "./components/Awards";
 import { Beyond } from "./components/Beyond";
 import { Contact } from "./components/Contact";
@@ -14,6 +15,12 @@ import { Skills } from "./components/Skills";
 import { Work } from "./components/Work";
 
 export function App() {
+  // The sheet is drawn by script, so the browser's own jump to a #fragment on load finds nothing; redo it once mounted.
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (id) document.getElementById(id)?.scrollIntoView();
+  }, []);
+
   return (
     <>
       <a className="skip-link" href="#main">
