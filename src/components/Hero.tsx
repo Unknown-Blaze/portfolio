@@ -1,6 +1,7 @@
 import { facts, person, REVISION } from "../content";
 import { asset } from "../lib/asset";
 import { HeroPlan } from "./HeroPlan";
+import { Legend } from "./Legend";
 
 export function Hero() {
   return (
@@ -50,6 +51,7 @@ export function Hero() {
           </li>
         ))}
       </ul>
+      <Legend />
     </section>
   );
 }

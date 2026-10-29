@@ -729,7 +729,9 @@ ol {
 }
 
 .plan figcaption,
-.knight figcaption {
+.knight figcaption,
+.hobby-figure figcaption,
+.ruler figcaption {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
@@ -1042,24 +1044,36 @@ ol {
 }
 
 .timeline-tick {
+  --kind: var(--amber);
   position: absolute;
-  left: calc(-2.25rem + 0.6rem - 5px);
+  left: calc(-2.25rem + 0.6rem - 6px);
   top: 1.45rem;
-  width: 11px;
+  width: 13px;
   height: 1px;
-  background: var(--amber);
-  box-shadow: 0 0 0 0.5px var(--amber);
+  background: var(--kind);
+  box-shadow: 0 0 0 0.5px var(--kind);
 }
 
 .timeline-tick::after {
   content: "";
   position: absolute;
-  left: 3px;
-  top: -3px;
-  width: 5px;
-  height: 5px;
+  left: 2.5px;
+  top: -4px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  background: var(--amber);
+  background: var(--kind);
+  border: 1.5px solid var(--kind);
+  box-sizing: border-box;
+}
+
+.timeline-tick[data-kind="venture"]::after {
+  background: var(--paper);
+  border-color: var(--ink);
+}
+
+.timeline-tick[data-kind="venture"] {
+  --kind: var(--ink);
 }
 
 .timeline details > summary {
@@ -1108,8 +1122,8 @@ ol {
   padding: 0.12rem 0.45rem;
   font-size: 0.68rem;
   letter-spacing: 0.08em;
-  color: var(--teal);
-  border: 1px solid var(--teal);
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
   border-radius: 2px;
   white-space: nowrap;
 }
@@ -1301,18 +1315,6 @@ ol {
 
 /* ---------- 08 Beyond code ---------- */
 
-.beyond-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
-  gap: clamp(1.5rem, 4vw, 3rem);
-  align-items: start;
-}
-
-.beyond-list {
-  display: grid;
-  gap: 1.25rem;
-  list-style: none;
-}
 
 .knight {
   margin: 0;
@@ -1456,8 +1458,7 @@ ol {
   .now-grid,
   .feature,
   .edu-grid,
-  .contact-grid,
-  .beyond-grid {
+  .contact-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -1493,7 +1494,7 @@ ol {
     grid-column: 1;
   }
 
-  .org-tag {
+  .timeline-tags {
     grid-column: 1;
     grid-row: 3;
     justify-self: start;
@@ -1508,9 +1509,6 @@ ol {
     padding-left: 0;
   }
 
-  .knight {
-    max-width: 380px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1573,4 +1571,583 @@ ol {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+/* ---------- Colour code: one kind, one colour, everywhere ---------- */
+
+[data-kind="industry"] {
+  --kind: var(--teal);
+}
+
+[data-kind="research"] {
+  --kind: var(--amber);
+}
+
+[data-kind="venture"] {
+  --kind: var(--ink);
+}
+
+[data-kind="campus"] {
+  --kind: var(--muted);
+}
+
+.kind-swatch {
+  display: inline-block;
+  flex: none;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: var(--kind);
+  border: 1.5px solid var(--kind);
+}
+
+[data-kind="venture"] .kind-swatch,
+.ruler-bar[data-kind="venture"] {
+  background: transparent;
+}
+
+/* Hero legend, read like the key block in a drawing's corner. */
+.sheet-legend {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  margin-top: calc(-1 * clamp(2rem, 5vw, 4rem));
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--ink);
+  border-top: 0;
+  background: var(--surface);
+}
+
+.sheet-legend-title {
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.sheet-legend-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sheet-legend-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+}
+
+.sheet-legend-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sheet-legend-note {
+  color: var(--muted);
+}
+
+/* ---------- 00A By the numbers ---------- */
+
+.numbers {
+  padding-block: clamp(1rem, 3vw, 2rem) clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.numbers-title {
+  margin: 0.4rem 0 1.25rem;
+  font-size: clamp(1.6rem, 3.4vw, 2.3rem);
+  letter-spacing: -0.03em;
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.number-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.6rem clamp(0.9rem, 2.4vw, 1.6rem) 1.1rem;
+  background: var(--surface);
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+/* Registration marks in the inner corners. */
+.number-tile::before,
+.number-tile::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-color: var(--line);
+  border-style: solid;
+}
+
+.number-tile::before {
+  top: 6px;
+  left: 6px;
+  border-width: 1px 0 0 1px;
+}
+
+.number-tile::after {
+  right: 6px;
+  bottom: 6px;
+  border-width: 0 1px 1px 0;
+}
+
+.number-no {
+  position: absolute;
+  top: 0.55rem;
+  left: 1.3rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.number-swatch {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.9rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: var(--kind);
+  border: 1.5px solid var(--kind);
+}
+
+.number-tile[data-kind="venture"] .number-swatch {
+  background: transparent;
+}
+
+.number-value {
+  margin-top: 0.35rem;
+  font-size: clamp(1.7rem, 4.4vw, 3.1rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--kind);
+}
+
+.number-tile[data-kind="venture"] .number-value {
+  color: var(--ink);
+}
+
+.number-tile[data-kind="campus"] .number-value {
+  color: var(--ink);
+}
+
+.number-callout {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 0.15rem;
+  margin-left: 0.6rem;
+}
+
+.number-leader {
+  flex: none;
+  width: 22px;
+  height: 16px;
+  background: linear-gradient(
+    to bottom left,
+    transparent calc(50% - 0.6px),
+    var(--muted) calc(50% - 0.6px),
+    var(--muted) calc(50% + 0.6px),
+    transparent calc(50% + 0.6px)
+  );
+}
+
+.number-label {
+  margin-top: 12px;
+  padding: 0 0.2rem 0.15rem;
+  border-bottom: 1px solid var(--muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.number-source {
+  margin-top: auto;
+  padding-top: 0.9rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- 03 Experience: year ruler and kinds ---------- */
+
+.ruler {
+  margin: 0 0 2rem;
+  padding: 12px 14px 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.ruler-lanes,
+.ruler-axis {
+  display: grid;
+  gap: 3px;
+}
+
+.ruler-lane,
+.ruler-axis {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ruler-tag {
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ruler-track {
+  position: relative;
+  height: 11px;
+  /* Quarter divisions, a darker joint at each year. */
+  background-image:
+    linear-gradient(90deg, var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grout-major) 1px, transparent 1px);
+  background-size:
+    calc(100% / 3) 100%,
+    calc(100% / 12) 100%;
+}
+
+.ruler-bar {
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  min-width: 4px;
+  background: var(--kind);
+  border: 1.5px solid var(--kind);
+  border-radius: 1px;
+}
+
+.ruler-axis {
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px solid var(--ink);
+}
+
+.ruler-scale {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ruler-year {
+  padding-left: 4px;
+  border-left: 1px solid var(--ink);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.timeline-year {
+  position: absolute;
+  left: calc(-2.25rem + 0.6rem);
+  top: 0;
+  z-index: 1;
+  padding: 0.2rem 0.1rem;
+  writing-mode: vertical-rl;
+  transform: translate(-50%, -88%) rotate(180deg);
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+}
+
+.timeline-item:first-child .timeline-year {
+  top: 0;
+  transform: translate(-50%, 0) rotate(180deg);
+}
+
+.timeline-item:first-child .timeline-tick {
+  top: 3.2rem;
+}
+
+.timeline-item:first-child details > summary {
+  padding-top: 2.45rem;
+}
+
+.timeline-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-self: end;
+  gap: 0.4rem;
+}
+
+.kind-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.12rem 0.45rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.kind-tag .kind-swatch {
+  width: 0.55rem;
+  height: 0.55rem;
+}
+
+/* ---------- 02 MyCCDS phone strip ---------- */
+
+.phones {
+  padding: 14px 12px 8px;
+}
+
+.phone-strip {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(118px, 1fr);
+  gap: 12px;
+  margin: 0;
+  padding: 0 0 6px;
+  list-style: none;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.phone {
+  scroll-snap-align: start;
+  padding: 5px;
+  background: var(--chip);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.phone img {
+  width: 100%;
+  border-radius: 11px;
+}
+
+.phone:nth-child(even) {
+  margin-top: 18px;
+}
+
+/* ---------- 08 Beyond code tiles ---------- */
+
+.beyond-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.beyond-tile {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.beyond-tile .knight,
+.hobby-figure {
+  margin: 0;
+  padding: 10px;
+  border: 0;
+  border-bottom: 1px dashed var(--line);
+  border-radius: 0;
+  background: none;
+}
+
+.beyond-tile .knight-board {
+  aspect-ratio: 1;
+}
+
+.hobby-figure .plate {
+  aspect-ratio: 1;
+  border: 1px solid var(--ink);
+}
+
+.beyond-tile figcaption {
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+  font-size: 0.6rem;
+}
+
+.beyond-text {
+  padding: 1rem clamp(1rem, 2vw, 1.25rem) 1.25rem;
+}
+
+.beyond-text h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.plate-stamp {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  fill: var(--amber);
+}
+
+.plate-dim path {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1;
+}
+
+.plate-dim text {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  fill: var(--muted);
+}
+
+.key-white {
+  fill: var(--surface);
+  stroke: var(--ink);
+  stroke-width: 1.25;
+}
+
+.key-on {
+  fill: var(--amber);
+  fill-opacity: 0.35;
+}
+
+.key-black {
+  fill: var(--ink);
+}
+
+.cube-base polygon,
+.cube-layer polygon {
+  stroke: var(--ink);
+  stroke-width: 1.1;
+  stroke-linejoin: round;
+}
+
+.cube-t {
+  fill: var(--amber);
+  fill-opacity: 0.4;
+}
+
+.cube-inner {
+  fill-opacity: 0.12;
+}
+
+.cube-r {
+  fill: var(--teal);
+  fill-opacity: 0.35;
+}
+
+.cube-l {
+  fill: var(--chip);
+}
+
+.cube-guides line {
+  stroke: var(--muted);
+  stroke-width: 1;
+  stroke-dasharray: 3 4;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cube-layer {
+    transition: transform 0.5s ease;
+  }
+
+  .beyond-tile:hover .cube-layer {
+    transform: translateY(-10px);
+  }
+
+  .beyond-tile:hover .key-on {
+    animation: key-press 0.9s ease-in-out;
+  }
+}
+
+@keyframes key-press {
+  0%,
+  100% {
+    fill-opacity: 0.35;
+  }
+  40% {
+    fill-opacity: 0.9;
+  }
+}
+
+@media (max-width: 899px) {
+  .numbers-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .beyond-tiles {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 520px;
+  }
+
+  .sheet-legend {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sheet-legend-list li {
+    flex-wrap: wrap;
+  }
+
+  .timeline-tags {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 1099px) and (min-width: 900px) {
+  .beyond-tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .ruler-lane,
+  .ruler-axis {
+    grid-template-columns: 4.6rem minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+
+  .timeline-year {
+    left: calc(-1.6rem + 0.6rem);
+  }
+
+  .number-tile {
+    padding-inline: 0.75rem;
+  }
+
+  .number-value {
+    font-size: 1.4rem;
+    letter-spacing: -0.05em;
+  }
+
+  .number-label {
+    font-size: 0.62rem;
+  }
 }

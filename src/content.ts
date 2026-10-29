@@ -53,6 +53,59 @@ export const facts: readonly string[] = [
   "Winner, EasyA x Ripple",
 ];
 
+/* ---------- Colour code, used across the sheet ---------- */
+
+/** What kind of work a role or a number comes from; each kind has one colour on every sheet. */
+export type Kind = "industry" | "research" | "venture" | "campus";
+
+export const KINDS: readonly { kind: Kind; label: string; note: string }[] = [
+  { kind: "industry", label: "Industry", note: "employed engineering roles" },
+  { kind: "research", label: "Research", note: "papers, lab and study work" },
+  { kind: "venture", label: "Own venture", note: "co-founded, freelance and own builds" },
+  { kind: "campus", label: "Campus", note: "university roles" },
+];
+
+/* ---------- 00A By the numbers ---------- */
+
+/** One key dimension. `from` is where the count-up starts; `to` is the figure shown at rest. */
+export interface KeyNumber {
+  from: number;
+  to: number;
+  decimals: number;
+  prefix: string;
+  suffix: string;
+  label: string;
+  source: string;
+  kind: Kind;
+}
+
+export const numbers: readonly KeyNumber[] = [
+  { from: 0, to: 600, decimals: 0, prefix: "", suffix: "+", label: "daily active users", source: "MyCCDS", kind: "venture" },
+  {
+    from: 0,
+    to: 0.859,
+    decimals: 3,
+    prefix: "",
+    suffix: "",
+    label: "PCC, vs 0.847 best baseline",
+    source: "Final Year Project",
+    kind: "research",
+  },
+  { from: 300, to: 50, decimals: 0, prefix: "300→", suffix: " ms", label: "API latency", source: "LISA 1.0", kind: "industry" },
+  { from: 0, to: 70, decimals: 0, prefix: "−", suffix: "%", label: "cloud cost", source: "LISA 1.0", kind: "industry" },
+  {
+    from: 90,
+    to: 99.9,
+    decimals: 1,
+    prefix: "",
+    suffix: "%",
+    label: "session stability",
+    source: "NIE tutoring backend",
+    kind: "research",
+  },
+  { from: 0, to: 5, decimals: 0, prefix: "", suffix: "", label: "hackathon placings", source: "Winner to finalist", kind: "venture" },
+];
+
 /* ---------- 01 Now ---------- */
 
 export interface NowItem {
@@ -99,11 +152,15 @@ export interface Work {
   callouts: readonly Callout[];
   links: readonly Link[];
   image?: Image;
+  /** Phone screenshots shown as a strip, in place of `image`. */
+  gallery?: readonly Image[];
   /** A drawn plate shown in place of a screenshot, for work with nothing public to show. */
   plate?: "robot";
 }
 
 const shot = (file: string, alt: string): Image => ({ src: `img/${file}.webp`, alt, width: 800, height: 450 });
+// Taken from the app's own store listing, status and navigation bars trimmed.
+const phone = (file: string, alt: string): Image => ({ src: `work/myccds/${file}.webp`, alt, width: 300, height: 582 });
 
 export const work: readonly Work[] = [
   {
@@ -128,7 +185,12 @@ export const work: readonly Work[] = [
         href: "https://www.ntu.edu.sg/computing/news-events/news/detail/ganesh-rudra-prasadh-transforms-student-experience-with-myccds",
       },
     ],
-    image: shot("myccds", "MyCCDS Google Play listing with a 5.0 rating and six app screenshots"),
+    gallery: [
+      phone("welcome", "MyCCDS welcome screen: your one-stop portal for all CCDS needs"),
+      phone("home", "MyCCDS home screen with top links to the student intranet, STARS and NTULearn"),
+      phone("guide", "MyCCDS getting-started guide explaining the links, side navigation and in-app browser"),
+      phone("calendar", "MyCCDS academic calendar page listing the calendars by academic year"),
+    ],
   },
   {
     id: "mhc-peptide",
@@ -459,6 +521,7 @@ export interface Role {
   title: string;
   org: string;
   tag: string;
+  kind: Kind;
   period: string;
   location: string;
   bullets: readonly string[];
@@ -469,6 +532,7 @@ export const experience: readonly Role[] = [
     title: "Software Engineer",
     org: "Fabrica AI",
     tag: "FABRICA",
+    kind: "industry",
     period: "Jul 2026 – present",
     location: "Singapore",
     bullets: [
@@ -483,6 +547,7 @@ export const experience: readonly Role[] = [
     title: "Co-Founder and Full Stack Engineer",
     org: "Lumerva",
     tag: "LUMERVA",
+    kind: "venture",
     period: "Sep 2025 – present",
     location: "Singapore",
     bullets: [
@@ -496,6 +561,7 @@ export const experience: readonly Role[] = [
     title: "DevOps Engineer and Team Lead",
     org: "Misumi Kaizen OU Group (MISUMI.AI)",
     tag: "MISUMI.AI",
+    kind: "industry",
     period: "Sep 2025 – Aug 2026",
     location: "Singapore",
     bullets: [
@@ -511,6 +577,7 @@ export const experience: readonly Role[] = [
     title: "DevOps Intern",
     org: "MODEC Offshore Production Systems (Singapore) / Offshore Frontier Solutions",
     tag: "MODEC",
+    kind: "industry",
     period: "Dec 2025 – Jan 2026",
     location: "Singapore",
     bullets: [
@@ -524,6 +591,7 @@ export const experience: readonly Role[] = [
     title: "AI Engineer (part-time)",
     org: "National Institute of Education, NTU",
     tag: "NIE",
+    kind: "research",
     period: "Jun 2025 – Oct 2025",
     location: "Singapore",
     bullets: [
@@ -537,6 +605,7 @@ export const experience: readonly Role[] = [
     title: "Software Engineer Intern, Sustainability Analytics",
     org: "MODEC Offshore Production Systems (Singapore) / Offshore Frontier Solutions",
     tag: "MODEC",
+    kind: "industry",
     period: "Jun 2025 – Aug 2025",
     location: "Singapore",
     bullets: [
@@ -551,6 +620,7 @@ export const experience: readonly Role[] = [
     title: "Full Stack Engineer Intern",
     org: "Panasonic R&D Center Singapore",
     tag: "PANASONIC",
+    kind: "industry",
     period: "Jan 2025 – Jun 2025",
     location: "Singapore",
     bullets: [
@@ -564,6 +634,7 @@ export const experience: readonly Role[] = [
     title: "Full Stack Developer",
     org: "NTU College of Computing and Data Science (CCDS)",
     tag: "NTU CCDS",
+    kind: "campus",
     period: "May 2024 – Jul 2025",
     location: "Singapore",
     bullets: [
@@ -576,6 +647,7 @@ export const experience: readonly Role[] = [
     title: "Embedded Engineering Intern, Edge Data Systems",
     org: "Schaeffler Hub for Advanced Research",
     tag: "SCHAEFFLER",
+    kind: "industry",
     period: "May 2024 – Aug 2024",
     location: "Singapore",
     bullets: [
@@ -589,6 +661,7 @@ export const experience: readonly Role[] = [
     title: "SCSE Peer Coach",
     org: "Nanyang Technological University",
     tag: "NTU",
+    kind: "campus",
     period: "Jan 2024 – Apr 2024",
     location: "Singapore",
     bullets: [
@@ -600,6 +673,7 @@ export const experience: readonly Role[] = [
     title: "Chess CCA Coach, MOE-qualified",
     org: "Freelance",
     tag: "FREELANCE",
+    kind: "venture",
     period: "Jan 2024 – Apr 2024",
     location: "Singapore",
     bullets: [
@@ -894,6 +968,7 @@ export const languages: readonly Language[] = [
 
 export interface Pastime {
   label: string;
+  plate: "knight" | "piano" | "cube";
   title: string;
   detail: string;
 }
@@ -901,16 +976,19 @@ export interface Pastime {
 export const beyond: readonly Pastime[] = [
   {
     label: "CHESS",
+    plate: "knight",
     title: "President and Captain, NTU International Chess Varsity",
     detail: "Led team selection, training and competition for the varsity team. MOE-qualified chess CCA coach.",
   },
   {
     label: "PIANO",
+    plate: "piano",
     title: "Music Director, NTU Piano Ensemble",
     detail: "ABRSM Piano Grade 8 with Distinction.",
   },
   {
     label: "CUBING",
+    plate: "cube",
     title: "Malaysia National Cubing Open finalist",
     detail: "Competitive speedcubing.",
   },

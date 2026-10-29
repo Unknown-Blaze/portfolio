@@ -8,6 +8,7 @@ import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Nav } from "./components/Nav";
 import { Now } from "./components/Now";
+import { Numbers } from "./components/Numbers";
 import { Research } from "./components/Research";
 import { Skills } from "./components/Skills";
 import { Work } from "./components/Work";
@@ -22,6 +23,7 @@ export function App() {
       <div className="sheet">
         <main id="main">
           <Hero />
+          <Numbers />
           <Dim label="00 → 01" />
           <Now />
           <Dim label="01 → 02" />
