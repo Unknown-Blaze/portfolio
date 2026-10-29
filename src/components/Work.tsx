@@ -43,7 +43,8 @@ function viewsOf(item: WorkItem): View[] {
       caption: `${name} · ${gallery.length} SCREENS, ANDROID`,
       className: "feature-shot phones",
       node: (
-        <ul className="phone-strip" aria-label={`${item.name} screenshots`}>
+        // Focusable so keyboard users can scroll the strip sideways when it overflows on narrow screens.
+        <ul className="phone-strip" aria-label={`${item.name} screenshots`} tabIndex={0}>
           {gallery.map((g) => (
             <li key={g.src} className="phone">
               <img src={asset(g.src)} alt={g.alt} width={g.width} height={g.height} loading="lazy" decoding="async" />
@@ -69,7 +70,14 @@ function viewsOf(item: WorkItem): View[] {
       caption: name,
       className: "feature-shot",
       node: (
-        <img src={asset(image.src)} alt={image.alt} width={image.width} height={image.height} loading="lazy" decoding="async" />
+        <img
+          src={asset(image.src)}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          loading="lazy"
+          decoding="async"
+        />
       ),
     });
   }
@@ -183,10 +191,7 @@ function Compact({ item }: { item: WorkItem }) {
 
 export function Work() {
   const [filter, setFilter] = useState<Filter>("All");
-  const shown = useMemo(
-    () => (filter === "All" ? work : work.filter((w) => w.domains.includes(filter))),
-    [filter],
-  );
+  const shown = useMemo(() => (filter === "All" ? work : work.filter((w) => w.domains.includes(filter))), [filter]);
   const hasVisual = (w: WorkItem): boolean => Boolean(w.image ?? w.gallery ?? w.plate ?? w.system);
   const features = shown.filter(hasVisual);
   const others = shown.filter((w) => !hasVisual(w));

@@ -53,7 +53,8 @@ function mentions(items: string): number {
 const counts = skills.map((s) => mentions(s.items));
 const most = Math.max(1, ...counts);
 // A square-root scale, so one very common group does not flatten every other group to a single tick.
-const ticksFor = (n: number): number => (n === 0 ? 0 : Math.max(1, Math.round((Math.sqrt(n) / Math.sqrt(most)) * TICKS)));
+const ticksFor = (n: number): number =>
+  n === 0 ? 0 : Math.max(1, Math.round((Math.sqrt(n) / Math.sqrt(most)) * TICKS));
 
 const keyOf = (i: number): string => String.fromCharCode(65 + i);
 

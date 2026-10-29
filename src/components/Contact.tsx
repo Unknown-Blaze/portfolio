@@ -12,7 +12,7 @@ const COPIED_MS = 2000;
 // navigator.clipboard needs a secure context; the textarea route covers older browsers and plain http previews.
 async function copyText(text: string): Promise<boolean> {
   try {
-    if (navigator.clipboard && window.isSecureContext) {
+    if ("clipboard" in navigator && window.isSecureContext) {
       await navigator.clipboard.writeText(text);
       return true;
     }
@@ -28,6 +28,8 @@ async function copyText(text: string): Promise<boolean> {
   area.select();
   let ok = false;
   try {
+    // Deprecated, but the only copy route without the async Clipboard API (insecure contexts, older browsers).
+    // eslint-disable-next-line @typescript-eslint/no-deprecated
     ok = document.execCommand("copy");
   } catch {
     ok = false;
@@ -62,7 +64,7 @@ export function CopyEmail({ className, label }: CopyEmailProps) {
       type="button"
       className={`copy-email ${className ?? ""}`.trim()}
       data-state={state}
-      onClick={onClick}
+      onClick={() => void onClick()}
       aria-label={state === "idle" ? `Copy email address ${person.email}` : undefined}
     >
       <span className="copy-email-glyph" aria-hidden="true">

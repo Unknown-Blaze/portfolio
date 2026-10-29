@@ -28,7 +28,9 @@ function stickers(o: P3, u: P3, v: P3, rows: number, map: (p: P3) => P3, cls: st
         [i + 1 - inset, j + 1 - inset],
         [i + inset, j + 1 - inset],
       ].map(([a = 0, b = 0]) => map(add(add(o, u, a / 3), v, b / rows)));
-      out.push(<polygon key={`${key}${i}${j}`} className={cls} points={corners.map((c) => project(c).join(",")).join(" ")} />);
+      out.push(
+        <polygon key={`${key}${i}${j}`} className={cls} points={corners.map((c) => project(c).join(",")).join(" ")} />,
+      );
     }
   }
   return out;

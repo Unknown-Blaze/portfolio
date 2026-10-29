@@ -8,7 +8,8 @@ export function RobotPlate() {
   return (
     <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-labelledby="plate-title" className="plate">
       <title id="plate-title">
-        Drawing: plan view of a tile-grouting robot on a tiled floor, with grouted joints behind it and LiDAR rays ahead.
+        Drawing: plan view of a tile-grouting robot on a tiled floor, with grouted joints behind it and LiDAR rays
+        ahead.
       </title>
       <g className="plan-grid">
         {Array.from({ length: W / T + 1 }, (_, i) => (
@@ -39,11 +40,17 @@ export function RobotPlate() {
       </g>
       <g className="plate-notes">
         <path d="M440 300 L520 110 H640" />
-        <text x={526} y={102}>LIDAR + CAMERAS</text>
+        <text x={526} y={102}>
+          LIDAR + CAMERAS
+        </text>
         <path d="M368 300 L300 380 H160" />
-        <text x={164} y={372}>GROUT NOZZLE</text>
+        <text x={164} y={372}>
+          GROUT NOZZLE
+        </text>
         <path d="M600 250 L660 170 H760" />
-        <text x={664} y={162}>GROUTED JOINT</text>
+        <text x={664} y={162}>
+          GROUTED JOINT
+        </text>
       </g>
     </svg>
   );

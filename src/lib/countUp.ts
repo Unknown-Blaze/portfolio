@@ -16,10 +16,12 @@ export function useRevealProgress<T extends Element>(): [RefObject<T>, number] {
   const [progress, setProgress] = useState(() =>
     prefersReducedMotion() || typeof IntersectionObserver === "undefined" ? 1 : 0,
   );
+  // Whether the count starts already finished; read once, so the effect below runs once per mount.
+  const doneAtMount = useRef(progress === 1);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el || progress === 1) return;
+    if (!el || doneAtMount.current) return;
     let frame = 0;
     const observer = new IntersectionObserver(
       (entries) => {
@@ -44,7 +46,6 @@ export function useRevealProgress<T extends Element>(): [RefObject<T>, number] {
       observer.disconnect();
       cancelAnimationFrame(frame);
     };
-    // Runs once per mount; progress is read only for the reduced-motion early exit.
   }, []);
 
   return [ref, progress];

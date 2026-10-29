@@ -111,8 +111,7 @@ body {
   /* Tile grid with grout lines: fine joints every 48px, a heavier joint every 192px. */
   background-image:
     linear-gradient(var(--grout-major) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grout-major) 1px, transparent 1px),
-    linear-gradient(var(--grout) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grout-major) 1px, transparent 1px), linear-gradient(var(--grout) 1px, transparent 1px),
     linear-gradient(90deg, var(--grout) 1px, transparent 1px);
   background-size:
     192px 192px,
@@ -700,8 +699,19 @@ ol {
   top: 0;
   aspect-ratio: 1;
   background:
-    linear-gradient(90deg, transparent calc(50% - 1px), rgba(246, 248, 250, 0.45) calc(50% - 1px), rgba(246, 248, 250, 0.45) calc(50% + 1px), transparent calc(50% + 1px)),
-    linear-gradient(transparent calc(50% - 1px), rgba(246, 248, 250, 0.45) calc(50% - 1px), rgba(246, 248, 250, 0.45) calc(50% + 1px), transparent calc(50% + 1px));
+    linear-gradient(
+      90deg,
+      transparent calc(50% - 1px),
+      rgba(246, 248, 250, 0.45) calc(50% - 1px),
+      rgba(246, 248, 250, 0.45) calc(50% + 1px),
+      transparent calc(50% + 1px)
+    ),
+    linear-gradient(
+      transparent calc(50% - 1px),
+      rgba(246, 248, 250, 0.45) calc(50% - 1px),
+      rgba(246, 248, 250, 0.45) calc(50% + 1px),
+      transparent calc(50% + 1px)
+    );
   clip-path: polygon(14% 0, 100% 0, 100% 86%, 86% 100%, 0 100%, 0 14%);
   pointer-events: none;
 }
@@ -1372,7 +1382,6 @@ ol {
 
 /* ---------- 08 Beyond code ---------- */
 
-
 .knight {
   margin: 0;
   padding: 10px;
@@ -1426,50 +1435,6 @@ ol {
 
 /* ---------- 09 Contact ---------- */
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
-  gap: 2rem;
-  align-items: end;
-}
-
-.stamp {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 0;
-  border: 1.5px solid var(--ink);
-  background: var(--surface);
-  font-size: 0.72rem;
-}
-
-.stamp div {
-  padding: 0.5rem 0.7rem;
-  border-top: 1px solid var(--ink);
-}
-
-.stamp div:nth-child(even) {
-  border-right: 1px solid var(--ink);
-}
-
-.stamp .stamp-wide {
-  grid-column: 1 / -1;
-  border-top: 0;
-  border-right: 0;
-}
-
-.stamp dt {
-  font-size: 0.6rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.stamp dd {
-  margin: 0.15rem 0 0;
-  font-weight: 600;
-  color: var(--ink);
-}
-
 .contact-email {
   margin: 0 0 1.5rem;
   font-size: clamp(1.4rem, 4.6vw, 3rem);
@@ -1481,13 +1446,6 @@ ol {
 .contact-email a {
   text-decoration-thickness: 3px;
   text-underline-offset: 8px;
-}
-
-.contact-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  list-style: none;
 }
 
 /* ---------- Footer ---------- */
@@ -1514,8 +1472,7 @@ ol {
   .hero,
   .now-grid,
   .feature,
-  .edu-grid,
-  .contact-grid {
+  .edu-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -1565,7 +1522,6 @@ ol {
   .timeline-body {
     padding-left: 0;
   }
-
 }
 
 @media (max-width: 480px) {

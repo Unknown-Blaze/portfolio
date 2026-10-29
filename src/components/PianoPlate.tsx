@@ -36,7 +36,15 @@ export function PianoPlate() {
           );
         })}
         {blacks.map((i) => (
-          <rect key={`b${i}`} x={X0 + (i + 1) * KEY_W - BLACK_W / 2} y={Y0} width={BLACK_W} height={BLACK_H} rx={1.5} className="key-black" />
+          <rect
+            key={`b${i}`}
+            x={X0 + (i + 1) * KEY_W - BLACK_W / 2}
+            y={Y0}
+            width={BLACK_W}
+            height={BLACK_H}
+            rx={1.5}
+            className="key-black"
+          />
         ))}
       </g>
       <g className="plate-notes">
@@ -53,7 +61,9 @@ export function PianoPlate() {
         DISTINCTION
       </text>
       <g className="plate-dim">
-        <path d={`M${X0} ${Y0 + KEY_H + 12} V${Y0 + KEY_H + 40} M${X0 + WHITE * KEY_W} ${Y0 + KEY_H + 12} V${Y0 + KEY_H + 40}`} />
+        <path
+          d={`M${X0} ${Y0 + KEY_H + 12} V${Y0 + KEY_H + 40} M${X0 + WHITE * KEY_W} ${Y0 + KEY_H + 12} V${Y0 + KEY_H + 40}`}
+        />
         <path d={`M${X0} ${Y0 + KEY_H + 30} H${X0 + WHITE * KEY_W}`} />
         <text x={X0 + (WHITE * KEY_W) / 2} y={Y0 + KEY_H + 24} textAnchor="middle">
           2 OCTAVES · 15 WHITE · 10 BLACK

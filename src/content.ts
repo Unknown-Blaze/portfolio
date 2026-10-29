@@ -80,7 +80,16 @@ export interface KeyNumber {
 }
 
 export const numbers: readonly KeyNumber[] = [
-  { from: 0, to: 600, decimals: 0, prefix: "", suffix: "+", label: "daily active users", source: "MyCCDS", kind: "venture" },
+  {
+    from: 0,
+    to: 600,
+    decimals: 0,
+    prefix: "",
+    suffix: "+",
+    label: "daily active users",
+    source: "MyCCDS",
+    kind: "venture",
+  },
   {
     from: 0,
     to: 0.859,
@@ -91,7 +100,16 @@ export const numbers: readonly KeyNumber[] = [
     source: "Final Year Project",
     kind: "research",
   },
-  { from: 300, to: 50, decimals: 0, prefix: "300→", suffix: " ms", label: "API latency", source: "LISA 1.0", kind: "industry" },
+  {
+    from: 300,
+    to: 50,
+    decimals: 0,
+    prefix: "300→",
+    suffix: " ms",
+    label: "API latency",
+    source: "LISA 1.0",
+    kind: "industry",
+  },
   { from: 0, to: 70, decimals: 0, prefix: "−", suffix: "%", label: "cloud cost", source: "LISA 1.0", kind: "industry" },
   {
     from: 90,
@@ -103,7 +121,16 @@ export const numbers: readonly KeyNumber[] = [
     source: "NIE tutoring backend",
     kind: "research",
   },
-  { from: 0, to: 5, decimals: 0, prefix: "", suffix: "", label: "hackathon placings", source: "Winner to finalist", kind: "venture" },
+  {
+    from: 0,
+    to: 5,
+    decimals: 0,
+    prefix: "",
+    suffix: "",
+    label: "hackathon placings",
+    source: "Winner to finalist",
+    kind: "venture",
+  },
 ];
 
 /* ---------- 01 Now ---------- */
@@ -125,7 +152,7 @@ export const now: readonly NowItem[] = [
     role: "Software Engineer",
     since: "Jul 2026",
     summary:
-      "Sole software engineer on a fully autonomous tile-grouting robot deployed in Singapore and Australia. I own its ROS\u00a02 codebase, from perception to release.",
+      "Sole software engineer on a autonomous tile-grouting robot deployed in Singapore and Australia. I own its ROS\u00a02 codebase, from perception to release.",
     stack: ["ROS\u00a02", "LiDAR", "SLAM", "Behaviour trees", "Gazebo", "Docker", "GitHub Actions"],
   },
   {
@@ -240,7 +267,8 @@ export const work: readonly Work[] = [
     context: "Winner, Best Developer Tooling · EasyA x Ripple Hackathon",
     period: "Jun 2025 – Nov 2025",
     domains: ["Blockchain", "Web"],
-    summary: "Donations that donors can audit: milestone escrow on XRPL and Ethereum, with NFT receipts and certificates.",
+    summary:
+      "Donations that donors can audit: milestone escrow on XRPL and Ethereum, with NFT receipts and certificates.",
     points: [
       "2 s transaction finality across XRPL and Ethereum.",
       "Milestone-based escrow keeps every release on chain; donors receive NFT receipts and certificates.",
@@ -261,7 +289,7 @@ export const work: readonly Work[] = [
     context: "Fabrica AI · deployed in Singapore and Australia",
     period: "Jul 2026 – present",
     domains: ["Robotics", "Embedded"],
-    summary: "The ROS\u00a02 software of a fully autonomous robot that automates tile grouting on construction sites.",
+    summary: "The ROS\u00a02 software of a autonomous robot that automates tile grouting on construction sites.",
     points: [
       "Delivered a complete LiDAR upgrade, from integration to on-site deployment, in one month.",
       "Autonomy stack: LiDAR and camera perception, SLAM, navigation, motion planning and behaviour trees.",
@@ -390,7 +418,8 @@ export const work: readonly Work[] = [
     context: "Quantitative trading-signal pipeline",
     period: "",
     domains: ["AI & ML"],
-    summary: "A deep-learning pipeline that predicts trading signals with LSTM, GRU and Transformer models, backtested net of transaction costs.",
+    summary:
+      "A deep-learning pipeline that predicts trading signals with LSTM, GRU and Transformer models, backtested net of transaction costs.",
     points: [],
     stack: ["Python", "PyTorch", "pandas", "scikit-learn"],
     callouts: [],
@@ -457,7 +486,8 @@ export const work: readonly Work[] = [
     context: "Software Engineer Intern · MODEC",
     period: "Jun 2025 – Aug 2025",
     domains: ["Web"],
-    summary: "A sustainability analytics platform, built solo, that turns vendor data and IoT logs into environmental reporting.",
+    summary:
+      "A sustainability analytics platform, built solo, that turns vendor data and IoT logs into environmental reporting.",
     points: [
       "React vendor-data workflows on a Django REST Framework backend serving 500+ concurrent requests.",
       "Redis caching cut retrieval time by 40%; IoT logs ingested through AWS Lambda and Amazon S3.",
@@ -481,7 +511,8 @@ export const work: readonly Work[] = [
     context: "NTU TechFest Hackathon · Top 5",
     period: "Jan 2025",
     domains: ["AI & ML", "Web"],
-    summary: "A Chrome extension that slows misinformation by checking highlighted text and flagging manipulated images as you browse.",
+    summary:
+      "A Chrome extension that slows misinformation by checking highlighted text and flagging manipulated images as you browse.",
     points: [
       "The extension sends page images to a Flask API running a PyTorch deepfake classifier.",
       "Grad-CAM heatmaps are drawn back over the page to show where the model looked.",
@@ -526,7 +557,8 @@ export const work: readonly Work[] = [
     context: "Built for a trading company",
     period: "",
     domains: ["Web"],
-    summary: "Runs a trading company's daily operations: stock in and out, orders, shipments, a printable catalogue, invoices and delivery orders.",
+    summary:
+      "Runs a trading company's daily operations: stock in and out, orders, shipments, a printable catalogue, invoices and delivery orders.",
     points: [],
     stack: ["React", "Vite", "Tailwind CSS", "Supabase"],
     callouts: [],
@@ -538,7 +570,8 @@ export const work: readonly Work[] = [
     context: "Inventory and sales for a seasonal fruit business",
     period: "",
     domains: ["Web"],
-    summary: "A local-first inventory and sales app for a seasonal business: works offline, imports Excel and syncs to Supabase.",
+    summary:
+      "A local-first inventory and sales app for a seasonal business: works offline, imports Excel and syncs to Supabase.",
     points: [],
     stack: ["React", "Supabase", "Python", "Playwright"],
     callouts: [],
@@ -592,7 +625,7 @@ export const experience: readonly Role[] = [
     period: "Jul 2026 – present",
     location: "Singapore",
     bullets: [
-      "Sole software engineer: own the ROS\u00a02 codebase of a fully autonomous tile-grouting robot deployed commercially in Singapore and Australia.",
+      "Sole software engineer: own the ROS\u00a02 codebase of a autonomous tile-grouting robot deployed commercially in Singapore and Australia.",
       "Delivered a complete LiDAR upgrade, from integration to on-site deployment, in one month.",
       "Integrate, tune and debug the autonomy stack: LiDAR and camera perception, SLAM, navigation, motion planning and behaviour trees.",
       "Direct intern engineers and integrate the software with the mechanical and electrical teams.",
@@ -1056,8 +1089,8 @@ export const beyond: readonly Pastime[] = [
  */
 export const KNIGHTS_TOUR: readonly number[] = [
   56, 41, 24, 9, 3, 13, 7, 22, 5, 15, 30, 47, 62, 52, 58, 48, 33, 16, 1, 18, 8, 2, 12, 6, 23, 38, 55, 61, 51, 57, 40,
-  50, 60, 45, 39, 54, 44, 59, 49, 32, 42, 25, 35, 29, 19, 34, 28, 11, 17, 0, 10, 27, 21, 4, 14, 20, 26, 43, 37, 31,
-  46, 36, 53, 63,
+  50, 60, 45, 39, 54, 44, 59, 49, 32, 42, 25, 35, 29, 19, 34, 28, 11, 17, 0, 10, 27, 21, 4, 14, 20, 26, 43, 37, 31, 46,
+  36, 53, 63,
 ];
 
 /* ---------- Sheet index ---------- */

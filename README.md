@@ -68,7 +68,7 @@ npm ci                # Node 22.18 or later
 npm run dev           # http://localhost:5173/portfolio/
 npm run build         # typecheck, then build to dist/
 npm run preview       # serve dist/ at http://localhost:4173/portfolio/
-npm run check         # typecheck + lint + build: what CI runs
+npm run check         # typecheck + lint + format:check + build: what CI runs
 npm run lint          # ESLint (typescript-eslint, react-hooks, jsx-a11y): eslint.config.js
 npm run format:check  # Prettier, 120 columns: .prettierrc.json
 ```
