@@ -13,6 +13,8 @@
     <meta name="theme-color" content="#F6F8FA" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#0D1117" media="(prefers-color-scheme: dark)" />
     <link rel="icon" type="image/svg+xml" href="/portfolio/favicon.svg" />
+    <link rel="apple-touch-icon" href="/portfolio/apple-touch-icon.png" />
+    <link rel="manifest" href="/portfolio/site.webmanifest" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Rudra Prasadh Ganesh" />
@@ -25,7 +27,10 @@
     <meta property="og:image" content="https://unknown-blaze.github.io/portfolio/og.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Rudra Prasadh Ganesh, software engineer in AI, full-stack and robotics, drawn as an engineering sheet" />
+    <meta
+      property="og:image:alt"
+      content="Rudra Prasadh Ganesh, software engineer in AI, full-stack and robotics, drawn as an engineering sheet"
+    />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Rudra Prasadh Ganesh · Software engineer · AI, full-stack & robotics" />
     <meta
@@ -34,20 +39,7 @@
     />
     <meta name="twitter:image" content="https://unknown-blaze.github.io/portfolio/og.png" />
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Rudra Prasadh Ganesh",
-        "jobTitle": "Software Engineer (AI, full-stack and robotics)",
-        "worksFor": { "@type": "Organization", "name": "Fabrica AI" },
-        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Nanyang Technological University" },
-        "email": "mailto:grudraprasadh@gmail.com",
-        "url": "https://unknown-blaze.github.io/portfolio/",
-        "image": "https://unknown-blaze.github.io/portfolio/img/rudra.webp",
-        "sameAs": ["https://github.com/Unknown-Blaze", "https://www.linkedin.com/in/unknown-blaze"]
-      }
-    </script>
+    <!-- JSON-LD (Person, WebSite, CreativeWork) and the Content-Security-Policy are added at build: see vite.config.ts. -->
 
     <script>
       // Set the theme before first paint so there is no flash: saved choice, else the system's.
@@ -65,7 +57,11 @@
   </head>
   <body>
     <div id="root"></div>
-    <noscript><p style="padding: 1rem">Rudra Prasadh Ganesh, software engineer: AI, full-stack and robotics. Email grudraprasadh@gmail.com.</p></noscript>
+    <noscript
+      ><p style="padding: 1rem">
+        Rudra Prasadh Ganesh, software engineer: AI, full-stack and robotics. Email grudraprasadh@gmail.com.
+      </p></noscript
+    >
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
