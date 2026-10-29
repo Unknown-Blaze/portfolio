@@ -24,9 +24,23 @@ function Links({ item }: { item: WorkItem }) {
 
 function Feature({ item, index }: { item: WorkItem; index: number }) {
   const image = item.image;
+  const gallery = item.gallery;
   return (
     <article className={`feature ${index % 2 === 1 ? "feature-flip" : ""}`} aria-labelledby={`w-${item.id}`}>
-      {image ? (
+      {gallery && gallery.length > 0 ? (
+        <figure className="feature-shot phones">
+          <ul className="phone-strip" aria-label={`${item.name} screenshots`}>
+            {gallery.map((g) => (
+              <li key={g.src} className="phone">
+                <img src={asset(g.src)} alt={g.alt} width={g.width} height={g.height} loading="lazy" decoding="async" />
+              </li>
+            ))}
+          </ul>
+          <figcaption className="mono" aria-hidden="true">
+            DETAIL {String.fromCharCode(66 + index)} · {item.name.toUpperCase()} · {gallery.length} SCREENS, ANDROID
+          </figcaption>
+        </figure>
+      ) : image ? (
         <figure className="feature-shot">
           <img
             src={asset(image.src)}
@@ -113,8 +127,9 @@ export function Work() {
     () => (filter === "All" ? work : work.filter((w) => w.domains.includes(filter))),
     [filter],
   );
-  const features = shown.filter((w) => w.image ?? w.plate);
-  const others = shown.filter((w) => !(w.image ?? w.plate));
+  const hasVisual = (w: WorkItem): boolean => Boolean(w.image ?? w.gallery ?? w.plate);
+  const features = shown.filter(hasVisual);
+  const others = shown.filter((w) => !hasVisual(w));
   const count = (d: Domain): number => work.filter((w) => w.domains.includes(d)).length;
 
   return (
