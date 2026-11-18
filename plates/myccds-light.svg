@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="560" viewBox="0 0 600 560" role="img" aria-labelledby="title desc">
+<title id="title">MyCCDS system plate</title>
+<desc id="desc">MyCCDS is an Expo and React Native app on iOS and Android for NTU CCDS students, backed by Firebase authentication and Firestore. 600+ daily active users and a 5-star store rating.</desc>
+<defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0 H0 V20" fill="none" stroke="#E6EAEE" stroke-width="1"/></pattern><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#57606A"/></marker><marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker></defs>
+<rect x="0.5" y="0.5" width="599" height="559" rx="14" fill="#F6F8FA"/>
+<rect x="0.5" y="0.5" width="599" height="559" rx="14" fill="url(#grid)" stroke="#D0D7DE"/>
+<text x="28" y="34" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" fill="#0F766E" font-weight="700" letter-spacing="1.6">SYSTEM PLATE · MYCCDS</text>
+<text x="572" y="34" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#57606A" letter-spacing="1.4" text-anchor="end">NTU CCDS</text>
+<path d="M20 48 H580" stroke="#D0D7DE" stroke-width="1"/>
+<rect x="40" y="70" width="520" height="54" rx="6" fill="#FFFFFF" stroke="#57606A" stroke-width="1.2"/>
+<text x="300.0" y="95.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">NTU CCDS students</text>
+<text x="300.0" y="112.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">PHONES · BOTH STORES</text>
+<path d="M300 124 V158" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="40" y="160" width="520" height="150" rx="10" fill="none" stroke="#0F766E" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="52" y="180" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#0F766E" font-weight="700" letter-spacing="1.2">EXPO · REACT NATIVE · ONE CODEBASE</text>
+<text x="548" y="180" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#0F766E" font-weight="700" letter-spacing="1.2" text-anchor="end">APP</text>
+<rect x="66" y="196" width="210" height="90" rx="6" fill="#FFFFFF" stroke="#57606A" stroke-width="1.2"/>
+<text x="171.0" y="239.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#1F2328" font-weight="600" text-anchor="middle">iOS</text>
+<text x="171.0" y="256.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">APP STORE</text>
+<rect x="324" y="196" width="210" height="90" rx="6" fill="#FFFFFF" stroke="#57606A" stroke-width="1.2"/>
+<text x="429.0" y="239.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" fill="#1F2328" font-weight="600" text-anchor="middle">Android</text>
+<text x="429.0" y="256.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">GOOGLE PLAY</text>
+<path d="M171 286 V346" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)"/>
+<path d="M429 286 V346" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="40" y="348" width="520" height="120" rx="10" fill="none" stroke="#0F766E" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="52" y="368" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#0F766E" font-weight="700" letter-spacing="1.2">FIREBASE</text>
+<rect x="66" y="382" width="210" height="64" rx="6" fill="#E3F1EF" stroke="#0F766E" stroke-width="1.6"/>
+<text x="171.0" y="412.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">Authentication</text>
+<text x="171.0" y="429.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">SIGN-IN</text>
+<rect x="324" y="382" width="210" height="64" rx="6" fill="#E3F1EF" stroke="#0F766E" stroke-width="1.6"/>
+<text x="429.0" y="412.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">Firestore</text>
+<text x="429.0" y="429.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">CONTENT · FEEDBACK</text>
+<circle cx="40" cy="468" r="3.2" fill="#C2410C"/>
+<path d="M40 468 L40 500 L58 500" fill="none" stroke="#C2410C" stroke-width="1.2"/>
+<text x="64" y="506" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#C2410C" font-weight="700" letter-spacing="-0.3">600+</text>
+<text x="64" y="524" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="1.1">DAILY ACTIVE USERS</text>
+<circle cx="200" cy="468" r="3.2" fill="#C2410C"/>
+<path d="M200 468 L200 500 L218 500" fill="none" stroke="#C2410C" stroke-width="1.2"/>
+<text x="224" y="506" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#C2410C" font-weight="700" letter-spacing="-0.3">5-star</text>
+<text x="224" y="524" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="1.1">STORE RATING</text>
+<g><rect x="348" y="496" width="232" height="44" fill="#F6F8FA" stroke="#57606A" stroke-width="1"/><path d="M348 518 H580" stroke="#57606A" stroke-width="0.75"/></g>
+<text x="358" y="511.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#1F2328" font-weight="700" letter-spacing="1.1">NOT TO SCALE</text>
+<text x="358" y="533.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="1.1">PLATE · MYCCDS</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="640" viewBox="0 0 600 640" role="img" aria-labelledby="title desc">
+<title id="title">LISA 1.0 system plate</title>
+<desc id="desc">Users in 4 ASEAN markets use a Next.js 15 app. An API layer backed by PostgreSQL calls retrieval (RAG) over a document store, then an LLM, which returns the answer. Deployed on Alibaba Cloud with Terraform. API latency 300 ms to 50 ms; cloud cost down 70%.</desc>
+<defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0 H0 V20" fill="none" stroke="#E6EAEE" stroke-width="1"/></pattern><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#57606A"/></marker><marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C2410C"/></marker></defs>
+<rect x="0.5" y="0.5" width="599" height="639" rx="14" fill="#F6F8FA"/>
+<rect x="0.5" y="0.5" width="599" height="639" rx="14" fill="url(#grid)" stroke="#D0D7DE"/>
+<text x="28" y="34" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" fill="#0F766E" font-weight="700" letter-spacing="1.6">SYSTEM PLATE · LISA 1.0</text>
+<text x="572" y="34" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#57606A" letter-spacing="1.4" text-anchor="end">MISUMI.AI</text>
+<path d="M20 48 H580" stroke="#D0D7DE" stroke-width="1"/>
+<rect x="40" y="72" width="250" height="58" rx="6" fill="#FFFFFF" stroke="#57606A" stroke-width="1.2"/>
+<text x="165.0" y="99.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">Users</text>
+<text x="165.0" y="116.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">4 ASEAN MARKETS</text>
+<path d="M165 130 V160" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="40" y="162" width="250" height="58" rx="6" fill="#FFFFFF" stroke="#57606A" stroke-width="1.2"/>
+<text x="165.0" y="189.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">Next.js 15 app</text>
+<text x="165.0" y="206.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">WEB FRONT END</text>
+<circle cx="290" cy="270" r="3.2" fill="#C2410C"/>
+<path d="M290 270 L330 228 L352 228" fill="none" stroke="#C2410C" stroke-width="1.2"/>
+<text x="356" y="222" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#C2410C" font-weight="700" letter-spacing="-0.3">300 → 50 ms</text>
+<text x="356" y="240" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="1.1">API LATENCY</text>
+<rect x="24" y="246" width="548" height="290" rx="10" fill="none" stroke="#0F766E" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="36" y="526" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#0F766E" font-weight="700" letter-spacing="1.2">ALIBABA CLOUD · PROVISIONED WITH TERRAFORM</text>
+<path d="M165 220 V262" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="40" y="264" width="250" height="58" rx="6" fill="#FFFFFF" stroke="#57606A" stroke-width="1.2"/>
+<text x="165.0" y="291.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">API layer</text>
+<text x="165.0" y="308.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">SERVICES</text>
+<rect x="340" y="264" width="210" height="58" rx="6" fill="#FFFFFF" stroke="#57606A" stroke-width="1.2"/>
+<text x="445.0" y="291.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">PostgreSQL</text>
+<text x="445.0" y="308.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">APPLICATION DATA</text>
+<path d="M290 293 H338" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<path d="M165 322 V350" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="40" y="352" width="250" height="58" rx="6" fill="#E3F1EF" stroke="#0F766E" stroke-width="1.6"/>
+<text x="165.0" y="379.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">Retrieval (RAG)</text>
+<text x="165.0" y="396.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">TOP-K CONTEXT</text>
+<rect x="340" y="352" width="210" height="58" rx="6" fill="#FFFFFF" stroke="#57606A" stroke-width="1.2"/>
+<text x="445.0" y="379.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">Document store</text>
+<text x="445.0" y="396.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">INDEXED SOURCES</text>
+<path d="M290 381 H338" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<path d="M165 410 V438" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="40" y="440" width="250" height="58" rx="6" fill="#FFFFFF" stroke="#57606A" stroke-width="1.2"/>
+<text x="165.0" y="467.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">LLM</text>
+<text x="165.0" y="484.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">GROUNDED GENERATION</text>
+<path d="M290 469 H338" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="340" y="440" width="210" height="58" rx="6" fill="#E3F1EF" stroke="#0F766E" stroke-width="1.6"/>
+<text x="445.0" y="467.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#1F2328" font-weight="600" text-anchor="middle">Answer</text>
+<text x="445.0" y="484.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="0.9" text-anchor="middle">BACK TO THE USER</text>
+<path d="M550 469 H586 V101 H292" fill="none" stroke="#57606A" stroke-width="1.5" marker-end="url(#ah)"/>
+<circle cx="150" cy="536" r="3.2" fill="#C2410C"/>
+<path d="M150 536 L150 566 L170 566" fill="none" stroke="#C2410C" stroke-width="1.2"/>
+<text x="176" y="572" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#C2410C" font-weight="700" letter-spacing="-0.3">−70%</text>
+<text x="176" y="590" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="1.1">CLOUD COST</text>
+<g><rect x="348" y="576" width="232" height="44" fill="#F6F8FA" stroke="#57606A" stroke-width="1"/><path d="M348 598 H580" stroke="#57606A" stroke-width="0.75"/></g>
+<text x="358" y="591.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#1F2328" font-weight="700" letter-spacing="1.1">NOT TO SCALE</text>
+<text x="358" y="613.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#57606A" letter-spacing="1.1">PLATE · LISA 1.0</text>
+</svg>

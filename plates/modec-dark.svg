@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600" role="img" aria-labelledby="title desc">
+<title id="title">Sustainability analytics platform plate</title>
+<desc id="desc">IoT sources are ingested through AWS Lambda and S3 into a Django REST Framework backend with a Redis cache, serving a React dashboard. 500+ concurrent requests, retrieval time down 40%, 99.9% uptime.</desc>
+<defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0 H0 V20" fill="none" stroke="#171D25" stroke-width="1"/></pattern><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8B949E"/></marker><marker id="aa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#FBBF24"/></marker></defs>
+<rect x="0.5" y="0.5" width="599" height="599" rx="14" fill="#0D1117"/>
+<rect x="0.5" y="0.5" width="599" height="599" rx="14" fill="url(#grid)" stroke="#30363D"/>
+<text x="28" y="34" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" fill="#2DD4BF" font-weight="700" letter-spacing="1.6">SYSTEM PLATE · SUSTAINABILITY ANALYTICS</text>
+<text x="572" y="34" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" fill="#8B949E" letter-spacing="1.4" text-anchor="end">MODEC</text>
+<path d="M20 48 H580" stroke="#30363D" stroke-width="1"/>
+<rect x="40" y="70" width="250" height="58" rx="6" fill="#161B22" stroke="#8B949E" stroke-width="1.2"/>
+<text x="165.0" y="97.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#E6EDF3" font-weight="600" text-anchor="middle">IoT sources</text>
+<text x="165.0" y="114.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#8B949E" letter-spacing="0.9" text-anchor="middle">SITE LOGS</text>
+<path d="M165 128 V164" fill="none" stroke="#8B949E" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="24" y="150" width="552" height="104" rx="10" fill="none" stroke="#2DD4BF" stroke-width="1.2" stroke-dasharray="6 4"/>
+<text x="36" y="244" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#2DD4BF" font-weight="700" letter-spacing="1.2">AWS · INGESTION</text>
+<rect x="40" y="166" width="250" height="58" rx="6" fill="#161B22" stroke="#8B949E" stroke-width="1.2"/>
+<text x="165.0" y="193.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#E6EDF3" font-weight="600" text-anchor="middle">AWS Lambda</text>
+<text x="165.0" y="210.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#8B949E" letter-spacing="0.9" text-anchor="middle">PARSE · VALIDATE</text>
+<path d="M290 195 H338" fill="none" stroke="#8B949E" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="340" y="166" width="210" height="58" rx="6" fill="#161B22" stroke="#8B949E" stroke-width="1.2"/>
+<text x="445.0" y="193.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#E6EDF3" font-weight="600" text-anchor="middle">Amazon S3</text>
+<text x="445.0" y="210.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#8B949E" letter-spacing="0.9" text-anchor="middle">RAW LOG STORE</text>
+<path d="M445 224 V262 H165 V296" fill="none" stroke="#8B949E" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="40" y="298" width="250" height="58" rx="6" fill="#0E2A27" stroke="#2DD4BF" stroke-width="1.6"/>
+<text x="165.0" y="325.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#E6EDF3" font-weight="600" text-anchor="middle">Django REST</text>
+<text x="165.0" y="342.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#8B949E" letter-spacing="0.9" text-anchor="middle">API · 500+ CONCURRENT</text>
+<rect x="340" y="298" width="210" height="58" rx="6" fill="#161B22" stroke="#8B949E" stroke-width="1.2"/>
+<text x="445.0" y="325.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#E6EDF3" font-weight="600" text-anchor="middle">Redis</text>
+<text x="445.0" y="342.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#8B949E" letter-spacing="0.9" text-anchor="middle">CACHE</text>
+<path d="M290 327 H338" fill="none" stroke="#8B949E" stroke-width="1.5" marker-end="url(#ah)" marker-start="url(#ah)"/>
+<path d="M165 356 V392" fill="none" stroke="#8B949E" stroke-width="1.5" marker-end="url(#ah)"/>
+<rect x="40" y="394" width="250" height="58" rx="6" fill="#161B22" stroke="#8B949E" stroke-width="1.2"/>
+<text x="165.0" y="421.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" fill="#E6EDF3" font-weight="600" text-anchor="middle">React dashboard</text>
+<text x="165.0" y="438.0" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#8B949E" letter-spacing="0.9" text-anchor="middle">VENDOR DATA · REPORTS</text>
+<circle cx="445" cy="356" r="3.2" fill="#FBBF24"/>
+<path d="M445 356 L445 410 L430 410" fill="none" stroke="#FBBF24" stroke-width="1.2"/>
+<text x="424" y="404" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#FBBF24" font-weight="700" letter-spacing="-0.3" text-anchor="end">−40%</text>
+<text x="424" y="422" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#8B949E" letter-spacing="1.1" text-anchor="end">RETRIEVAL TIME</text>
+<circle cx="40" cy="425" r="3.2" fill="#FBBF24"/>
+<path d="M40 425 L28 425 L28 490 L44 490" fill="none" stroke="#FBBF24" stroke-width="1.2"/>
+<text x="50" y="496" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#FBBF24" font-weight="700" letter-spacing="-0.3">500+</text>
+<text x="50" y="514" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#8B949E" letter-spacing="1.1">CONCURRENT REQUESTS</text>
+<circle cx="260" cy="452" r="3.2" fill="#FBBF24"/>
+<path d="M260 452 L260 490 L278 490" fill="none" stroke="#FBBF24" stroke-width="1.2"/>
+<text x="284" y="496" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#FBBF24" font-weight="700" letter-spacing="-0.3">99.9%</text>
+<text x="284" y="514" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#8B949E" letter-spacing="1.1">UPTIME</text>
+<g><rect x="370" y="536" width="210" height="44" fill="#0D1117" stroke="#8B949E" stroke-width="1"/><path d="M370 558 H580" stroke="#8B949E" stroke-width="0.75"/></g>
+<text x="380" y="551.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#E6EDF3" font-weight="700" letter-spacing="1.1">NOT TO SCALE</text>
+<text x="380" y="573.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#8B949E" letter-spacing="1.1">PLATE · MODEC</text>
+</svg>
