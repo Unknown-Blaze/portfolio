@@ -1057,6 +1057,27 @@ ol {
   gap: 1.25rem;
 }
 
+/* The compact grid sizes its own columns, so it is measured as a container: a short last row
+   stretches to fill the row instead of leaving empty cells (columns are 320px + 1.25rem gaps). */
+#work {
+  container-type: inline-size;
+}
+
+@container (min-width: 660px) and (max-width: 999.98px) {
+  .compact-grid > :last-child:nth-child(2n + 1) {
+    grid-column: span 2;
+  }
+}
+
+@container (min-width: 1000px) and (max-width: 1339.98px) {
+  .compact-grid > :last-child:nth-child(3n + 1) {
+    grid-column: span 3;
+  }
+  .compact-grid > :last-child:nth-child(3n + 2) {
+    grid-column: span 2;
+  }
+}
+
 .plate {
   display: block;
   width: 100%;
