@@ -26,7 +26,7 @@ export interface Image {
   height: number;
 }
 
-export const REVISION = "2026-10";
+export const REVISION = "2026-11";
 
 export const person = {
   name: "Rudra Prasadh Ganesh",
@@ -51,7 +51,7 @@ export const person = {
 export const facts: readonly string[] = [
   "Lee Kuan Yew Gold Medal",
   "AIED 2026 co-author",
-  "600+ daily users on iOS & Android",
+  "600+ daily users on MyCCDS",
   "Winner, EasyA x Ripple",
 ];
 
@@ -200,7 +200,7 @@ export const work: readonly Work[] = [
     context: "Student platform for NTU's College of Computing and Data Science",
     period: "Nov 2024 – present",
     domains: ["Mobile"],
-    summary: "One app for CCDS students' links, guides and calendars, used by 600+ students a day on iOS and Android.",
+    summary: "One app for CCDS students' links, guides and calendars, shipped on iOS and Android to 600+ daily users.",
     points: [
       "Shipped to the App Store and Google Play from one React Native, Expo and Redux codebase.",
       "600+ daily active users and a 5-star store rating.",
@@ -627,21 +627,21 @@ export const experience: readonly Role[] = [
     ],
   },
   {
-    title: "Co-Founder and Full Stack Engineer",
-    org: "Lumerva",
-    tag: "LUMERVA",
-    kind: "venture",
-    period: "Sep 2025 – Jul 2026",
+    title: "DevOps Intern",
+    org: "MODEC Offshore Production Systems (Singapore) / Offshore Frontier Solutions",
+    tag: "MODEC",
+    kind: "industry",
+    period: "Dec 2025 – Jan 2026",
     location: "Singapore",
     bullets: [
-      "Built the full stack of a production learning platform: React and TypeScript front end, Python back-end services.",
-      "Designed Celery and Redis background jobs that raise throughput and cut request latency.",
-      "Built modular API and content pipelines for personalised course paths, quizzes and content modules.",
-      "Integrated the YouTube Data API and Brave Search API, with ranking logic that improves discovery quality.",
+      "Took an analytical data application from proof of concept to secure production.",
+      "Configured and ran AWS Elastic Beanstalk environments with security-aligned release processes.",
+      "Added a CI/CD workflow with validation gates for stable, repeatable releases.",
+      "Planned testing and rollback to meet the company's security and reliability benchmarks.",
     ],
   },
   {
-    title: "DevOps Engineer and Team Lead",
+    title: "Team Co-Lead, Cloud Infrastructure and DevOps",
     org: "Misumi Kaizen OU Group (MISUMI.AI)",
     tag: "MISUMI.AI",
     kind: "industry",
@@ -657,17 +657,17 @@ export const experience: readonly Role[] = [
     ],
   },
   {
-    title: "DevOps Intern",
-    org: "MODEC Offshore Production Systems (Singapore) / Offshore Frontier Solutions",
-    tag: "MODEC",
-    kind: "industry",
-    period: "Dec 2025 – Jan 2026",
+    title: "Co-Founder and Full Stack Engineer",
+    org: "Lumerva",
+    tag: "LUMERVA",
+    kind: "venture",
+    period: "Sep 2025 – Jul 2026",
     location: "Singapore",
     bullets: [
-      "Took an analytical data application from proof of concept to secure production.",
-      "Configured and ran AWS Elastic Beanstalk environments with security-aligned release processes.",
-      "Added a CI/CD workflow with validation gates for stable, repeatable releases.",
-      "Planned testing and rollback to meet the company's security and reliability benchmarks.",
+      "Built the full stack of a production learning platform: React and TypeScript front end, Python back-end services.",
+      "Designed Celery and Redis background jobs that raise throughput and cut request latency.",
+      "Built modular API and content pipelines for personalised course paths, quizzes and content modules.",
+      "Integrated the YouTube Data API and Brave Search API, with ranking logic that improves discovery quality.",
     ],
   },
   {
