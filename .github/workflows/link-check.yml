@@ -25,11 +25,13 @@ jobs:
       - run: mkdir -p "$RUNNER_TEMP/site" && cp -r dist "$RUNNER_TEMP/site/portfolio"
       - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
-          # LinkedIn answers every bot with status 999, so it is skipped.
+          # LinkedIn answers every bot with status 999, so it is skipped. The MyCCDS App Store
+          # listing was delisted; it is kept on the page, marked deprecated, so it is skipped too.
           args: >-
             --no-progress
             --root-dir ${{ runner.temp }}/site
             --exclude 'linkedin\.com'
+            --exclude 'apps\.apple\.com/us/app/myccds'
             --accept '100..=103,200..=299,429'
             '${{ runner.temp }}/site/portfolio/**/*.html'
             src/content.ts

@@ -14,11 +14,17 @@ function Links({ item }: { item: WorkItem }) {
   if (item.links.length === 0) return <p className="work-links not-public mono">Not public</p>;
   return (
     <p className="work-links">
-      {item.links.map((l) => (
-        <ExtLink key={l.href} href={l.href} className="arrow-link">
-          {l.label}
-        </ExtLink>
-      ))}
+      {item.links.map((l) =>
+        l.deprecated ? (
+          <span key={l.href} className="link-deprecated">
+            <s>{l.label}</s> <small>{l.deprecated}</small>
+          </span>
+        ) : (
+          <ExtLink key={l.href} href={l.href} className="arrow-link">
+            {l.label}
+          </ExtLink>
+        ),
+      )}
     </p>
   );
 }

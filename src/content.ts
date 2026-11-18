@@ -8,6 +8,8 @@ export const DOMAINS: readonly Domain[] = ["AI & ML", "Web", "Mobile", "Robotics
 export interface Link {
   label: string;
   href: string;
+  /** Set when the target no longer works: the label stays, struck through, with this note and no link. */
+  deprecated?: string;
 }
 
 /** A key number pinned to a card with a leader line, like a dimension note on a drawing. */
@@ -216,7 +218,7 @@ export const work: readonly Work[] = [
     callouts: [{ value: "600+", note: "daily active users" }],
     links: [
       { label: "Google Play", href: "https://play.google.com/store/apps/details?id=com.ntu.myccds" },
-      { label: "App Store", href: "https://apps.apple.com/us/app/myccds/id6753279278" },
+      { label: "App Store", href: "https://apps.apple.com/us/app/myccds/id6753279278", deprecated: "delisted" },
       {
         label: "NTU article",
         href: "https://www.ntu.edu.sg/computing/news-events/news/detail/ganesh-rudra-prasadh-transforms-student-experience-with-myccds",

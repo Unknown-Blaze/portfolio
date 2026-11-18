@@ -1034,6 +1034,18 @@ ol {
   margin: 1.1rem 0 0;
 }
 
+.link-deprecated {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.link-deprecated small {
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 .compact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
