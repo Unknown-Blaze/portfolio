@@ -146,24 +146,16 @@ export interface NowItem {
 }
 
 export const nowIntro =
-  "I own the software of an autonomous construction robot at Fabrica AI, and I build Lumerva, the learning platform I co-founded, end to end.";
+  "Full time on robotics: the software of an autonomous robot that works on real construction sites.";
 
 export const now: readonly NowItem[] = [
   {
     org: "Fabrica AI",
-    role: "Software Engineer",
+    role: "Robotics Software Engineer",
     since: "Jul 2026",
     summary:
       "Sole software engineer on an autonomous tile-grouting robot deployed in Singapore and Australia. I own its ROS\u00a02 codebase, from perception to release.",
     stack: ["ROS\u00a02", "LiDAR", "SLAM", "Behaviour trees", "Gazebo", "Docker", "GitHub Actions"],
-  },
-  {
-    org: "Lumerva",
-    role: "Co-Founder and Full Stack Engineer",
-    since: "Sep 2025",
-    summary:
-      "A learning platform that builds personalised course paths, quizzes and content modules. I build all of it: React and TypeScript front end, Python services, Celery and Redis background jobs.",
-    stack: ["React", "TypeScript", "Python", "Celery", "Redis", "YouTube Data API", "Brave Search API"],
   },
 ];
 
@@ -620,7 +612,7 @@ export interface Role {
 
 export const experience: readonly Role[] = [
   {
-    title: "Software Engineer",
+    title: "Robotics Software Engineer",
     org: "Fabrica AI",
     tag: "FABRICA",
     kind: "industry",
@@ -639,10 +631,10 @@ export const experience: readonly Role[] = [
     org: "Lumerva",
     tag: "LUMERVA",
     kind: "venture",
-    period: "Sep 2025 – present",
+    period: "Sep 2025 – Jul 2026",
     location: "Singapore",
     bullets: [
-      "Build the full stack of a production learning platform: React and TypeScript front end, Python back-end services.",
+      "Built the full stack of a production learning platform: React and TypeScript front end, Python back-end services.",
       "Designed Celery and Redis background jobs that raise throughput and cut request latency.",
       "Built modular API and content pipelines for personalised course paths, quizzes and content modules.",
       "Integrated the YouTube Data API and Brave Search API, with ranking logic that improves discovery quality.",
@@ -739,7 +731,7 @@ export const experience: readonly Role[] = [
     org: "Schaeffler Hub for Advanced Research",
     tag: "SCHAEFFLER",
     kind: "industry",
-    period: "May 2024 – Aug 2024",
+    period: "May 2024 – Jul 2024",
     location: "Singapore",
     bullets: [
       "Improved performance by 20% with low-latency EtherCAT and FreeRTOS scheduling on an XMC4800 microcontroller.",

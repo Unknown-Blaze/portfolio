@@ -878,6 +878,11 @@ ol {
   gap: 1.25rem;
 }
 
+/* One current role spans the row instead of leaving half of it empty. */
+.now-grid:has(> :only-child) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .now-card h3 {
   font-size: clamp(1.6rem, 3vw, 2.1rem);
   letter-spacing: -0.03em;
